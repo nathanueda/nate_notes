@@ -1,0 +1,13 @@
+% \documentclass[<optional args>]{<class type>}
+\documentclass[11pt]{article} 
+
+\begin{document}
+    % The backslash after LaTeX adds a space.
+    Hello! This is my first \LaTeX\ document. % Adding a `\\` creates a soft return (a newline as part of the same paragraph (no indent)).
+    
+    % Anything between a pair of `$` is in inline math mode (instead of the default text mode).
+    % Anything between `\[` and `\]` is in displayed math mode (has a separate line for the math equations).
+    A rectangle has side lengths of $ (x+1) $ and $ (x+3) $. % Adding a space between this and the above line, this would indicate a hard return (adds a newline and creates a new paragraph (adds an indent)).
+    The equation \[ {A(x)=x^2+4x+3} \] gives the area of the rectangle. % Surrounding the equation in curly braces ensures the whole equation is on one line.
+    
+\end{document}

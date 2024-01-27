@@ -1,0 +1,89 @@
+\documentclass[11pt]{article}
+\usepackage{enumerate}
+\pagestyle{empty}
+
+\begin{document}
+
+\begin{enumerate} % Creates an ordinal list.
+    \item pencil
+    \item calculator
+    \item ruler
+    \item notebook
+    \begin{enumerate} % Nested ordinal list.
+        \item notes
+        \item homework
+        \item assessments
+        \begin{enumerate}
+            \item tests
+            \item quizzes
+            \item journal entries
+        \end{enumerate}
+    \end{enumerate}
+    \item highlighers
+\end{enumerate}
+
+\vspace{1cm}
+
+\begin{enumerate}[A.] % Requires packages enumerate. Labels with capital letters.
+    \item pencil
+    \item calculator
+    \item ruler
+    \item notebook
+\end{enumerate}
+
+\vspace{1cm}
+
+\begin{enumerate}[i.] % Labels with roman numerals.
+    \item pencil
+    \item calculator
+    \item ruler
+    \item notebook
+\end{enumerate}
+
+\pagebreak % Creates a new page.
+
+\begin{enumerate} \setcounter{enumi}{5} % Starts a list from 6.
+    \item pencil
+    \item calculator
+    \item ruler
+    \item notebook
+\end{enumerate}
+
+
+\begin{itemize} % Creates a bulleted list.
+    \item pencil
+    \item calculator
+    \item ruler
+    \item notebook
+    \begin{itemize} % Nested bulleted list.
+        \item notes
+        \item homework
+        \item assessments
+        \begin{itemize}
+            \item tests
+            \item quizzes
+            \item journal entries
+        \end{itemize}
+    \end{itemize}
+    \item highlighers
+\end{itemize}
+
+\vspace{1cm}
+
+\begin{enumerate} 
+    \item[] pencil % Removes the numbers.
+    \item[] calculator
+    \item[] ruler
+    \item[] notebook
+\end{enumerate}
+
+\vspace{1cm}
+
+\begin{enumerate} 
+    \item[a.] pencil % Put whatever we want to number them with between []
+    \item[b.] calculator
+    \item[c.] ruler
+    \item[d.] notebook
+\end{enumerate}
+
+\end{document}

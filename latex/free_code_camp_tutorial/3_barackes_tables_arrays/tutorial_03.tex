@@ -1,0 +1,90 @@
+\documentclass[11pt]{article}
+\usepackage{amsfonts, amssymb, amsmath, float}
+\parindent0px % Turns off paragraph indenting (indent paragraphs by 0 pixels).
+\pagestyle{empty} % Turn off page numbers.
+
+\begin{document}
+    The distributive property states that $ a(b+c) = ab + ac $ for all $ a, b, c \in \mathbb{R}$ \\[6pt]
+    The equivalence class of $a$ is $[a]$ \\[6pt]
+    The set $A$ is defined to be $\{1, 2, 3\}$ \\[6pt] % Need to add backslashes before {} to have them show up.
+    The movie tickets cost \$11.50. % Need to add a backslash to before $ to have it show up. 
+    
+    \[ 2(\frac{1}{x^2-1}) \]
+    \[ 2\left(\frac{1}{x^2-1}\right) \] % \left and \right resizes the () to fit.
+    \[ 2\left[\frac{1}{x^2-1}\right] \]
+    \[ 2\left \langle \frac{1}{x^2-1}\right \rangle \] % \langle and \rangle for angular brackets.
+    \[ 2\left |\frac{1}{x^2-1}\right | \] % Pipe.
+    \[ \left . \frac{dy}{dy}  \right |_{x=1} \] % \right needs a corresponding \left, so we use \left. to ignore it.
+    \[ \left ( \frac{1}{1 + \left ( \frac{1}{1+x} \right )} \right ) \]
+
+    Tables:\\
+    \begin{tabular}{|c||c|c|c|c|c|} % This gives us 6 centered columns, separated by vertical bars (lll would give us 3 left aligned columns).  % chktex 44
+        \hline % Gives us a horizontal line.  
+        $x$ & 1 & 2 & 3 & 4 & 5 \\ \hline % Separate items into columns using &.
+        $f(x)$ & 10 & 11 & 12 & 13 & 14 \\ \hline
+    \end{tabular}
+    
+    \vspace{1cm} % Separate tables by 1 cm.    
+
+    \begin{tabular}{|c||c|c|c|c|c|} 
+        \hline 
+        $x$ & 1 & 2 & 3 & 4 & 5 \\ \hline 
+        $f(x)$ & $\frac{1}{2}$ & 11 & 12 & 13 & 14 \\ \hline % Notice the fraction extends out of its box.
+    \end{tabular}
+
+    \vspace{1cm}
+
+    \begin{table}[H] % The compiler may move the table to where it fits best, the [H] ensures it keeps it where we placed it.
+        \centering % Centers the table.
+        \def\arraystretch{1.2} % \def defines something new. We are strangtching it to fit the fraction.
+            \begin{tabular}{|c||c|c|c|c|c|}
+                \hline 
+                $x$ & 1 & 2 & 3 & 4 & 5 \\ \hline 
+                $f(x)$ & $\frac{1}{2}$ & 11 & 12 & 13 & 14 \\ \hline 
+            \end{tabular}
+            \caption{These values represent the function $f(x)$} % Adds a table caption and a table number (automatically).
+        \end{table}    
+
+
+    \begin{table}[H] 
+    \centering 
+    \def\arraystretch{1.2} 
+        \caption{The relationship between $f$ and $f'$}
+        \begin{tabular}{|l|l|}
+            \hline 
+            $f(x)$ & $f'(x)$ \\ \hline 
+            $x>0$ & The function $f(x)$ is increasing. The function $f(x)$ is increasing. The function $f(x)$ is increasing. \\ \hline % Notice, with long text, this runs off the page.
+        \end{tabular} 
+    \end{table}    
+
+    \begin{table}[H] 
+        \centering 
+        \def\arraystretch{1.2} 
+            \caption{The relationship between $f$ and $f'$}
+            \begin{tabular}{|l|p{3in}|} % p means paragraph, we can resize to fit the text in the window.
+                \hline 
+                $f(x)$ & $f'(x)$ \\ \hline 
+                $x>0$ & The function $f(x)$ is increasing. The function $f(x)$ is increasing. The function $f(x)$ is increasing. \\ \hline % Notice, with long text, this runs off the page.
+            \end{tabular} 
+        \end{table}    
+
+    Arrays:
+    % Everything in align is in math mode.
+    \begin{align}  % In align, the equations are numbers.
+        5x^2 - 9 = x + 3 \\
+        5x^2 - x - 12 = 0 \\
+    \end{align}
+
+    \begin{align*} % With algin*, the equations are no longer numbers.
+        5x^2 - 9 &= x + 3 \\ % The & here align the equal signs.
+    \end{align*}   
+
+    \begin{align} 
+        5x^2 - 9 &= x + 3 \\ % The & here align the equal signs.
+        5x^2 - x - 12 &= 0 \\
+        &= 12 + x - 5x^2
+    \end{align}
+
+
+\end{document}
+
