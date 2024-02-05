@@ -4,6 +4,7 @@
 \usepackage{graphicx}
 \usepackage{float}
 \usepackage[margin=1in]{geometry}
+\usepackage{cancel}
 
 \parindent0px
 
@@ -63,9 +64,10 @@ another. It tells us how much these vectors are working together.
 
 Dot Product Rules (for two vectors, v, w):
 \begin{itemize}
-    \item $ v \cdot w = w \cdot v $
-    \item $ u \cdot (v + w) = u \cdot v + u \cdot w $
-    \item $ (cv) \cdot w = c(v \cdot w) $
+    \item $ \boldsymbol{v} \cdot \boldsymbol{w} = w \cdot v $
+    \item $ \boldsymbol{u} \cdot (\boldsymbol{v} + \boldsymbol{w}) = \boldsymbol{u} \cdot 
+    \boldsymbol{v} + \boldsymbol{u} \cdot \boldsymbol{w} $
+    \item $ (c\boldsymbol{v}) \cdot \boldsymbol{w} = c(\boldsymbol{v} \cdot \boldsymbol{w}) $
 \end{itemize}
 
 \textbf{Cosine Formula:} If $v$ and $w$ are nonzero vectors, then:
@@ -84,7 +86,7 @@ result in a unit vector. In other words:
 \textbf{Cauchy-Schwarz Inequality:} 
 \[ | v \cdot w | \le \|v\|  \|w\| \]
 In words, the absolute value of the dot product of two vectors is no greater than the product 
-of their lengths.
+of their lengths. \\
 
 \textbf{Triangle Inequality:} 
 \[\|v + w\| \le \|v\| + \|w\|\]
@@ -96,5 +98,117 @@ of the length of the other triangle sides.
 	\includegraphics[width=2in]{imgs/triangle_inequality.png}
 	\caption{This Squeeze Theorem}
 \end{figure}
+
+\subsection{Matrices and Their Column Spaces}
+
+\textbf{Independence:} Columns are independent when each new column is a vector that we don't
+already have as a combination of previous columns. The only combindation of columns that produces
+$A\boldsymbol{x} = (0,0,0) $ is $ \boldsymbol{x} = (0, 0, 0) $. \\
+
+\textbf{Column Space:} The column space, $\textbf{C}(A)$, contains all vectors 
+$A\boldsymbol{x}$. In other words, it contains all combinations of the columns.
+
+The \textbf{span} of the columns of $\boldsymbol{A}$ is the column space. \\
+
+\textbf{Rank}: The number of independent columns of a matrix. This is equivalent to saying the
+rank is the number of pivots in a matrix. \\
+
+Rank Rules:
+\begin{itemize}
+    \item $ \text{rank}(A + B) \le \text{rank}(A) + \text{rank}(B) $
+\end{itemize}
+
+\subsection{Matrix Multiplication AB and CR}
+
+To multiply two matrices $AB$, take the dot product of each row of $A$ with each column of $B$. \\ 
+The number in row $i$, column $j$ of $AB$ is (row $i$ of $A$) $\cdot$ (column $j$ or $B$). \\
+
+When $A \in \mathbb{R}^{m \times n}$ and $B \in \mathbb{R}^{n \times p}$:
+\begin{itemize}
+    \item  $AB \in \mathbb{R}^{m \times p}$
+    \item $mp$ dot products are needed to carry out the matrix multiplication (one for each 
+    entry in the matrix $AB$).
+\end{itemize}
+
+Matrix Multiplication Rules:
+\begin{itemize}
+    \item Associative: $(\boldsymbol{AB}) \boldsymbol{C}$
+    \item Distributive: $\boldsymbol{A}(\boldsymbol{B} + \boldsymbol{C}) = \boldsymbol{AB} +
+    \boldsymbol{BC}$
+    \item Not Commutative: In general $\boldsymbol{AB} \ne \boldsymbol{BA}$
+\end{itemize}
+
+\section{Solving Linear Equations Ax = b}
+
+\subsection{Elimination and Back Substitution}
+
+For a matrix $A \in \mathbb{R}^{n \times n}$, there are three outcomes for 
+$A\boldsymbol{x} = \boldsymbol{b}$:
+
+\begin{enumerate}
+    \item No solution
+    \begin{itemize}
+        \item $\boldsymbol{b}$ is not in the column space of $A$
+        \item This occurs when the columns of $A$ are dependent and $\boldsymbol{b}$ is not in
+        $C(A)$.
+        \[\begin{bmatrix}
+            2 & 4\\
+            4 & 8
+            \end{bmatrix} = \begin{bmatrix}
+                16 \\
+                \cancel{32}
+                \end{bmatrix} \]
+    \end{itemize}
+    \item Exactly 1 solution
+    \begin{itemize}
+        \item $A$ has independent columns and an inverse matrix $A^{-1}$
+    \end{itemize}
+    \item Infinitely many solutions
+    \begin{itemize}
+        \item Columns of $A$ are dependent.
+        \item This occurs when the columns of $A$ are dependent and $\boldsymbol{b}$ is in 
+        $C(A)$
+        \[\begin{bmatrix}
+            2 & 4\\
+            4 & 8
+            \end{bmatrix} = \begin{bmatrix}
+                16 \\
+                32
+                \end{bmatrix} \]
+    \end{itemize}
+\end{enumerate}
+
+\textbf{Elimination:} A system that allows us to determine if $A\boldsymbol{x} = \boldsymbol{b}
+$ has no solution, 1 solution, or infinitely many solutions. The goal of elimination is to
+transform $A$ to an upper triangular matrix, $U$. \\ 
+
+Elimination allows us to discover the number of pivots in $A \in \mathbb{R}^{n \times n}$ by 
+creating $U$. If there are $n$ pivots in $U$, $U$ has full rank. This implies $A$ has exactly 
+one solution. \\
+
+\textbf{Back Substitution}:
+If $U$ has full rank, back substituion allows us to find the solution. \\
+
+\subsection{Elimination Matrices and Inverse Matrices}
+
+\textbf{Elimination}
+
+\begin{itemize}
+    \item The basic elimination step subtracts a multiple of $\ell_{ij}$ of equation $j$ from
+    equation $i$
+\end{itemize}
+
+\textbf{Inverse Matrices}
+
+\begin{itemize}
+    \item If $A$ is invertible, the one and only solution to $A\boldsymbol{x} = \boldsymbol{b}$
+    is $\boldsymbol{x} = A^{-1}\boldsymbol{b}$
+    \item Only square matrices can have inverses
+    \item Invertible $\equiv$ non-singular $\equiv$ non-zero determinant $\equiv$ independent 
+    columns
+    \item Not invertible $\equiv$ singular $\equiv$ zero determinant $\equiv$ dependent columns
+    \item If a matrix is invertible, the inverse is unique
+    \item A triangular matrix has an inverse so long that it has no zero diagonal entries
+\end{itemize}
 
 \end{document}
