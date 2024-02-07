@@ -6,3 +6,4 @@
 \contentsline {section}{\numberline {2}Solving Linear Equations Ax = b}{5}{section.2}%
 \contentsline {subsection}{\numberline {2.1}Elimination and Back Substitution}{5}{subsection.2.1}%
 \contentsline {subsection}{\numberline {2.2}Elimination Matrices and Inverse Matrices}{6}{subsection.2.2}%
+\contentsline {subsection}{\numberline {2.3}Matrix Computations and A = LU}{6}{subsection.2.3}%

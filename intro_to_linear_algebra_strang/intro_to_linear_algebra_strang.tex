@@ -211,4 +211,17 @@ If $U$ has full rank, back substituion allows us to find the solution. \\
     \item A triangular matrix has an inverse so long that it has no zero diagonal entries
 \end{itemize}
 
+\subsection{Matrix Computations and A = LU}
+
+Elimination without row exchanges factors $A$ into $LU$. We can't find an $LU$ decomposition if 
+row exchanges are needed during elimination. \\
+
+\textbf{Gauss-Jordan elimination:}
+\begin{itemize}
+    \item An algorithm that allows us to determine if the inverse of a matrix exists, and if it
+    does it exist, it allows us to determine what the inverse is. 
+    \item Augment $A$ by $I$, that is $ \left[ A \ I \right]$, and through elementary row 
+    operations, transform this matrix to $ \left[ I \ A^{-1} \right]$
+\end{itemize}
+
 \end{document}

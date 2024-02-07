@@ -76,4 +76,27 @@ $A$ and $B$ cannot occur.
 
 \subsection{The Definition of Probability}
 
+Axioms of Probability:
+\begin{enumerate}
+    \item For every event $A$, $P(A) \ge 0$
+    \item $P(S) = 1$
+    \item $P( \bigcup_{i=1}^{\infty} A_i) = \sum_{i=1}^{\infty}P(A_i)$
+\end{enumerate}
+
+Basic Theorems:
+\begin{enumerate}
+    \item $P(\emptyset) = 0$
+    \item For every finite sequence of $n$ disjoint events, $A_1, \ldots, A_n$, $P( 
+    \bigcup_{i=1}^{n} A_i) = \sum_{i=1}^{n}P(A_i)$
+    \item For every event $A$, $P(A^c) = 1 - P(A)$
+    \item If $A \subset B$, then $P(A) \le P(B)$
+    \item For every event $A$, $0 \le P(A) \le 1$
+    \item For every two events $A$ and $B$, $P(A \cap B^c) = P(A) - P(A \cap B)$
+    \item For every two events $A$ and $B$, $P(A \cup B) = P(A) + P(B) - P(A \cap B)$
+    \item Bonferroni Inequality: For all events $A_1, \ldots, A_n$, $P(\bigcap_{i=1}^{n} A_i) 
+    \ge 1 - \sum_{i=1}^{n} P(A_i^c)$
+\end{enumerate}
+
+\subsection{Finite Sample Spaces}
+
 \end{document}
