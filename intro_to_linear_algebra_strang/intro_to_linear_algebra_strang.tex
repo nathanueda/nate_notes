@@ -224,4 +224,50 @@ row exchanges are needed during elimination. \\
     operations, transform this matrix to $ \left[ I \ A^{-1} \right]$
 \end{itemize}
 
+\section{The Four Fundamental Subspaces}
+\subsection{Vector Spaces and Subspaces}
+
+To be a vector space means that all linear combinations $c\boldsymbol{v} + d\boldsymbol{w}$ of 
+the vectors or matrices stay inside that space. \\
+
+\textbf{Subspaces:} 
+\begin{itemize}
+    \item A subspace is a vector space entirely contained within another vector space
+    \item All linear combinations of vectors in the subspace stay in the subspace
+    \item Every subspace contains the zero vector
+    \item Subspaces of $\mathbb{R}^3$:
+    \begin{itemize}
+        \item The single vector $(0,0,0)$
+        \item Any line through $(0,0,0)$
+        \item Any plane through $(0,0,0)$
+        \item The whole space $\mathbb{R}^3$
+    \end{itemize}
+\end{itemize} 
+
+\textbf{Column Space:}
+\begin{itemize}
+    \item The column space ($C(A)$) consists of all linear combinations of the columns
+    \item To solve $A\boldsymbol{x} = \boldsymbol{b}$ is to express $\boldsymbol{b}$ as a
+    combination of the columns
+    \item The right side, $\boldsymbol{b}$, has to be in the column space produced by $A$, or 
+    $A\boldsymbol{x} = \boldsymbol{b}$ has no solution
+\end{itemize}
+
+\textbf{Row Space:}
+\begin{itemize}
+    \item The row space of $A$ is the column space $C(A^T)$
+    \item The rank of $A = \text{ rank of } A^T$
+\end{itemize}
+
+\textbf{Span:} 
+\begin{itemize}
+    \item The span of vectors $\boldsymbol{v}$ and $\boldsymbol{w}$ is the set of all of their 
+    linear combinations.
+    \item In other words, this tells us, given some set of vectors, which vectors are able to 
+    be created by taking a linear combination of the vectors in the set. It is the vector  
+    space we can reach (span) by taking linear combindations of the set of vectors.
+    \item Independence is not required by the word span.
+\end{itemize}
+
+
 \end{document}

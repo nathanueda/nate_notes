@@ -7,3 +7,5 @@
 \contentsline {subsection}{\numberline {2.1}Elimination and Back Substitution}{5}{subsection.2.1}%
 \contentsline {subsection}{\numberline {2.2}Elimination Matrices and Inverse Matrices}{6}{subsection.2.2}%
 \contentsline {subsection}{\numberline {2.3}Matrix Computations and A = LU}{6}{subsection.2.3}%
+\contentsline {section}{\numberline {3}The Four Fundamental Subspaces}{6}{section.3}%
+\contentsline {subsection}{\numberline {3.1}Vector Spaces and Subspaces}{6}{subsection.3.1}%
