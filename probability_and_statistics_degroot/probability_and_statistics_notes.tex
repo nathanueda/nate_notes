@@ -108,4 +108,34 @@ Simple Sample Space
 
 \subsection{Counting Methods}
 
+\textbf{Multiplication Rule:} An experiment with $k$ parts where the $i$th part has $n_i$ 
+possible outcomes (regardless of which specific outcomes have occurred in the other parts) has 
+a sample space $S = n_1 n_2 \ldots n_k$ \\
+
+\textbf{Permutations ($P_{n,k}$):}
+\begin{itemize}
+    \item Number of ways to arrange a set where order matters
+    \item Sampling considering $n$ different items and making $k$ choices from them
+    \begin{itemize}
+        \item Sampling with replacement: $n^k$
+        \item Sampling without replacement: $n(n-1) \ldots (n-k+1)$
+        \begin{itemize}
+            \item $n$ options for first choice, $n-1$ options for second choice, $n-k+1$ 
+            options for $k$th choice
+        \end{itemize}
+    \end{itemize}
+    
+    \item The number of permutations of $n$ different items is $P_{n,n} = n$!
+    \item The number of permutations of $n$ different items making $k$ choices ($0 \le k \le 
+    n$) is
+        \[P_{n,k} = n(n-1) \ldots (n-k+1)\]
+        \[P_{n,k} = n(n-1) \ldots (n-k+1) \left(\frac{1}{1}\right)\]
+        \[P_{n,k} = n(n-1) \ldots (n-k+1) \left(\frac{(n-k)(n-k-1) \ldots 1}{(n-k)(n-k-1) 
+        \ldots 1}\right)\]
+        \[P_{n,k} = \frac{n(n-1) \ldots (n-k+1)(n-k)(n-k-1) \ldots 1}{(n-k)(n-k-1) \ldots 1}\]
+        \[P_{n,k} = \frac{n!}{(n-k)!}\]
+\end{itemize}
+
+\subsection{Combinatorial Methods}
+
 \end{document}

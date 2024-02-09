@@ -244,18 +244,18 @@ the vectors or matrices stay inside that space. \\
     \end{itemize}
 \end{itemize} 
 
-\textbf{Column Space:}
+\textbf{Column Space ($C(A)$):}
 \begin{itemize}
-    \item The column space ($C(A)$) consists of all linear combinations of the columns
+    \item The column space consists of all linear combinations of the columns
     \item To solve $A\boldsymbol{x} = \boldsymbol{b}$ is to express $\boldsymbol{b}$ as a
     combination of the columns
     \item The right side, $\boldsymbol{b}$, has to be in the column space produced by $A$, or 
     $A\boldsymbol{x} = \boldsymbol{b}$ has no solution
 \end{itemize}
 
-\textbf{Row Space:}
+\textbf{Row Space ($C(A^T)$):}
 \begin{itemize}
-    \item The row space of $A$ is the column space $C(A^T)$
+    \item The row space of $A$ is the column space of $A^T$
     \item The rank of $A = \text{ rank of } A^T$
 \end{itemize}
 
@@ -268,6 +268,138 @@ the vectors or matrices stay inside that space. \\
     space we can reach (span) by taking linear combindations of the set of vectors.
     \item Independence is not required by the word span.
 \end{itemize}
+
+\subsection{Computing the Nullspace by Elimination: A = CR}
+
+\textbf{Nullspace ($N(A)$):}
+\begin{itemize}
+    \item Contains all solutions $\boldsymbol{x}$ to $A\boldsymbol{x} = 0$ including 
+    $\boldsymbol{x} = 0$
+    \item If $A$ is invertible, then the nullspace contains only the zero vector (no special
+    solutions)
+    \item If $A$ has $n$ columns, $r$ of which are independent, then there are $n-r$ vectors in
+    the nullspace
+    \item Elimination does not change the nullspace (though it does change the column space)
+    \item If $n > m$ (more columns than rows), then there is at least one free variable (can't
+    have $n$ independent columns in $\mathbb{R}^m$). Therefore, there is at least one nonzero 
+    solution
+    \item The dimension of the nullspace is the number of free variables in a matrix
+\end{itemize}
+
+\textbf{Echelon Form ($R$):}
+\begin{itemize}
+    \item Echelon form requirements:
+    \begin{enumerate}
+        \item All rows having only zeros are at the bottom
+        \item The leading entry (pivot) for each nonzero row (leftmost nonzero entry), is on 
+        the right of the leading entry of every row above
+    \end{enumerate}
+    \item The result of Gaussian elimination on any matrix, square or otherwise
+    \item If the matrix is square and invertible, echelon form is an upper triangular matrix, 
+    $U$
+    \item Can be viewed as a generalization of upper triangular form for rectangular matrices 
+    \item Example: \[
+        \begin{bmatrix}
+        1 & a_0 & a_1 & a_2 & a_3 \\
+        0 & 0 & 2 & a_4 & a_5 \\
+        0 & 0 & 0 & 1 & a_6 \\
+        0 & 0 & 0 & 0 & 0 
+        \end{bmatrix}
+        \]
+\end{itemize}
+
+\textbf{Reduced Row Echelon Form Requirements ($R_0$):}
+\begin{itemize}
+    \item In row echlon form 
+    \item The leading entry (pivot) of each nonzero row is a 1
+    \item Each column containing a leading 1 has zeros in all entries above the leading 1. 
+    \item Example: \[
+        \begin{bmatrix}
+            1 & 7 & 0 & 8 \\
+            0 & 0 & 1 & 9 \\
+            0 & 0 & 0 & 0
+        \end{bmatrix}
+    \]
+    \item Algorithm (must be in row echelon form):
+    \begin{enumerate}
+        \item Divide pivots by themselves to make them all 1.
+        \item Zero out all entires above and below the pivots.
+    \end{enumerate}
+    The result will have the identity matrix in the pivot columns (and the remaining columns 
+    will be the special columns)
+\end{itemize}
+
+\textbf{Finding the Nullspace:} \\
+Goal: Given some matrix $A$, find all solutions $A\boldsymbol{x} = 0$
+\begin{enumerate}
+    \item Start with some matrix \[ A = 
+    \begin{bmatrix}
+        1 & 2 & 2 & 2 \\
+        2 & 4 & 6 & 8 \\
+        3 & 6 & 8 & 10
+    \end{bmatrix}
+\]
+    \item Do elimination to echelon form \[ R = 
+    \begin{bmatrix}
+        1 & 2 & 2 & 2 \\
+        0 & 0 & 2 & 4 \\
+        0 & 0 & 0 & 0
+    \end{bmatrix}
+\]
+    \item Do elimination from row echelon form to reduced row echelon form to find the pivot 
+    columns and free columns \[ R_0 = 
+    \begin{bmatrix}
+        1 & 2 & 0 & -2 \\
+        0 & 0 & 1 & 2 \\
+        0 & 0 & 0 & 0
+    \end{bmatrix}
+\]
+    Takeaways:
+    \begin{itemize}
+        \item $r = 2 = $ number of pivots (coming from columns 1 and 3)
+        \item $2$ free variables (coming from columns 2 and 4)
+        \begin{itemize}
+            \item Free variables, which in this case are $x_2$ and $x_4$ can take on any value
+            \item There is one special solution for each free variable
+            \item The special solution for each free variable is found by setting that free 
+            variable to 1 and the rest of the free variables to 0
+        \end{itemize}
+    \end{itemize}
+
+    \item Find the special solutions for the free variables using back substituion
+    
+    Recall our system of linear equations: \\
+    \[x_1 + 2x_2 - 2x_4 = 0 \]
+    \[ x_3 + 2x_4 = 0 \]
+    \begin{enumerate}
+        \item Let $x_2 = 1, x_4 = 0$. Equation 2 gives us $x_3 = 0$ and equation 1 gives us 
+        $x_1 = -2$. The result is a vector in the nullspace: \[ s_1 = \begin{bmatrix}
+            -2 \\
+            1 \\
+            0 \\
+            0
+        \end{bmatrix}
+    \]
+
+        \item Let $x_2 = 0, x_4 = 1$. Equation 2 gives us $x_3 = -2$ and equation 1 gives us 
+        $x_1 = 2$. The result is a vector in the nullspace: \[ s_2 = \begin{bmatrix}
+            2 \\
+            0 \\
+            -2 \\
+            1
+        \end{bmatrix}
+    \]
+    Takeaways: 
+    \begin{itemize}
+        \item These vectors form a basis for the nullspace of $A$. 
+        \item Any multiple of these 2 vectors (special solutions) are in the nullspace.
+        \item The nullspace contains exactly all the linear combinations of the special solutions. 
+        \item In other words, for any 2 constants $c, d$, the nullspace is: \[ cs_1 + ds_2 \]
+    \end{itemize} 
+    \end{enumerate}
+\end{enumerate}
+
+\subsection{The Complete Solution to Ax = b}
 
 
 \end{document}

@@ -9,3 +9,5 @@
 \contentsline {subsection}{\numberline {2.3}Matrix Computations and A = LU}{6}{subsection.2.3}%
 \contentsline {section}{\numberline {3}The Four Fundamental Subspaces}{6}{section.3}%
 \contentsline {subsection}{\numberline {3.1}Vector Spaces and Subspaces}{6}{subsection.3.1}%
+\contentsline {subsection}{\numberline {3.2}Computing the Nullspace by Elimination: A = CR}{7}{subsection.3.2}%
+\contentsline {subsection}{\numberline {3.3}The Complete Solution to Ax = b}{9}{subsection.3.3}%
