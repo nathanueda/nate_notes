@@ -114,7 +114,7 @@ a sample space $S = n_1 n_2 \ldots n_k$ \\
 
 \textbf{Permutations ($P_{n,k}$):}
 \begin{itemize}
-    \item Number of ways to arrange a set where order matters
+    \item Number of ways to arrange a set (order matters)
     \item Sampling considering $n$ different items and making $k$ choices from them
     \begin{itemize}
         \item Sampling with replacement: $n^k$
@@ -137,5 +137,32 @@ a sample space $S = n_1 n_2 \ldots n_k$ \\
 \end{itemize}
 
 \subsection{Combinatorial Methods}
+\textbf{Combinations ($C_{n,k}$):}
+\begin{itemize}
+    \item Number of subsets (order does not matter)
+    \item Permutations may be thought of as combinations of size $k$ chosen out of $n$, 
+    multiplied by the number of ways to arrange the size $k$ subsets, $k$!. More formally, this
+    says 
+    \[ P_{n,k} = C_{n,k} k!\]
+    \item Combinations (binomial coefficient) are the number of distinct subsets of size $k$ 
+    that can be chosen from a set of size $n$: 
+        \[C_{n,k} = {n \choose k} = \frac{P_{n,k}}{k!} = \frac{\frac{n!}{(n-k)!}}{k!} =  \frac{n!}{(n-k)!k!} \]
+    \item Combinations without replacement: ${n+k-1 \choose k}$
+\end{itemize}
+
+\subsection{The Probability of a Union of Events}
+
+\begin{itemize}
+    \item Union of two events $A_1$ and $A_2$: \[P(A_1 \cup A_2) = P(A_1) + P(A_2) - P(A_1 \cap
+    A_2)\]
+    \item Union of three events $A_1$, $A_2$, and $A_3$: \[P(A_1 \cup A_2 \cup A_3) = P(A_1) + 
+    P(A_2) + P(A_3) - \left[ P(A_1 \cap A_2) + P(A_1 \cap A_3) + P(A_2 \cap A_3) \right] \] \[ 
+    + P(A_1 \cap A_2 \cap A_3)\]
+    \item Union of $n$ events $A_1, \ldots, A_n$: \[ P \left(\bigcup_{i=1}^{n} A_i\right) = 
+    \sum_{i=1}^{n} P(A_i) - \sum_{i<j}P(A_i \cap A_j) + \sum_{i<j<k}P(A_i \cap A_j \cap A_k) -
+    \] \[ \sum_{i<j<k<l} P(A_i \cap A_j \cap A_k \cap A_l) + \cdots + {(-1)}^{n+1} P(A_1 \cap 
+    A_2 \cap \cdots \cap A_n)\]
+\end{itemize}
+
 
 \end{document}

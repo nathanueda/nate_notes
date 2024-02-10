@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.12.19)  9 FEB 2024 10:46
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.12.19)  10 FEB 2024 06:18
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -342,23 +342,29 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 \tf@toc=\write4
 \openout4 = `probability_and_statistics_notes.toc'.
 
- [2] [3] [4] [5] (./probability_and_statistics_notes.aux)
+ [2] [3] [4]
+
+Package amsmath Warning: Foreign command \atopwithdelims;
+(amsmath)                \frac or \genfrac should be used instead
+(amsmath)                 on input line 149.
+
+[5] (./probability_and_statistics_notes.aux)
 Package rerunfilecheck Info: File `probability_and_statistics_notes.out' has not changed.
-(rerunfilecheck)             Checksum: 768BA9744D1B57C352177A9BAD18D15A;1555.
+(rerunfilecheck)             Checksum: 6DA3A85A68B34C637D758052C4926FE5;1811.
  ) 
 Here is how much of TeX's memory you used:
- 9947 strings out of 476093
- 155083 string characters out of 5791584
+ 9949 strings out of 476093
+ 155113 string characters out of 5791584
  1862793 words of memory out of 5000000
- 30181 multiletter control sequences out of 15000+600000
+ 30182 multiletter control sequences out of 15000+600000
  520340 words of font info for 62 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 72i,6n,77p,368b,519s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 72i,6n,77p,399b,519s stack positions out of 10000i,1000n,20000p,200000b,200000s
 {/usr/local/texlive/2022/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}</usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfrm1095.pfb>
-Output written on probability_and_statistics_notes.pdf (5 pages, 147073 bytes).
+Output written on probability_and_statistics_notes.pdf (5 pages, 153281 bytes).
 PDF statistics:
- 154 PDF objects out of 1000 (max. 8388607)
- 121 compressed objects within 2 object streams
- 27 named destinations out of 1000 (max. 500000)
- 73 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 159 PDF objects out of 1000 (max. 8388607)
+ 126 compressed objects within 2 object streams
+ 28 named destinations out of 1000 (max. 500000)
+ 81 words of extra memory for PDF output out of 10000 (max. 10000000)
 

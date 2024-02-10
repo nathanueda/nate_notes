@@ -7,3 +7,4 @@
 \contentsline {subsection}{\numberline {1.6}Finite Sample Spaces}{4}{subsection.1.6}%
 \contentsline {subsection}{\numberline {1.7}Counting Methods}{4}{subsection.1.7}%
 \contentsline {subsection}{\numberline {1.8}Combinatorial Methods}{5}{subsection.1.8}%
+\contentsline {subsection}{\numberline {1.9}The Probability of a Union of Events}{5}{subsection.1.9}%
