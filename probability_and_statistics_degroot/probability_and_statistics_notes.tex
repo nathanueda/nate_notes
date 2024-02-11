@@ -150,6 +150,13 @@ a sample space $S = n_1 n_2 \ldots n_k$ \\
     \item Combinations without replacement: ${n+k-1 \choose k}$
 \end{itemize}
 
+\subsection{Multinomial Coefficients}
+
+The total number of different ways of dividing $n$ elements into $k$ groups is 
+\[ {n \choose n_1, n_2, \ldots, n_k} = {n \choose n_1} {n - n_1 \choose n_2} {n - n_1 - n_2 
+\choose n_3} \cdots {n - n_1 - \cdots - n_{k-2} \choose n_{k-1}} = \frac{n!}{n_1!n_2! \cdots 
+n_k!}\]
+
 \subsection{The Probability of a Union of Events}
 
 \begin{itemize}
@@ -163,6 +170,5 @@ a sample space $S = n_1 n_2 \ldots n_k$ \\
     \] \[ \sum_{i<j<k<l} P(A_i \cap A_j \cap A_k \cap A_l) + \cdots + {(-1)}^{n+1} P(A_1 \cap 
     A_2 \cap \cdots \cap A_n)\]
 \end{itemize}
-
 
 \end{document}
