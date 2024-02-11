@@ -9,3 +9,4 @@
 \contentsline {subsection}{\numberline {1.8}Combinatorial Methods}{5}{subsection.1.8}%
 \contentsline {subsection}{\numberline {1.9}Multinomial Coefficients}{5}{subsection.1.9}%
 \contentsline {subsection}{\numberline {1.10}The Probability of a Union of Events}{5}{subsection.1.10}%
+\contentsline {subsection}{\numberline {1.11}Statistical Swindles}{6}{subsection.1.11}%
