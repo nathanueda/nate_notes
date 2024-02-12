@@ -171,6 +171,57 @@ n_k!}\]
     A_2 \cap \cdots \cap A_n)\]
 \end{itemize}
 
-\subsection{Statistical Swindles}
+\section{Conditional Probability}
+
+\subsection{The Definition of Conditional Probability}
+
+\begin{itemize}
+    \item Conditional probability is the updating of probabilities when certain events are
+    observed
+    \item The updated probability of event $A$ after we learn that event $B$ has occured is the
+    conditional probability of $A$ given $B$, denoted $P(A|B)$
+    \item When we go from $P(A)$ to $P(A|B)$, we say we are conditioning on $B$
+    \item For $P(B) > 0$ \[P(A|B) = \frac{P(A \cap B)}{P(B)}\]
+    \item Intuitively, this is saying the probability of $A$ occurring, given $B$ has occurred
+    is equal to the outcomes where both $A$ and $B$ occurred (which makes sense since we know 
+    $B$ has occurred and we want to find the probability of $A$ also occurring) divided by the 
+    probability of $B$ occurring (which makes sense since we know $B$ occurred, we can 
+    renormalize the sample space to only contain outcomes where $B$ occurred).
+\end{itemize}
+
+\textbf{Multiplication Rule for Conditional Probabilities}
+\begin{itemize}
+    \item For 2 events $A,B$
+    \begin{itemize}
+        \item If $P(B) > 0$ \[P(A \cap B) = P(B)P(A|B)\]
+        \item If $P(A) > 0$ \[P(A \cap B) = P(A)P(B|A)\]
+    \end{itemize}
+    \item For $n$ events $A_1, \ldots, A_n$ such that $P(A_1 \cap \ldots \cap A_{n-1}) > 0$ 
+    \[P(A_1 \cap \ldots \cap A_n) = P(A_1)P(A_2|A_1)P(A_3|A_1 \cap A_2) \ldots P(A_n|A_1 \cap
+    \ldots A_{n-1})\]
+    \item For $n$ events $A_1, \ldots, A_n, B$ such that $P(B) > 0$ and $P(A_1 \cap \ldots \cap
+    A_{n-1}) > 0$ 
+    \[P(A_1 \cap \ldots \cap A_n|B) = P(A_1|B)P(A_2|A_1 \cap B)P(A_3|A_1 \cap A_2 \cap B) 
+    \ldots P(A_n|A_1 \cap \ldots A_{n-1} \cap B)\]
+\end{itemize}
+
+\textbf{Law of Total Probability}
+\begin{itemize}
+    \item Tells us that to get the unconditional probability of $A$, we can divide the sample
+    space into disjoint slices $B_j$, find the conditional probability of $A$ within each of 
+    these slices, then take a weighted sum of the conditional probabilities, where the weights
+    are the probabilities $P(B_i)$
+    \item Often used in tandum with Bayes' Rule
+    \item Partition: Let $S$ denote the sample space and consider $k$ events $B_1, \ldots, B_k$
+    in $S$ such that $B_1, \ldots, B_k$ are disjoint and $\bigcup_{i=1}^{k}B_i = S$. Then 
+    events $B_1, \ldots, B_k$ form a partition in $S$. In other words, only one of these events
+    can occur and combined they fill the entire sample space
+    \item Suppose events $B_1, \ldots, B_k$ form a partition of the space $S$ and $P(B_j) > 0$
+    for $j = 1, \ldots, k$. Then \[P(A) = \sum_{j=1}^{k} P(B_j \cap A) = \sum_{j=1}^{k} P(B_j)
+    P(A|B_j)\]
+    \item Conditional LOTP \[P(A|C)= \sum_{j=1}^{k}P(B_j|C)P(A|B_j \cap C)\]
+\end{itemize}
+
+
 
 \end{document}
