@@ -11,3 +11,4 @@
 \contentsline {subsection}{\numberline {1.10}The Probability of a Union of Events}{5}{subsection.1.10}%
 \contentsline {section}{\numberline {2}Conditional Probability}{6}{section.2}%
 \contentsline {subsection}{\numberline {2.1}The Definition of Conditional Probability}{6}{subsection.2.1}%
+\contentsline {subsection}{\numberline {2.2}Independent Events}{7}{subsection.2.2}%

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.12.19)  12 FEB 2024 10:04
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.12.19)  15 FEB 2024 09:09
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -350,21 +350,21 @@ Package amsmath Warning: Foreign command \atopwithdelims;
 
 [5] [6] [7] (./probability_and_statistics_notes.aux)
 Package rerunfilecheck Info: File `probability_and_statistics_notes.out' has not changed.
-(rerunfilecheck)             Checksum: C31B408DC9CAC5EAF823743042536163;2430.
+(rerunfilecheck)             Checksum: 0D2169187A33A60F30F4D175C08479A0;2581.
  ) 
 Here is how much of TeX's memory you used:
- 9957 strings out of 476093
- 155207 string characters out of 5791584
+ 9959 strings out of 476093
+ 155237 string characters out of 5791584
  1863793 words of memory out of 5000000
- 30185 multiletter control sequences out of 15000+600000
+ 30186 multiletter control sequences out of 15000+600000
  520340 words of font info for 62 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  72i,6n,77p,418b,519s stack positions out of 10000i,1000n,20000p,200000b,200000s
 {/usr/local/texlive/2022/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}</usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfrm1095.pfb>
-Output written on probability_and_statistics_notes.pdf (7 pages, 161132 bytes).
+Output written on probability_and_statistics_notes.pdf (7 pages, 164029 bytes).
 PDF statistics:
- 185 PDF objects out of 1000 (max. 8388607)
- 150 compressed objects within 2 object streams
- 33 named destinations out of 1000 (max. 500000)
- 105 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 190 PDF objects out of 1000 (max. 8388607)
+ 155 compressed objects within 2 object streams
+ 34 named destinations out of 1000 (max. 500000)
+ 113 words of extra memory for PDF output out of 10000 (max. 10000000)
 

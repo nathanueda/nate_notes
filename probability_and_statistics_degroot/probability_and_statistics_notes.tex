@@ -222,6 +222,42 @@ n_k!}\]
     \item Conditional LOTP \[P(A|C)= \sum_{j=1}^{k}P(B_j|C)P(A|B_j \cap C)\]
 \end{itemize}
 
+\subsection{Independent Events}
 
+\textbf{Independence of Two Events:}
+\begin{itemize}
+    \item Two events are independent if learning that one occurred does not change the
+    probability of the other event.
+    \item Two events $A$ and $B$ with positive probabilities are independent if 
+    \[P(A \cap B) = P(A)P(B)\] 
+    \item Similarly, two events $A$ and $B$ with positive probabilities are independent if 
+    \[P(A|B) = P(A) \text{ and } P(B|A)=P(B)\]
+    \item If two events $A$ and $B$ are independent, then $A$ and $B^C$ are independent
+\end{itemize}
+
+\textbf{Independence of k Events:}
+\begin{itemize}
+    \item For $k$ events, if knowing what happened with any particular subset of the events 
+    gives us no information about what happened with the events not in the subset, the events
+    are independent
+    \item $k$ events are (mutually) independent if 
+    \begin{itemize}
+        \item Any pair $P(A_i \cap A_j) = P(A_i)P(A_j) \text{ for } i \ne j$ 
+        \item Any triplet $P(A_i \cap A_j \cap A_k) = P(A_i)P(A_j)P(A_k) \text{ for } i \ne j 
+        \ne k$
+        \item $\ldots$
+        \item The n-tuplet $P(A_1 \cap \ldots \cap A_n) = P(A_1) \ldots P(A_n) $
+    \end{itemize}
+\end{itemize}
+
+When deciding whether or not to model events as independent, try to answer the following 
+question: ``If I were to learn that some of these events occurred, would I change the 
+probabilities of any of the others?'' \\
+
+\textbf{Conditional Independence:}
+\begin{itemize}
+    \item Two events $A$ and $B$ are conditionally independent given $E$ if $P(A \cap B|E) =
+    P(A|E)P(B|E)$
+\end{itemize}
 
 \end{document}
