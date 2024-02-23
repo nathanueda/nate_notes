@@ -27,71 +27,74 @@
 \section{Vectors and Matrices}
 \subsection{Vectors and Linear Combinations}
 
-\textbf{Vector Length:} For a vector $ v \in \mathbb{R}^n $, its length is:
+\textbf{Vector Length:} For a vector $ \boldsymbol{v} \in \mathbb{R}^n $, its length is:
 
-\[ \|v\|= \sqrt{v_1^2 + \cdots + v_n^2} \]
+\[ \|\boldsymbol{v}\|= \sqrt{v_1^2 + \cdots + v_n^2} \]
 
 In words, the length of a vector is the square root of the sum of the squared components. \\
 
-Given two vectors in $\mathbb{R}^2\ v, w$ with their tail starting from the origin
+Given two vectors in $\mathbb{R}^2\ \boldsymbol{v}, \boldsymbol{w}$ with their tail starting 
+from the origin
 \begin{itemize}
     \item If they lie on the same line, the vectors are \textit{linearly dependent}.
     \item If they do not lie on the same line, the vectors are \textit{linearly independent}.
 \end{itemize}
-Therefore, the combinations $ c\textbf{v} + d\textbf{w} $ fill the $x-y$ plane unless $v$ is in 
-line with $w$. \\
+Therefore, the combinations $ c\boldsymbol{v} + d\boldsymbol{w} $ fill the $x-y$ plane unless 
+$\boldsymbol{v}$ is in line with $\boldsymbol{w}$. \\
 
 To fill $m$-dimensional space, we need $m$ independent vectors, with each vector having $m$
 components.
 
 \subsection{Lengths and Angles from Dot Products}
 
-\textbf{Dot Product:} For two vectors $v, w \in \mathbb{R}^n$, their dot product is:
+\textbf{Dot Product:} For two vectors $\boldsymbol{v}, \boldsymbol{w} \in \mathbb{R}^n$, their
+dot product is:
 
-\[ v \cdot w = v_1 w_1 + \cdots + v_n w_n \]
+\[ \boldsymbol{v} \cdot \boldsymbol{w} = v_1 w_1 + \cdots + v_n w_n \]
 
 The dot product of two vectors tells us what amount of one vector goes in the direction of
 another. It tells us how much these vectors are working together.
 
 \begin{itemize}
-    \item $ v \cdot w > 0 $: The vectors point in somewhat similar directions. In other
-    words, the angle between the two vectors is less than 90 degrees.
-    \item $ v \cdot w = 0 $: The vectors are perpendicular. In other words, the angle 
-    between the two vectors is 90 degrees.
-    \item $ v \cdot w < 0 $: The vectors point in somewhat opposing directions. In other
-    words, the angle between the two vectors is greater than 90 degrees.
+    \item $ \boldsymbol{v} \cdot \boldsymbol{w} > 0 $: The vectors point in somewhat similar 
+    directions. In other words, the angle between the two vectors is less than 90 degrees.
+    \item $ \boldsymbol{v} \cdot \boldsymbol{w} = 0 $: The vectors are perpendicular. In other 
+    words, the angle between the two vectors is 90 degrees.
+    \item $ \boldsymbol{v} \cdot \boldsymbol{w} < 0 $: The vectors point in somewhat opposing 
+    directions. In other words, the angle between the two vectors is greater than 90 degrees.
 \end{itemize}
 
-Dot Product Rules (for two vectors, v, w):
+Dot Product Rules (for two vectors, $\boldsymbol{v}, \boldsymbol{w}$):
 \begin{itemize}
-    \item $ \boldsymbol{v} \cdot \boldsymbol{w} = w \cdot v $
+    \item $ \boldsymbol{v} \cdot \boldsymbol{w} = \boldsymbol{w} \cdot \boldsymbol{v} $
     \item $ \boldsymbol{u} \cdot (\boldsymbol{v} + \boldsymbol{w}) = \boldsymbol{u} \cdot 
     \boldsymbol{v} + \boldsymbol{u} \cdot \boldsymbol{w} $
     \item $ (c\boldsymbol{v}) \cdot \boldsymbol{w} = c(\boldsymbol{v} \cdot \boldsymbol{w}) $
 \end{itemize}
 
-\textbf{Cosine Formula:} If $v$ and $w$ are nonzero vectors, then:
-\[ \cos \theta = \frac{v \cdot w}{\|v\| \|w\|}\]
+\textbf{Cosine Formula:} If $\boldsymbol{v}$ and $\boldsymbol{w}$ are nonzero vectors, then:
+\[ \cos \theta = \frac{\boldsymbol{v} \cdot \boldsymbol{w}}{\|\boldsymbol{v}\| \|\boldsymbol{w}
+\|}\]
 
 \textbf{Unit Vectors:} A vector is a unit vector if its length is 1. \\
-For a vector $u \in \mathbb{R}^n$:
+For a vector $\boldsymbol{u} \in \mathbb{R}^n$:
 
-\[ \|u\| = 1\]
+\[ \|\boldsymbol{u}\| = 1\]
 
-For any vector $v \in \mathbb{R}^n$, as long as $v \ne 0$, dividing $v$ by its length will
-result in a unit vector. In other words:
+For any vector $\boldsymbol{v} \in \mathbb{R}^n$, as long as $\boldsymbol{v} \ne 0$, dividing 
+$\boldsymbol{v}$ by its length will result in a unit vector. In other words:
 
-\[ u = \frac{v}{\|v\|} \]
+\[ \boldsymbol{u} = \frac{\boldsymbol{v}}{\|\boldsymbol{v}\|} \]
 
 \textbf{Cauchy-Schwarz Inequality:} 
-\[ | v \cdot w | \le \|v\|  \|w\| \]
+\[ | \boldsymbol{v} \cdot \boldsymbol{w} | \le \|\boldsymbol{v}\|  \|\boldsymbol{w}\| \]
 In words, the absolute value of the dot product of two vectors is no greater than the product 
 of their lengths. \\
 
 \textbf{Triangle Inequality:} 
-\[\|v + w\| \le \|v\| + \|w\|\]
-In words, the length of any one side (in this case $\|v+w\|$) of a triangle is at most the sum
-of the length of the other triangle sides.
+\[\|\boldsymbol{v} + \boldsymbol{w}\| \le \|\boldsymbol{v}\| + \|\boldsymbol{w}\|\]
+In words, the length of any one side (in this case $\|\boldsymbol{v}+\boldsymbol{w}\|$) of a 
+triangle is at most the sum of the length of the other triangle sides.
 
 \begin{figure}[H] 
 	\centering 
@@ -108,7 +111,7 @@ $A\boldsymbol{x} = (0,0,0) $ is $ \boldsymbol{x} = (0, 0, 0) $. \\
 \textbf{Column Space:} The column space, $\textbf{C}(A)$, contains all vectors 
 $A\boldsymbol{x}$. In other words, it contains all combinations of the columns.
 
-The \textbf{span} of the columns of $\boldsymbol{A}$ is the column space. \\
+The \textbf{span} of the columns of $A$ is the column space. \\
 
 \textbf{Rank}: The number of independent columns of a matrix. This is equivalent to saying the
 rank is the number of pivots in a matrix. \\
@@ -132,10 +135,9 @@ When $A \in \mathbb{R}^{m \times n}$ and $B \in \mathbb{R}^{n \times p}$:
 
 Matrix Multiplication Rules:
 \begin{itemize}
-    \item Associative: $(\boldsymbol{AB}) \boldsymbol{C}$
-    \item Distributive: $\boldsymbol{A}(\boldsymbol{B} + \boldsymbol{C}) = \boldsymbol{AB} +
-    \boldsymbol{BC}$
-    \item Not Commutative: In general $\boldsymbol{AB} \ne \boldsymbol{BA}$
+    \item Associative: $(AB)C$
+    \item Distributive: $A(B + C) = AB + BC$
+    \item Not Commutative: In general $AB \ne BA$
 \end{itemize}
 
 \section{Solving Linear Equations Ax = b}
@@ -150,7 +152,7 @@ $A\boldsymbol{x} = \boldsymbol{b}$:
     \begin{itemize}
         \item $\boldsymbol{b}$ is not in the column space of $A$
         \item This occurs when the columns of $A$ are dependent and $\boldsymbol{b}$ is not in
-        $C(A)$.
+        $C(A)$ ($\cancel{32} = \text{any value but 32}$).
         \[\begin{bmatrix}
             2 & 4\\
             4 & 8
@@ -393,7 +395,8 @@ Goal: Given some matrix $A$, find all solutions $A\boldsymbol{x} = 0$
     \begin{itemize}
         \item These vectors form a basis for the nullspace of $A$. 
         \item Any multiple of these 2 vectors (special solutions) are in the nullspace.
-        \item The nullspace contains exactly all the linear combinations of the special solutions. 
+        \item The nullspace contains exactly all the linear combinations of the special 
+        solutions. 
         \item In other words, for any 2 constants $c, d$, the nullspace is: \[ cs_1 + ds_2 \]
     \end{itemize} 
     \end{enumerate}
@@ -401,5 +404,191 @@ Goal: Given some matrix $A$, find all solutions $A\boldsymbol{x} = 0$
 
 \subsection{The Complete Solution to Ax = b}
 
+$A\boldsymbol{x} = \boldsymbol{b}$ is solvable when $\boldsymbol{b}$ is in $C(A)$ \\
+
+\textbf{Finding the Complete Solution to $A\boldsymbol{x} = \boldsymbol{b}$}:
+\begin{enumerate}
+    \item Augment matrix $A$ to account for the non-zero $\boldsymbol{b}$ on the right side \\
+    
+    $A \rightarrow \left[A \ \boldsymbol{b}\right]$
+
+    \item Reduce $\left[A \ \boldsymbol{b}\right] \rightarrow \left[U \ \boldsymbol{c}\right]$ \\
+    
+    $\left[A \ \boldsymbol{b}\right] = $
+    $
+    \begin{bmatrix}
+        1 & 2 & 3 & 5 & b_1 \\
+        2 & 4 & 8 & 12 & b_2 \\
+        3 & 6 & 7 & 13 & b_3
+    \end{bmatrix} \rightarrow
+    $
+    $
+    \begin{bmatrix}
+        1 & 2 & 3 & 5 & b_1 \\
+        0 & 0 & 2 & 2 & b_2 - 2b_1 \\
+        0 & 0 & -2 & -2 & b_3 - 3b_1
+    \end{bmatrix} \rightarrow \\
+    $
+
+    $
+    \begin{bmatrix}
+        1 & 2 & 3 & 5 & b_1 \\
+        0 & 0 & 2 & 2 & b_2 - 2b_1 \\
+        0 & 0 & 0 & 0 & b_3 + b_2 - 5b_1
+    \end{bmatrix} =
+    $
+    $\left[U \ \boldsymbol{c}\right] $ \\
+    \begin{itemize}
+        \item Columns 1 and 3 will be the pivot columns ($x_1, x_3)$ 
+        and columns 2 and 4 will be the free columns (free variables $x_2, x_4$)
+        \item Condition for solvability: $b_3 + b_2 - 5b_1 = 0$ 
+    \end{itemize}
+
+    \item Reduce $\left[U \ \boldsymbol{c}\right] \rightarrow \left[R_0 \ \boldsymbol{d}\right]$ \\ 
+    
+    $\left[U \ \boldsymbol{c}\right] \rightarrow $ 
+    $
+    \begin{bmatrix}
+        1 & 2 & 3 & 5 & b_1 \\
+        0 & 0 & 2 & 2 & b_2 - 2b_1 \\
+        0 & 0 & 0 & 0 & b_3 + b_2 - 5b_1
+    \end{bmatrix} \rightarrow
+    $
+    $
+    \begin{bmatrix}
+        1 & 2 & 3 & 5 & b_1 \\
+        0 & 0 & 1 & 1 & \frac{1}{2}b_2 - b_1 \\
+        0 & 0 & 0 & 0 & b_3 + b_2 - 5b_1
+    \end{bmatrix} \rightarrow
+    $ \\
+
+    $
+    \begin{bmatrix}
+        1 & 2 & 0 & 2 & 4b_1 - \frac{3}{2}b_2 \\
+        0 & 0 & 1 & 1 & \frac{1}{2}b_2 - b_1 \\
+        0 & 0 & 0 & 0 & b_3 + b_2 - 5b_1
+    \end{bmatrix} = \left[R_0 \ \boldsymbol{d}\right]
+    $
+
+    \item Find a particular solution (there is only one), $\boldsymbol{x_\text{p}}$, for 
+    \[ A\boldsymbol{x}= \begin{bmatrix}
+        0 \\
+        6 \\
+        -6 \\
+    \end{bmatrix}
+    \]
+
+    Note that this $\boldsymbol{b}$ was given in the problem
+    \begin{enumerate}
+        \item Set all free variables to 0 \\
+        $ x_1 + 2x_2 + 2x_4 = 4b_1 - \frac{3}{2}b_2 $ \\
+        $ x_3 + x_4 = \frac{1}{2}b_2 - b_1 $ \\
+
+        Let $x_2 = 0, x_4 = 0$ \\
+        $x_1 = 4b_1 - \frac{3}{2}b_2 $ \\
+        $x_3 = \frac{1}{2}b_2 - b_1$ \\
+        
+        \item Solve $A\boldsymbol{x} = \boldsymbol{b}$ for the pivot variables
+        
+        \[ \boldsymbol{x_\text{p}} = \begin{bmatrix}
+            4b_1 - \frac{3}{2}b_2 \\
+            0 \\
+            \frac{1}{2}b_2 - b_1 \\
+            0
+        \end{bmatrix} = \begin{bmatrix}
+            4(0) - \frac{3}{2}(6) \\
+            0 \\
+            \frac{1}{2}(6) - 0 \\
+            0
+        \end{bmatrix} = \begin{bmatrix}
+            -9 \\
+            0 \\
+            3 \\
+            0
+        \end{bmatrix}
+    \]
+    \end{enumerate}
+
+    \item Find the nullspace \\
+
+    Recall our system of linear equations (and set to 0 since we're solving nullspace):
+    \[x_1 + 2x_2 + 2x_4 = 0 \]
+    \[x_3 + x_4 = 0 \]
+
+    \begin{enumerate}
+        \item Let $x_2 = 1, x_4 = 0$. Equation 2 gives us $x_3 = 0$ and equation 1 gives us 
+        $x_1 = -2$. The result is a vector in the nullspace: \[ \boldsymbol{s_1} = \begin{bmatrix}
+            -2 \\
+            1 \\
+            0 \\
+            0
+        \end{bmatrix}
+    \]
+
+        \item Let $x_2 = 0, x_4 = 1$. Equation 2 gives us $x_3 = -1$ and equation 1 gives us 
+        $x_1 = -2$. The result is a vector in the nullspace: \[ \boldsymbol{s_2}= \begin{bmatrix}
+            -2 \\
+            0 \\
+            -1 \\
+            1
+        \end{bmatrix}
+    \]
+    For any 2 constants $c_1, c_2$, the nullspace is: 
+    \[ \boldsymbol{x_\text{n}} = c_1\boldsymbol{s_1} + c_2\boldsymbol{s_2} \]
+    
+    \end{enumerate}
+
+    \item Sum the particular and nullspace solutions to get the complete solution \\
+    
+    $\boldsymbol{x} = \boldsymbol{x_\text{p}}+ \boldsymbol{x_\text{n}} $ \\
+    
+    $\boldsymbol{x} = \begin{bmatrix}
+        -9 \\
+        0 \\
+        3 \\
+        0
+    \end{bmatrix} + c_1 \begin{bmatrix}
+        -2 \\
+        1 \\
+        0 \\
+        0
+    \end{bmatrix} + c_2 \begin{bmatrix}
+        -2 \\
+        0 \\
+        -1 \\
+        1
+    \end{bmatrix}  $
+    
+\end{enumerate}
+    
+Properties for every matrix $A$ with full column rank ($r=n$) (a pivot in every column):
+\begin{itemize}
+    \item All columns of $A$ are pivot columns (independent). No free variables
+    \item The nullspace, $N(A)$, contains only the zero vector $\boldsymbol{x} = 0$
+    \item There are 0 or 1 solutions to $A\boldsymbol{x}=\boldsymbol{b}$
+\end{itemize}
+
+Properties for every matrix $A$ with full row rank ($r=m$) (a pivot in every row):
+\begin{itemize}
+    \item All rows of $A$ are pivot rows and $R_0$ has no zero rows ($R_0 = R$). $n-r$ free 
+    variables
+    \item $A\boldsymbol{x}=\boldsymbol{b}$ has a solution for every right side $\boldsymbol{b}$
+    \item The column space of A is the whole space $\mathbb{R}^m$
+    \item If $m < n$ then $A\boldsymbol{x}=\boldsymbol{b}$ is undetermined (many solutions)
+\end{itemize}
+
+Possibilities for Linear Equations:
+\begin{enumerate}
+    \item $r=m, r=n: \text{square and invertible} \rightarrow A\boldsymbol{x}=\boldsymbol{b} 
+    \text{ has 1 solution}$
+    \item $r=m, r<n: \text{short and wide} \rightarrow A\boldsymbol{x}=\boldsymbol{b} \text{ 
+    has } \infty \text{ solutions}$
+    \item $r<m, r=n: \text{tall and thin} \rightarrow A\boldsymbol{x}=\boldsymbol{b} \text{ has
+    0 or 1 solution}$
+    \item $r<m, r<n: \text{not full rank} \rightarrow A\boldsymbol{x}=\boldsymbol{b} \text{ has
+    0 or } \infty \text{ solutions}$
+\end{enumerate}
+
+\subsection{Independence, Basis, and Dimension}
 
 \end{document}
