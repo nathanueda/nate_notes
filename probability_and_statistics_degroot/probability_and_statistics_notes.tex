@@ -258,6 +258,48 @@ probabilities of any of the others?'' \\
 \begin{itemize}
     \item Two events $A$ and $B$ are conditionally independent given $E$ if $P(A \cap B|E) =
     P(A|E)P(B|E)$
+    \item It is defined as independence but with respect to the conditional probabilities
 \end{itemize}
 
+\subsection{Bayes' Theorem}
+
+\begin{itemize}
+    \item Bayes' Theorem relates $P(A|B)$ to $P(B|A)$
+    \item This is important as often it is easier to solve either $P(A|B)$ or 
+    $P(B|A)$
+    \item It essentially tells us how to compute the conditional probability of each event in a
+    partition given an observed event $A$.
+\end{itemize}
+
+
+\textbf{Bayes' Theorem for 2 Events}
+\begin{itemize}
+    \item \[P(A|B) = \frac{P(B|A)P(A)}{P(B)}\]
+    \item It is often common to use LOTP in the denominator
+    \[P(A|B) = \frac{P(B|A)P(A)}{\sum_{i=1}^{n}P(B|A_i)P(A_i)} = 
+    \frac{P(B|A)P(A)}{P(B|A)P(A) + P(B|A^c)P(A^c)} \]
+\end{itemize}
+
+
+
+\textbf{Bayes' Theorem for $n$ Events}
+
+\[P(A_i|B)=\frac{P(B|A_i)P(A_i)}{\sum_{j=1}^{n}P(B|A_j)P(A_j)}\]
+
+\textbf{Prior vs. Posterior Probabilities}
+\begin{itemize}
+    \item Prior probabilities represent probabilities \textit{before} new evidence is 
+    introduced.
+    \begin{itemize}
+        \item $P(A)$
+    \end{itemize}
+    \item Posteror probabilities represent probabilities \textit{after} the new evidence in 
+    taken into consideration.
+    \begin{itemize}
+        \item $P(A|B)$
+    \end{itemize}
+\end{itemize}
+
+\textbf{Conditional Version of Bayes' Theorem}
+\[P(A_i|B \cap C) = \frac{P(B|A_i \cap C)P(A_i|C)}{\sum_{j=1}^{n}P(B|A_j \cap C)P(A_j|C)}\]
 \end{document}
