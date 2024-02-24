@@ -591,4 +591,85 @@ Possibilities for Linear Equations:
 
 \subsection{Independence, Basis, and Dimension}
 
+\textbf{Linear Independence} (below are different ways of saying a matrix has independent 
+columns)
+\begin{itemize}
+    \item Having independent vectors essentially means there are no extra, unnecessary vectors.
+    In other words, each vector is necessary, as no vector is a linear combination of the other
+    vectors
+    \item Different ways of saying a matrix has independent columns
+    \begin{itemize}
+        \item The columns of $A$ are linearly independent when the only solution to $A
+        \boldsymbol{x} = \boldsymbol{0}$ is $\boldsymbol{x} = \boldsymbol{0}$
+        \item The columns of $A$ are linearly independent when there is no combination of the 
+        columns of $A$, except for the zero vector, solve 
+        $A\boldsymbol{x} = \boldsymbol{0}$
+        \item The columns of $A$ are linearly independent when its nullspace, $N(A)$, contains 
+        only the zero vector
+    \end{itemize}
+\end{itemize}
+
+\textbf{Span}
+\begin{itemize}
+    \item The span of a set of vectors is defined as the set of all linear combinations of The
+    set of vectors
+    \item Saying that vectors $\boldsymbol{v_1}, \ldots, \boldsymbol{v_n}$ span a space means 
+    the space consists of all linear combinations of those vectors
+    \item In $\mathbb{R}^n$
+    \begin{itemize}
+        \item $n-1$ independent columns, cannot span all of $\mathbb{R}^n$ (that being said, 
+        they do still span a space; however, the space they span is just not all of 
+        $\mathbb{R}^n$. In fact, they would even form a basis for this space (since the columns
+        are independent))
+        \item $n$ independent columns are needed to span all of $\mathbb{R}^n$
+        \item $n+1$ vectors cannot be independent (only $n$ pivots, so even if we have $n$ 
+        pivots, one vector will still be dependent)
+    \end{itemize}
+    \item The vectors, $\boldsymbol{v_1}, \ldots, \boldsymbol{v_n}$, may or may not be 
+    independent
+    \begin{itemize}
+        \item For example, the columns of a matrix span its column space. These column vectors
+        may be dependent
+    \end{itemize}
+\end{itemize}
+
+\textbf{Basis}
+\begin{itemize}    
+    \item In the special case that vectors $\boldsymbol{v_1}, \ldots, \boldsymbol{v_n}$ are
+    independent (meaning we have just the right amount of vectors to describe the space, any 
+    less vectors and we wouldn't fully define the space, any more would be redundant), we say
+    these vector form a basis for the space. In other words, a basis is a special case of a 
+    span
+    \item More formally, a basis for a space is a sequence of vectors $\boldsymbol{v_1}, \ldots
+    , \boldsymbol{v_n}$ that have 2 properties
+    \begin{enumerate}
+        \item the vectors are independent
+        \item the vectors span the space
+    \end{enumerate}
+    \item The vectors $\boldsymbol{v_1}, \ldots, \boldsymbol{v_n}$ are a basis for $\mathbb{R}^n$
+    exactly when they are the columns of an $n$ by $n$ invertible matrix
+    \item To see if some vectors form a basis we would 
+    \begin{enumerate}
+        \item Put the vectors in the columns of a matrix
+        \item Do elimination
+        \item See if all the columns are pivot columns, if so, they form a basis, else, they 
+        don't
+    \end{enumerate}
+    \item All bases (plural for basis) for a vector space have the same number of vectors
+    \begin{itemize}
+        \item For example, there are many sets of vectors that form a basis for $\mathbb{R}^n$ 
+        and they all have $n$ vectors
+    \end{itemize}
+    
+\end{itemize}
+
+\textbf{Dimension}
+\begin{itemize}
+    \item The number of vectors in any and every basis is the dimension of the space
+    \item The dimension of the column space equals the rank of the matrix which equals the
+    number of pivot columns
+\end{itemize}
+
+\subsection{Dimensions of the Four Subspaces}
+
 \end{document}
