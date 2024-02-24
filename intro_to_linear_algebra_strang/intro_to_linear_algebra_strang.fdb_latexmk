@@ -1,6 +1,6 @@
 # Fdb version 4
-["pdflatex"] 1708747082 "/Users/nathanueda/VSCode/nate_notes/intro_to_linear_algebra_strang/intro_to_linear_algebra_strang.tex" "intro_to_linear_algebra_strang.pdf" "intro_to_linear_algebra_strang" 1708747083 0
-  "/Users/nathanueda/VSCode/nate_notes/intro_to_linear_algebra_strang/intro_to_linear_algebra_strang.tex" 1708747081 25266 52e33b3d54fb80bd1ef1a2e751853c8c ""
+["pdflatex"] 1708795521 "/Users/nathanueda/VSCode/nate_notes/intro_to_linear_algebra_strang/intro_to_linear_algebra_strang.tex" "intro_to_linear_algebra_strang.pdf" "intro_to_linear_algebra_strang" 1708795522 0
+  "/Users/nathanueda/VSCode/nate_notes/intro_to_linear_algebra_strang/intro_to_linear_algebra_strang.tex" 1708795520 27823 07110defac981a631edc90653df19557 ""
   "/usr/local/texlive/2022/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc" 1136849721 2900 1537cc8184ad1792082cd229ecc269f4 ""
   "/usr/local/texlive/2022/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/local/texlive/2022/texmf-dist/fonts/tfm/jknappen/ec/tcrm1095.tfm" 1136768653 1536 02c06700a42be0f5a28664c7273f82e7 ""
@@ -111,10 +111,10 @@
   "/usr/local/texlive/2022/texmf-var/web2c/pdftex/pdflatex.fmt" 1671485554 7874821 840c314cb1db4af42e8856a34f28e6c1 ""
   "/usr/local/texlive/2022/texmf.cnf" 1647878952 577 209b46be99c9075fd74d4c0369380e8c ""
   "imgs/triangle_inequality.png" 1706648554 20344 7c02a66944ea988b5d8ad6955b56e4a9 ""
-  "intro_to_linear_algebra_strang.aux" 1708747083 2748 74e7d68a0edb6722247c1c9da23f3122 "pdflatex"
-  "intro_to_linear_algebra_strang.out" 1708747083 3427 e7da605af67cdca3d2c92f3dedc9ae63 "pdflatex"
-  "intro_to_linear_algebra_strang.tex" 1708747081 25266 52e33b3d54fb80bd1ef1a2e751853c8c ""
-  "intro_to_linear_algebra_strang.toc" 1708747083 1447 e5db64b9dbc1a16a180dacb5efd1d7b2 "pdflatex"
+  "intro_to_linear_algebra_strang.aux" 1708795522 3005 cbca8b861de5b6e431e022d64ab93d5e "pdflatex"
+  "intro_to_linear_algebra_strang.out" 1708795522 3796 efad32a39d44dc534635d55e7916e3b6 "pdflatex"
+  "intro_to_linear_algebra_strang.tex" 1708795520 27823 07110defac981a631edc90653df19557 ""
+  "intro_to_linear_algebra_strang.toc" 1708795522 1622 efd227fb8f53f897ce3e0ab3f76d96af "pdflatex"
   (generated)
   "intro_to_linear_algebra_strang.aux"
   "intro_to_linear_algebra_strang.log"

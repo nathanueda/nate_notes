@@ -672,4 +672,66 @@ columns)
 
 \subsection{Dimensions of the Four Subspaces}
 
+\textbf{The Four Fundamental Subspaces}
+\begin{enumerate}
+    \item Column Space: $C(A^T)$
+    \item Row Space: $C(A^T)$
+    \item Nullspace: $N(A)$
+    \item Left Nullspace: $N(A^T)$
+\end{enumerate}
+
+\textbf{Column Space}
+\begin{itemize}
+    \item Contains all the combinations of the columns of a matrix, $A$
+    \item In $\mathbb{R}^m$ since each column has $m$ components
+    \item The basis for the column space is the pivot columns (number of pivot columns is the 
+    rank)
+    \item $\text{dim }C(A)=r$
+\end{itemize}
+
+\textbf{Row Space}
+\begin{itemize}
+    \item Contains all combinations of the rows of a matrix, $A$. In other words, it contains 
+    all combinations of the columns of $A^T$
+    \item In $\mathbb{R}^n$ since each row has $n$ components
+    \item The basis for the row space is the first $r$ rows of $R_0$ ($A$ has a different 
+    column space than $R_0$ but $A$ has the same row space as $R_0$ since we reached $R_0$ by 
+    doing operations on the rows)
+    \item $\text{dim }C(A^T)=r$ (same as the dimension of the column space)
+\end{itemize}
+
+\textbf{Nullspace}
+\begin{itemize}
+    \item Contains all solutions $\boldsymbol{x}$ to $A\boldsymbol{x} = \boldsymbol{0}$, 
+    including $\boldsymbol{x} = 0$
+    \item In $\mathbb{R}^m$ since each solution $\boldsymbol{x}$ has $m$ components
+    \item The basis for the nullspace is the special solutions for $A$ (for each free variable, 
+    we have one special solution)
+    \item $\text{dim }N(A)=n-r$ (number of free variables in $A$)
+\end{itemize}
+
+\textbf{Left Nullspace}
+\begin{itemize}
+    \item Contains all solutions $\boldsymbol{y}$ to $A^T\boldsymbol{y} = \boldsymbol{0}$, 
+    including $\boldsymbol{y} = 0$
+    \item This is called the left nullspace since $A^T\boldsymbol{y} = \boldsymbol{0}$ is 
+    equivalent to  $\boldsymbol{y}^T A= \boldsymbol{0}^T$ where $\boldsymbol{y}$ is acting on
+    the left
+    \item In $\mathbb{R}^n$ since each solution $\boldsymbol{y}$ has $n$ components
+    \item The basis for the left nullspace is the special solutions for $A^T$ (for each free 
+    variable, we have one special solution)
+    \item $\text{dim }N(A^T)=m-r$ (number of free variales in $A^T$)
+\end{itemize}
+
+\textbf{Misc.}
+\begin{itemize}
+    \item The row space and null space are in $\mathbb{R}^n$, have dimensions $r$ and $n-r$, 
+    and add to $n$
+    \item The column space and left nullspace are in $\mathbb{R}^m$, have dimensions $r$ and 
+    $m-r$, and add to $m$
+\end{itemize}
+
+\section{Orthogonality}
+\subsection{Orthogonality of Vectors and Subspaces}
+
 \end{document}
