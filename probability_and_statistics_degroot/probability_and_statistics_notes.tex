@@ -81,54 +81,54 @@ $A$ and $B$ cannot occur.
 
 Axioms of Probability:
 \begin{enumerate}
-    \item For every event $A$, $P(A) \ge 0$
-    \item $P(S) = 1$
-    \item $P( \bigcup_{i=1}^{\infty} A_i) = \sum_{i=1}^{\infty}P(A_i)$
+    \item For every event $A$, $P(A) \ge 0$.
+    \item $P(S) = 1$.
+    \item $P( \bigcup_{i=1}^{\infty} A_i) = \sum_{i=1}^{\infty}P(A_i)$.
 \end{enumerate}
 
 Basic Theorems:
 \begin{enumerate}
-    \item $P(\emptyset) = 0$
+    \item $P(\emptyset) = 0$.
     \item For every finite sequence of $n$ disjoint events, $A_1, \ldots, A_n$, $P( 
-    \bigcup_{i=1}^{n} A_i) = \sum_{i=1}^{n}P(A_i)$
-    \item For every event $A$, $P(A^c) = 1 - P(A)$
-    \item If $A \subset B$, then $P(A) \le P(B)$
-    \item For every event $A$, $0 \le P(A) \le 1$
-    \item For every two events $A$ and $B$, $P(A \cap B^c) = P(A) - P(A \cap B)$
-    \item For every two events $A$ and $B$, $P(A \cup B) = P(A) + P(B) - P(A \cap B)$
+    \bigcup_{i=1}^{n} A_i) = \sum_{i=1}^{n}P(A_i)$.
+    \item For every event $A$, $P(A^c) = 1 - P(A)$.
+    \item If $A \subset B$, then $P(A) \le P(B)$.
+    \item For every event $A$, $0 \le P(A) \le 1$.
+    \item For every two events $A$ and $B$, $P(A \cap B^c) = P(A) - P(A \cap B)$.
+    \item For every two events $A$ and $B$, $P(A \cup B) = P(A) + P(B) - P(A \cap B)$.
     \item Bonferroni Inequality: For all events $A_1, \ldots, A_n$, $P(\bigcap_{i=1}^{n} A_i) 
-    \ge 1 - \sum_{i=1}^{n} P(A_i^c)$
+    \ge 1 - \sum_{i=1}^{n} P(A_i^c)$.
 \end{enumerate}
 
 \subsection{Finite Sample Spaces}
 
 Simple Sample Space
 \begin{itemize}
-    \item Has a finite number ($n$) of possible outcomes
-    \item Each outcome has an equal probability ($\frac{1}{n}$)
-    \item If an event $A$ has $m$ outcomes, then $P(A) = \frac{m}{n}$
+    \item Has a finite number ($n$) of possible outcomes.
+    \item Each outcome has an equal probability ($\frac{1}{n}$).
+    \item If an event $A$ has $m$ outcomes, then $P(A) = \frac{m}{n}$.
 \end{itemize}
 
 \subsection{Counting Methods}
 
 \textbf{Multiplication Rule:} An experiment with $k$ parts where the $i$th part has $n_i$ 
 possible outcomes (regardless of which specific outcomes have occurred in the other parts) has 
-a sample space $S = n_1 n_2 \ldots n_k$ \\
+a sample space $S = n_1 n_2 \ldots n_k$. \\
 
 \textbf{Permutations ($P_{n,k}$):}
 \begin{itemize}
-    \item Number of ways to arrange a set (order matters)
-    \item Sampling considering $n$ different items and making $k$ choices from them
+    \item Number of ways to arrange a set (order matters).
+    \item Sampling considering $n$ different items and making $k$ choices from them.
     \begin{itemize}
-        \item Sampling with replacement: $n^k$
-        \item Sampling without replacement: $n(n-1) \ldots (n-k+1)$
+        \item Sampling with replacement: $n^k$.
+        \item Sampling without replacement: $n(n-1) \ldots (n-k+1)$.
         \begin{itemize}
             \item $n$ options for first choice, $n-1$ options for second choice, $n-k+1$ 
-            options for $k$th choice
+            options for $k$th choice.
         \end{itemize}
     \end{itemize}
     
-    \item The number of permutations of $n$ different items is $P_{n,n} = n$!
+    \item The number of permutations of $n$ different items is $P_{n,n} = n$!.
     \item The number of permutations of $n$ different items making $k$ choices ($0 \le k \le 
     n$) is
         \[P_{n,k} = n(n-1) \ldots (n-k+1)\]
@@ -142,7 +142,7 @@ a sample space $S = n_1 n_2 \ldots n_k$ \\
 \subsection{Combinatorial Methods}
 \textbf{Combinations ($C_{n,k}$):}
 \begin{itemize}
-    \item Number of subsets (order does not matter)
+    \item Number of subsets (order does not matter).
     \item Permutations may be thought of as combinations of size $k$ chosen out of $n$, 
     multiplied by the number of ways to arrange the size $k$ subsets, $k$!. More formally, this
     says 
@@ -152,7 +152,7 @@ a sample space $S = n_1 n_2 \ldots n_k$ \\
     except we are dividing out the number of ways we can rearrange the subsets, $k$!, since 
     order does not matter): 
         \[C_{n,k} = {n \choose k} = \frac{P_{n,k}}{k!} = \frac{\frac{n!}{(n-k)!}}{k!} =  \frac{n!}{(n-k)!k!} \]
-    \item Combinations without replacement: ${n+k-1 \choose k}$
+    \item Combinations without replacement: ${n+k-1 \choose k}$.
 \end{itemize}
 
 \subsection{Multinomial Coefficients}
@@ -182,11 +182,11 @@ n_k!}\]
 
 \begin{itemize}
     \item Conditional probability is the updating of probabilities when certain events are
-    observed
+    observed.
     \item The updated probability of event $A$ after we learn that event $B$ has occured is the
-    conditional probability of $A$ given $B$, denoted $P(A|B)$
-    \item When we go from $P(A)$ to $P(A|B)$, we say we are conditioning on $B$
-    \item For $P(B) > 0$ \[P(A|B) = \frac{P(A \cap B)}{P(B)}\]
+    conditional probability of $A$ given $B$, denoted $P(A|B)$.
+    \item When we go from $P(A)$ to $P(A|B)$, we say we are conditioning on $B$.
+    \item For $P(B) > 0$ \[P(A|B) = \frac{P(A \cap B)}{P(B)}\].
     \item Intuitively, this is saying the probability of $A$ occurring, given $B$ has occurred
     is equal to the outcomes where both $A$ and $B$ occurred (which makes sense since we know 
     $B$ has occurred and we want to find the probability of $A$ also occurring) divided by the 
@@ -215,22 +215,22 @@ n_k!}\]
     \item Tells us that to get the unconditional probability of $A$, we can divide the sample
     space into disjoint slices $B_j$, find the conditional probability of $A$ within each of 
     these slices, then take a weighted sum of the conditional probabilities, where the weights
-    are the probabilities $P(B_j)$
-    \item Often used in tandum with Bayes' Rule
-    \item Relates conditional probability to unconditional probability 
+    are the probabilities $P(B_j)$.
+    \item Often used in tandum with Bayes' Rule.
+    \item Relates conditional probability to unconditional probability .
     \item Partition: Let $S$ denote the sample space and consider $k$ events $B_1, \ldots, B_k$
     in $S$ such that $B_1, \ldots, B_k$ are disjoint and $\bigcup_{i=1}^{k}B_i = S$. Then 
     events $B_1, \ldots, B_k$ form a partition in $S$. In other words, only one of these events
-    can occur and combined they fill the entire sample space
+    can occur and combined they fill the entire sample space.
     \item Suppose events $B_1, \ldots, B_k$ form a partition of the space $S$ and $P(B_j) > 0$
     for $j = 1, \ldots, k$. Then \[P(A) = \sum_{j=1}^{k} P(B_j \cap A) = \sum_{j=1}^{k} P(B_j)
-    P(A|B_j)\]
-    \item Conditional LOTP \[P(A|C)= \sum_{j=1}^{k}P(B_j|C)P(A|B_j \cap C)\]
+    P(A|B_j)\].
+    \item Conditional LOTP \[P(A|C)= \sum_{j=1}^{k}P(B_j|C)P(A|B_j \cap C)\].
 \end{itemize}
 
 \subsection{Independent Events}
 
-\textbf{Independence of Two Events:}
+\textbf{Independence of 2 Events:}
 \begin{itemize}
     \item Two events are independent if learning that one occurred does not change the
     probability of the other event.
@@ -245,7 +245,7 @@ n_k!}\]
 \begin{itemize}
     \item For $k$ events, if knowing what happened with any particular subset of the events 
     gives us no information about what happened with the events not in the subset, the events
-    are independent
+    are independent.
     \item $k$ events are (mutually) independent if 
     \begin{itemize}
         \item Any pair $P(A_i \cap A_j) = P(A_i)P(A_j) \text{ for } i \ne j$ 
@@ -263,20 +263,19 @@ probabilities of any of the others?'' \\
 \textbf{Conditional Independence:}
 \begin{itemize}
     \item Two events $A$ and $B$ are conditionally independent given $E$ if $P(A \cap B|E) =
-    P(A|E)P(B|E)$
-    \item It is defined as independence but with respect to the conditional probabilities
+    P(A|E)P(B|E)$.
+    \item It is defined as independence but with respect to the conditional probabilities.
 \end{itemize}
 
 \subsection{Bayes' Theorem}
 
 \begin{itemize}
-    \item Bayes' Theorem relates $P(A|B)$ to $P(B|A)$
-    \item This is important as often it is easier to solve either $P(A|B)$ or 
-    $P(B|A)$
+    \item Bayes' Theorem relates $P(A|B)$ to $P(B|A)$.
+    \item This is important as often it is easier to solve either $P(A|B)$ or $P(B|A)$.
     \item Suppose that we are interested in which of several disjoint events $A_1, \ldots, A_k$
     will occur and that we will get to observe some other event $B$. If $P(B|A_i)$ is available
     for each $i$, then Bayes' theorem is a useful formula for computing the conditional 
-    probabilities of the $A_i$ events given $B$, that is, $P(A_i|B)$ for each $i$
+    probabilities of the $A_i$ events given $B$, that is, $P(A_i|B)$ for each $i$.
 \end{itemize}
 
 
@@ -310,4 +309,151 @@ probabilities of any of the others?'' \\
 
 \textbf{Conditional Version of Bayes' Theorem}
 \[P(A_i|B \cap C) = \frac{P(B|A_i \cap C)P(A_i|C)}{\sum_{j=1}^{n}P(B|A_j \cap C)P(A_j|C)}\]
+
+\subsection{The Gambler's Ruin Problem}
+
+\textbf{High Level Problem Overview:} Consider two gamblers with finite resources who 
+repeatedly play the same game against each other. Using the tools of conditional probability, 
+we can calculate the probability that each of the gamblers will eventually lose all of his 
+money to the opponent. As this game ends only when one of the gamblers has no money left, this
+problem is fittingly called, the Gambler's Ruin problem. \\
+
+\textbf{Problem Statement}
+\begin{itemize}
+    \item Two gamblers, $A$ and $B$, make \$1 bets each round.
+    \item $A$ has a probability $p$ of winning, $B$ has probability $1-p$ of winning.
+    \item $A$ starts with $k$ dollars, $B$ starts with $k-i$ dollars, for a combined fortune of
+    $k$.
+    \item The game continues until one of the gamblers has 0 dollars left.
+    \item The goal is to determine the probability that $A$ will reach $k$ dollars before 0.
+\end{itemize}
+
+\section{Random Variables and Distributions}
+\subsection{Random Variables and Discrete Distributions}
+
+\textbf{Random Variables}
+\begin{itemize}
+    \item A function that maps each outcome in the sample space to the real line.
+    \item Two main types of random variables: discrete and continuous random variables.
+    \item Main tool used for modeling unknown quantities in statistical analysis.
+\end{itemize}
+
+\textbf{Distributions}
+\begin{itemize}
+    \item A distribution specifies the probabilities of all events associated with a random
+    variable (maps outcomes to probabilities).
+\end{itemize}
+
+\textbf{Discrete Distributions}
+\begin{itemize}
+    \item Distributions that assign positive probability to at most countably many different
+    values.
+    \item Discrete distributions can be characterized by its probability function (p.f.) aka
+    probability mass function (p.m.f).
+\end{itemize}
+
+\textbf{Discrete Random Variables}
+\begin{itemize}
+    \item A random variable with a discrete distribution.
+    \item Is a discrete r.v. if the r.v. can take only a finite number $k$ of different values
+    $x_1, \ldots x_k$ or, at most, an infinite sequence of different values $x_1, x_2, \ldots $
+\end{itemize}
+
+\textbf{Probability Function}
+\begin{itemize}
+    \item A function that describes the probabilities of different values of a r.v.
+    \item For a discrete r.v., the p.f. of $X$ is defined as the function $f$ such that for 
+    every real number $x$, \[f(x)=P(X=x)\]
+    \item If $x$ is not a possible value of $X$, then $f(x)=P(X=x)=0$
+    \item The support of $X$ is all values $x$ such that $f(x)=P(X=x)>0$.
+    \item To be a valid p.f.
+    \begin{itemize}
+        \item The probabilities of all possible outcomes of $X$ sum to 1. More formally, if the
+        sequence $x_1, x_2, \ldots$ includes all the possible values of $X$, then $\sum_{i=1}^
+        {\infty} f(x_i) = 1$.
+        \item All possible values of $X$ have a probability greater than 0 and all other values 
+        have a probability of 0.
+    \end{itemize}
+    \item A p.f. is only for discrete distributions.
+\end{itemize}
+
+\textbf{Example}
+    \begin{itemize}
+        \item In an experiment in which a fair coin is tossed 2 times, we can define a random 
+        variable $X$ to represent the number of heads in each outcome.
+        \item The possible outcomes in the sample space are $S = \{TT, HT, TH, HH\}$.
+        \item $X(TT)=0,\ X(TH)=1,\  X(HT)=1,\ X(HH)=2$.
+        \item Therefore, the p.f. of $X$ is the function $f$ given by 
+        \begin{itemize}
+            \item $f(0) = P(X=0) = 1/4 $
+            \item $f(1) = P(X=1) = 1/2 $
+            \item $f(2) = P(X=2) = 1/4 $
+        \end{itemize}
+    \end{itemize} 
+
+\textbf{Common Named Distributions}
+\begin{itemize}
+    \item Some random variables has distributions that occur so frequently they are given 
+    names. 
+    \item These common named distributions represent a family of distributions (for example, 
+    there are a family of Bernoulli distributions, not just one). What allows us to determine 
+    the specific distribution we have (the specific Bernoulli distribution we have), are 
+    parameters (for Bernoulli, this is the value for $p$)
+\end{itemize}
+
+\textbf{Bernoulli Distributions}
+\begin{itemize}
+    \item A distribution of the probabilities of a single experiment asking a yes-no question.
+    \item A r.v. $X$ that takes on only two values 1 and 0 (success and failure).
+    \item Has one parameter, $p$.
+    \item Written $X \sim \text{Bern}(p)$.
+    \item p.f. of $X$
+    \[ P(X=x) = f(x) = \begin{cases} 
+        p & \text{for } x=1 \\
+        1-p & \text{for } x=0 \\
+        0 & \text{otherwise}
+     \end{cases}
+  \]
+\end{itemize}
+
+\textbf{Discrete Uniform Distributions}
+\begin{itemize}
+    \item A distribution where each outcome for the r.v. has an equally likely probability.
+    \item A r.v. $X$ where, for 2 integers $a,b$ where $a \le b$, the value of $X$ is equally 
+    likely to be each of the integers $a, \ldots, b$.
+    \item A uniform distribution on a set of $k$ integers has probability of $1/k$ on each 
+    integer.
+    \item Has two parameters, $a,b$.
+    \item Written $X \sim \text{DUnif}(a,b)$.
+    \item p.f. of $X$
+    \[ P(X=x) = f(x) = \begin{cases} 
+        \frac{1}{b-a+1} & \text{for } x=a, \ldots, b \\
+        0 & \text{otherwise}
+     \end{cases}
+  \]
+\end{itemize}
+
+\textbf{Binomial Distributions}
+\begin{itemize}
+    \item A distribution that is based upon a r.v. denoting the number of successes in $n$ 
+    independent Bernoulli trials (an experiment that can end only in success or failure).
+    \item Suppose that $n$ independent Bernoulli trials  are performed, each with success 
+    probability $p$. If we let $X$ be the number of success, then the distribution of $X$ is 
+    called the Binomial distribution with parameters $n$ and $p$. 
+    \item Has two parameters, $n, p$.
+    \item Written $X \sim \text{Bin}(n,p)$.
+    \item p.f. of $X$
+    \[ P(X=x) = f(x) = \begin{cases} 
+        {n \choose x}p^x{(1-p)}^{n-x} & \text{for } x=0, \ldots, n \\
+        0 & \text{otherwise}
+     \end{cases}
+  \]
+  \begin{itemize}
+    \item The probability of obtaining exactly $x$ successes and $n-x$ failures is $p^x{(1-p)}
+    ^{n-x}$. Since there are ${n \choose x}$ ways of ordering this, its follows that $P(X=x)=
+    {n \choose x}p^x{(1-p)}^{n-x}$.
+  \end{itemize}
+  \item The Bernoulli distribution is just a special case of the Binomial distribution where 
+  $n=1$, that is, Bin$(1, p)$.
+\end{itemize}
 \end{document}
