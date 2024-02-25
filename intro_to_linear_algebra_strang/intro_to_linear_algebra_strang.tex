@@ -734,4 +734,54 @@ columns)
 \section{Orthogonality}
 \subsection{Orthogonality of Vectors and Subspaces}
 
+\textbf{Orthogonality of Vectors}
+\begin{itemize}
+    \item 2 vectors are orthogonal when they are perpendicular to each other.
+    \item 2 vectors $\boldsymbol{v}, \boldsymbol{w}$ are orthogonal when their dot product is 0,
+    that is, $\boldsymbol{v}^T\boldsymbol{w}=0$ (since 90 degree angles between 2 vectors have
+    a dot product of 0).
+    \item If 2 vectors $\boldsymbol{v}, \boldsymbol{w}$ are orthogonal, they form a right 
+    triangle and the Pythagorean theorem holds, that is, $\|\boldsymbol{v}\|^2 + 
+    \|\boldsymbol{w}\|^2 = \|\boldsymbol{v} + \boldsymbol{w}\|^2$, where $\boldsymbol{v} + 
+    \boldsymbol{w}$ is the hypotenuse.
+    \item The zero vector is orthogonal to every vector. 
+    
+\end{itemize}
+
+\textbf{Orthogonality of Subspaces}
+\begin{itemize}
+    \item Subspaces $V$ and $W$ are orthogonal when $\boldsymbol{v}^T\boldsymbol{w}=0$ for 
+    every $\boldsymbol{v} \in V$ and every $\boldsymbol{w} \in W$.
+    \item The nullspace of $A$ is orthogonal to the row space of $A$.
+    \begin{itemize}
+        \item For $A\boldsymbol{x}=0$ recall $\boldsymbol{x}$ denotes vectors in the nullspace.
+        \item Every row has a zero dot product with $\boldsymbol{x}$, therefore every 
+        combination of the rows is perpendicular to $\boldsymbol{x}$.
+        \item This shows the whole row space is orthogonal to the whole nullspace.
+    \end{itemize}
+    \item The left nullspace of $A$ is orthogonal to the column space of $A$.
+    \begin{itemize}
+        \item This can be seen by applying the same logic as above.
+    \end{itemize}
+    \item The only vector in 2 orthogonal subspaces is the zero vector. 
+\end{itemize}
+
+\textbf{Orthogonal Complements}
+\begin{itemize}
+    \item If two orthogonal subspaces account for the whole space (their dimensions add to the 
+    whole space), they are orthogonal complements.
+    \item 2 orthogonal lines in $\mathbb{R}^3$ could not be orthogonal complements because 
+    their summed dimensions is 2 instead of 3.
+    \item A line orthogonal to a plane in $\mathbb{R}^3$ are orthogonal complements because 
+    their summed dimensions is 3.
+    \item The orthogonal complement $V^\perp$ of $V$ contains all vectors orthogonal to $V$.
+    \item The nullspace (dim $n-r$) is the orthogonal complement of the row space (dim $r$) (in 
+    $\mathbb{R}^n$)
+    \item The left nullspace (dim $m-r$) is the orthogonal complement of the column space (dim 
+    $r$) (in $\mathbb{R}^m$)
+\end{itemize}
+
+\subsection{Projections onto Lines and Subspaces}
+
+
 \end{document}

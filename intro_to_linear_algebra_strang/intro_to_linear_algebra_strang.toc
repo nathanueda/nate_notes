@@ -15,3 +15,4 @@
 \contentsline {subsection}{\numberline {3.5}Dimensions of the Four Subspaces}{13}{subsection.3.5}%
 \contentsline {section}{\numberline {4}Orthogonality}{14}{section.4}%
 \contentsline {subsection}{\numberline {4.1}Orthogonality of Vectors and Subspaces}{14}{subsection.4.1}%
+\contentsline {subsection}{\numberline {4.2}Projections onto Lines and Subspaces}{15}{subsection.4.2}%
