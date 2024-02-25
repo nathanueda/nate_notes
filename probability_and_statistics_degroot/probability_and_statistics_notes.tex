@@ -25,9 +25,11 @@
 
 \section{Introduction to Probability}
 \subsection{The History of Probability}
+The use of probability to measure uncertainty and variability dates back hundredes of years.
+
 \subsection{Interpretations of Probability}
 
-Probability Interpretations
+\textbf{Probability Interpretations}
 \begin{itemize}
     \item Frequency: If an experiment is carried out many times, the frequency with which a
     particular outcome occurred would define its probability.
@@ -43,9 +45,10 @@ Probability theory does not depend on intepretation.
 Probability allows us to quantify how likely an outcome is to occur. \\
 
 \textbf{Experiments:} Any process in which the possible outcomes can be identified ahead of time.
-\textbf{Events:} A well defined set of possible outcomes of the experiment. \\
+\textbf{Events:} A well defined set of possible outcomes of the experiment (such as rolling an 
+even number on a fair dice). \\
 
-Although there is controvery in regard to the proper meaning and interpration of some of the
+Although there is controversy in regard to the proper meaning and interpration of some of the
 probabilities that are assigned to the outcomes of many experiements, once these probabilities
 are assigned, there is complete agreemenet upon the mathematical theory of probability. \\
 
@@ -145,7 +148,9 @@ a sample space $S = n_1 n_2 \ldots n_k$ \\
     says 
     \[ P_{n,k} = C_{n,k} k!\]
     \item Combinations (binomial coefficient) are the number of distinct subsets of size $k$ 
-    that can be chosen from a set of size $n$: 
+    that can be chosen from a set of size $n$ (this is the same formula as for permutations,
+    except we are dividing out the number of ways we can rearrange the subsets, $k$!, since 
+    order does not matter): 
         \[C_{n,k} = {n \choose k} = \frac{P_{n,k}}{k!} = \frac{\frac{n!}{(n-k)!}}{k!} =  \frac{n!}{(n-k)!k!} \]
     \item Combinations without replacement: ${n+k-1 \choose k}$
 \end{itemize}
@@ -210,8 +215,9 @@ n_k!}\]
     \item Tells us that to get the unconditional probability of $A$, we can divide the sample
     space into disjoint slices $B_j$, find the conditional probability of $A$ within each of 
     these slices, then take a weighted sum of the conditional probabilities, where the weights
-    are the probabilities $P(B_i)$
+    are the probabilities $P(B_j)$
     \item Often used in tandum with Bayes' Rule
+    \item Relates conditional probability to unconditional probability 
     \item Partition: Let $S$ denote the sample space and consider $k$ events $B_1, \ldots, B_k$
     in $S$ such that $B_1, \ldots, B_k$ are disjoint and $\bigcup_{i=1}^{k}B_i = S$. Then 
     events $B_1, \ldots, B_k$ form a partition in $S$. In other words, only one of these events
@@ -267,8 +273,10 @@ probabilities of any of the others?'' \\
     \item Bayes' Theorem relates $P(A|B)$ to $P(B|A)$
     \item This is important as often it is easier to solve either $P(A|B)$ or 
     $P(B|A)$
-    \item It essentially tells us how to compute the conditional probability of each event in a
-    partition given an observed event $A$.
+    \item Suppose that we are interested in which of several disjoint events $A_1, \ldots, A_k$
+    will occur and that we will get to observe some other event $B$. If $P(B|A_i)$ is available
+    for each $i$, then Bayes' theorem is a useful formula for computing the conditional 
+    probabilities of the $A_i$ events given $B$, that is, $P(A_i|B)$ for each $i$
 \end{itemize}
 
 
