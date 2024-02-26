@@ -456,4 +456,58 @@ problem is fittingly called, the Gambler's Ruin problem. \\
   \item The Bernoulli distribution is just a special case of the Binomial distribution where 
   $n=1$, that is, Bin$(1, p)$.
 \end{itemize}
+
+\subsection{Continuous Distributions}
+
+\textbf{Continuous Distributions}
+\begin{itemize}
+    \item Distributions that have a range of values that are uncountably infinite. 
+    \item Continuous distributions can be characterized by its probability density function 
+    (p.d.f.)
+    \item Assign probability 0 to individual values, that is, $P(X=x)=0$ for every number $x$.
+\end{itemize}
+
+\textbf{Continuous Random Variables}
+\begin{itemize}
+    \item A random variable with a continuous distribution.
+\end{itemize}
+
+\textbf{Probability Density Function}
+\begin{itemize}
+    \item A nonnegative function $f$ for a r.v. $X$ such that the integral of $f$ over each 
+    interval $[a,b]$ gives the probability that $X$ is in the interval, that is, $P(a \le X 
+    \le b) = \int_{a}^{b} f(x) \,dx$.
+    \item Similarly, $P(X \ge a) = \int_{a}^{\infty} f(x) \,dx$ and $P(X \le b) = \int_
+    {-\infty}^{b} f(x) \,dx$.
+    \item Density is not probability (density can be greater than 1). The p.d.f. of $X$, 
+    $f(x)$, itself is not the probability that $X$ is near $x$, instead, the integral of $f$ 
+    over values near x gives the probability that $X$ is near $x$, and the integral is never 
+    greater than 1.
+    \item Since the endpoints have probability 0, for an interval $(a,b)$, $P(a < X < b) = 
+    P(a \le X \le b) = P(a < X \le b) =  P(a \le X < b)$
+    \item The support of $X$ is all values $x$ such that $f(x)=P(X=x)>0$.
+    \item To be a valid p.d.f.
+    \begin{itemize}
+        \item The p.d.f. of $X$ must integrate to 1, that is, $\int_{-\infty}^{\infty} f(x)=1$.
+        \item For all $x$, $f(x) \ge 0$.
+    \end{itemize}
+    \item To get a desired probability, integrate the p.d.f. over the appropriate range.
+    \item In general, we can think of $f(x) \,dx$ as the probability of $X$ being in an 
+    infinitesimally small interval containing $x$, of length $\,dx$,
+\end{itemize}
+
+\textbf{Uniform Distributions}
+\begin{itemize}
+    \item A Uniform r.v. on the interval $(a,b)$ is a completely random number, which speicifies 
+    that the p.d.f. is constant over the interval.
+    \item Has two parameters, $a,b$.
+    \item Written $X \sim \text{Unif}(a,b)$.
+    \item p.d.f. of $X$
+    \[ f(x) = \begin{cases} 
+        \frac{1}{b-a} & \text{for } a \le x \le b \\
+        0 & \text{otherwise}
+     \end{cases}
+  \]
+\end{itemize}
+
 \end{document}
