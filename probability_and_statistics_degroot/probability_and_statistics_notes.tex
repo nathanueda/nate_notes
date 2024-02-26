@@ -510,4 +510,24 @@ problem is fittingly called, the Gambler's Ruin problem. \\
   \]
 \end{itemize}
 
+\textbf{Normalizing Constants}
+\begin{itemize}
+    \item Often, we will have a p.d.f without a specified value for $c$, 
+    the normalizing constant. 
+    \item This happens especially often when we find sampling distributions 
+    of summaries of observed data where we can determine the p.d.f of a 
+    r.v. except for the constant factor.
+    \item The constant is unique.
+    \item Using the fact that the p.d.f must integrate to 1, we can solve 
+    for $c$.
+    \item Example:
+    \[\int_{0}^{4}cx \,dx = 1\]
+    \[c\int_{0}^{4}x \,dx = 1\]
+    \[c\frac{x^2}{2}\rvert_0^4 = 1\]
+    \[c\left(\frac{4^2}{2}-0\right)= 1\]
+    \[c\left(\frac{16}{2}\right)= 1\]
+    \[8c= 1\]
+    \[c= \frac{1}{8}\]
+\end{itemize}
+
 \end{document}
