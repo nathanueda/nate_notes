@@ -776,12 +776,105 @@ columns)
     their summed dimensions is 3.
     \item The orthogonal complement $V^\perp$ of $V$ contains all vectors orthogonal to $V$.
     \item The nullspace (dim $n-r$) is the orthogonal complement of the row space (dim $r$) (in 
-    $\mathbb{R}^n$)
+    $\mathbb{R}^n$).
     \item The left nullspace (dim $m-r$) is the orthogonal complement of the column space (dim 
-    $r$) (in $\mathbb{R}^m$)
+    $r$) (in $\mathbb{R}^m$).
 \end{itemize}
 
 \subsection{Projections onto Lines and Subspaces}
+
+\textbf{Why Project?}
+\begin{itemize}
+    \item $A\boldsymbol{x}=\boldsymbol{b}$ may have no solution ($A \boldsymbol{x}$ may not be 
+    in the column space of $\boldsymbol{b}$).
+    \item Therefore, the plan is to solve the closest problem we can.
+    \item Clearly, $A\boldsymbol{x}$ is in the column space of $A$, which, in this case, is not
+    the same as the column space of $\boldsymbol{b}$.
+    \item Therefore, we will change $\boldsymbol{b}$ to the vector that is closest to the 
+    column space of $A$.
+    \item Instead, we solve $A\boldsymbol{\hat{x}}=\boldsymbol{p}$, where $\boldsymbol{p}$ is 
+    the projection of $\boldsymbol{b}$ onto the column space of $A$.
+    \item Summary: If $A\boldsymbol{x}=\boldsymbol{b}$ has no solution, solve $A\boldsymbol{
+    \hat{x}}=\boldsymbol{p}$, which is the closest problem to $A\boldsymbol{x}=\boldsymbol{b}$ 
+    that has a solution.
+\end{itemize} 
+
+\textbf{Projection on a Line}
+\begin{itemize}
+    \item Given 2 vectors, $\boldsymbol{a}, \boldsymbol{b}$ as depicted below
+    \begin{figure}[H] 
+        \centering 
+        \includegraphics[width=3in]{imgs/line_projection.png}
+        \caption{2 vectors $\boldsymbol{a}, \boldsymbol{b}$}
+    \end{figure}
+    \item The projection of $\boldsymbol{b}$ onto $\boldsymbol{a}$ is the closest point from
+    $\boldsymbol{b}$ to $\boldsymbol{a}$ (the dotted line perpendicular to 
+    $\boldsymbol{a}$ going toward the tip of $\boldsymbol{b}$).
+    \item The projection $\boldsymbol{p}$ of is the part of $\boldsymbol{b}$ that is along the 
+    line.
+    \item The projection $\boldsymbol{p}$ is some multiple of $\boldsymbol{a}$, let's call it 
+    $\boldsymbol{\hat{x}}$, that is, $\boldsymbol{p}=\boldsymbol{\hat{x}}\boldsymbol{a}$.
+    \item The error (the part of $\boldsymbol{b}$ that is not part of the projection), which is
+    perpendicular to $\boldsymbol{a}$, is $\boldsymbol{e} = \boldsymbol{b} - \boldsymbol{p} = 
+    \boldsymbol{b} - \boldsymbol{\hat{x}}\boldsymbol{a}$.
+    \item Since $\boldsymbol{a} \perp \boldsymbol{p}, \boldsymbol{a}^T \boldsymbol{p} = 
+    \boldsymbol{a}^T (\boldsymbol{b} - \boldsymbol{\hat{x}}\boldsymbol{a}) = 0 $.
+    \item Simplifying, we get $\boldsymbol{\hat{x}} = \frac{\boldsymbol{a}^T \boldsymbol{b}}{
+    \boldsymbol{a}^T\boldsymbol{a}}$.
+    \item Since $\boldsymbol{p} = \boldsymbol{\hat{x}}\boldsymbol{a}, \boldsymbol{p} = \frac
+    {\boldsymbol{a}^T \boldsymbol{b}}{\boldsymbol{a}^T\boldsymbol{a}} \boldsymbol{a}$.
+    \item Doing some slight rearranging, we can see the projection is carried out by a matrix,
+    which we will denote $P$. In this case, we have $\boldsymbol{p} = \frac{\boldsymbol{a}^T 
+    \boldsymbol{b}}{\boldsymbol{a}^T\boldsymbol{a}} \boldsymbol{a} = \frac{\boldsymbol{a}^T 
+    \boldsymbol{a}}{\boldsymbol{a}^T\boldsymbol{a}} \boldsymbol{b} = P\boldsymbol{b}$.
+\end{itemize}
+
+\textbf{Properties of $P$}
+\begin{itemize}
+    \item Symmetric: $P=P^T$.
+    \item Its square is itself: $P^2=P$.
+\end{itemize}
+
+\textbf{Projection on a Plane}
+\begin{itemize}
+    \item Given a vector, $\boldsymbol{b}$ and the column space of $A, \ S$ as depicted below
+    \begin{figure}[H] 
+        \centering 
+        \includegraphics[width=3in]{imgs/plane_projection.png}
+        \caption{vectors $\boldsymbol{a}$, column space of $A, \ S$}
+    \end{figure}
+    \item Since $A$ is a plane, the matrix of $A$ is made up of 2 independent vectors, that is,
+    \[ A= \begin{bmatrix}
+        \boldsymbol{a_1} & \boldsymbol{a_2}
+    \end{bmatrix} \]
+    where $\boldsymbol{a_1}, \boldsymbol{a_2}$ form a basis for $A$.
+    \item The projection of $\boldsymbol{b}$ onto $S$ is the closest point from $\boldsymbol{b}
+    $ to $S$ (the dotted line perpendicular to $S$ going toward the tip of $\boldsymbol{b}$).
+    \item The projection $\boldsymbol{p}$ of is the part of $\boldsymbol{b}$ that is along the 
+    plane.
+    \item The projection $\boldsymbol{p}$ is some multiple of $A$, let's call it 
+    $\boldsymbol{\hat{x}}$, that is, $\boldsymbol{p}=\boldsymbol{\boldsymbol{\hat{x_1}}}
+    \boldsymbol{a_1} + \boldsymbol{\hat{x_2}}\boldsymbol{a_2} = 
+    A\boldsymbol{\hat{x}}$.
+    \item The error (the part of $\boldsymbol{b}$ that is not part of the projection), which is
+    perpendicular to $S$, is $\boldsymbol{e} = \boldsymbol{b} - \boldsymbol{p} = 
+    \boldsymbol{b} - A\boldsymbol{\hat{x}}$.
+    \item Since $\boldsymbol{S} \perp \boldsymbol{p}$
+    \[ \boldsymbol{a}_1^T \boldsymbol{p} = \boldsymbol{a}_1^T (\boldsymbol{b} - A
+    \boldsymbol{\hat{x}}) = 0 \]
+    \[ \boldsymbol{a}_2^T \boldsymbol{p} = \boldsymbol{a}_2^T (\boldsymbol{b} - A
+    \boldsymbol{\hat{x}}) = 0 \]
+    \[ A^T(\boldsymbol{b} - A\boldsymbol{\hat{x}}) = 0\]
+    \[ A^T A\boldsymbol{\hat{x}} = A^T \boldsymbol{b}\]
+    \item Simplifying, we get $\boldsymbol{\hat{x}} = {(A^T A)}^{-1} A^T \boldsymbol{b}$.
+    \item Since $\boldsymbol{p} = A\boldsymbol{\hat{x}}, \boldsymbol{p} = A{(A^T A)}^{-1} A^T 
+    \boldsymbol{b}$.
+    \item Doing some slight rearranging, we can see the projection is carried out by a matrix,
+    which we will denote $P$. In this case, we have $\boldsymbol{p} = A{(A^T A)}^{-1} A^T 
+    \boldsymbol{b} = P\boldsymbol{b}$.
+    \item This idea easily extends to $n$ vectors.
+
+\end{itemize}
 
 
 \end{document}

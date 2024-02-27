@@ -1,6 +1,6 @@
 # Fdb version 4
-["pdflatex"] 1708889070 "/Users/nathanueda/VSCode/nate_notes/intro_to_linear_algebra_strang/intro_to_linear_algebra_strang.tex" "intro_to_linear_algebra_strang.pdf" "intro_to_linear_algebra_strang" 1708889071 0
-  "/Users/nathanueda/VSCode/nate_notes/intro_to_linear_algebra_strang/intro_to_linear_algebra_strang.tex" 1708889070 30340 3175d3c20836b08da9aecad8116c0bf9 ""
+["pdflatex"] 1708995564 "/Users/nathanueda/VSCode/nate_notes/intro_to_linear_algebra_strang/intro_to_linear_algebra_strang.tex" "intro_to_linear_algebra_strang.pdf" "intro_to_linear_algebra_strang" 1708995565 0
+  "/Users/nathanueda/VSCode/nate_notes/intro_to_linear_algebra_strang/intro_to_linear_algebra_strang.tex" 1708995563 35596 a93f5a6f14f1e1d1247e0234326feb0b ""
   "/usr/local/texlive/2022/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc" 1136849721 2900 1537cc8184ad1792082cd229ecc269f4 ""
   "/usr/local/texlive/2022/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/local/texlive/2022/texmf-dist/fonts/tfm/jknappen/ec/tcrm1095.tfm" 1136768653 1536 02c06700a42be0f5a28664c7273f82e7 ""
@@ -39,6 +39,7 @@
   "/usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx8.pfb" 1248133631 32166 b0c356b15f19587482a9217ce1d8fa67 ""
   "/usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb" 1248133631 30251 6afa5cb1d0204815a708a080681d4674 ""
   "/usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb" 1248133631 36299 5f9df58c2139e7edcf37c8fca4bd384d ""
+  "/usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb" 1248133631 37166 8ab3487cbe3ab49ebce74c29ea2418db ""
   "/usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb" 1248133631 35469 70d41d2b9ea31d5d813066df7c99281c ""
   "/usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmib10.pfb" 1248133631 36912 b448ef9ad9d7228ec3c6e71005136d55 ""
   "/usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb" 1248133631 35752 024fb6c41858982481f6968b5fc26508 ""
@@ -110,11 +111,13 @@
   "/usr/local/texlive/2022/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1671485474 4623329 5e28269c2aee4b9e2f0ef6bdcff03654 ""
   "/usr/local/texlive/2022/texmf-var/web2c/pdftex/pdflatex.fmt" 1671485554 7874821 840c314cb1db4af42e8856a34f28e6c1 ""
   "/usr/local/texlive/2022/texmf.cnf" 1647878952 577 209b46be99c9075fd74d4c0369380e8c ""
+  "imgs/line_projection.png" 1708987133 79851 3ee2b9ba38b21d4a84b12cf0b2a04490 ""
+  "imgs/plane_projection.png" 1708990078 96625 da39f61163480fae562621d37d25ffd4 ""
   "imgs/triangle_inequality.png" 1706648554 20344 7c02a66944ea988b5d8ad6955b56e4a9 ""
-  "intro_to_linear_algebra_strang.aux" 1708889071 3149 5f0078c8e66ceaf2d6f2ce93e75d6b3c "pdflatex"
-  "intro_to_linear_algebra_strang.out" 1708889071 4046 7aeaaecd1c0423373ccf8bce1eec92d1 "pdflatex"
-  "intro_to_linear_algebra_strang.tex" 1708889070 30340 3175d3c20836b08da9aecad8116c0bf9 ""
-  "intro_to_linear_algebra_strang.toc" 1708889071 1725 4e54e9856cd0031aa4d52b4f824e93f6 "pdflatex"
+  "intro_to_linear_algebra_strang.aux" 1708995565 3471 aa92dee2865dd2eca13c3f677ac99c2d "pdflatex"
+  "intro_to_linear_algebra_strang.out" 1708995565 4046 7aeaaecd1c0423373ccf8bce1eec92d1 "pdflatex"
+  "intro_to_linear_algebra_strang.tex" 1708995563 35596 a93f5a6f14f1e1d1247e0234326feb0b ""
+  "intro_to_linear_algebra_strang.toc" 1708995565 1725 4e54e9856cd0031aa4d52b4f824e93f6 "pdflatex"
   (generated)
   "intro_to_linear_algebra_strang.aux"
   "intro_to_linear_algebra_strang.log"

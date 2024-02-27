@@ -612,6 +612,16 @@ INPUT ./imgs/triangle_inequality.png
 INPUT imgs/triangle_inequality.png
 INPUT ./imgs/triangle_inequality.png
 INPUT ./imgs/triangle_inequality.png
+INPUT ./imgs/line_projection.png
+INPUT ./imgs/line_projection.png
+INPUT imgs/line_projection.png
+INPUT ./imgs/line_projection.png
+INPUT ./imgs/line_projection.png
+INPUT ./imgs/plane_projection.png
+INPUT ./imgs/plane_projection.png
+INPUT imgs/plane_projection.png
+INPUT ./imgs/plane_projection.png
+INPUT ./imgs/plane_projection.png
 INPUT intro_to_linear_algebra_strang.aux
 INPUT ./intro_to_linear_algebra_strang.out
 INPUT ./intro_to_linear_algebra_strang.out
@@ -621,6 +631,7 @@ INPUT /usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.p
 INPUT /usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx8.pfb
 INPUT /usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb
 INPUT /usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb
+INPUT /usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb
 INPUT /usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb
 INPUT /usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmib10.pfb
 INPUT /usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmmib8.pfb
