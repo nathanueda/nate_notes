@@ -530,4 +530,84 @@ problem is fittingly called, the Gambler's Ruin problem. \\
     \[c= \frac{1}{8}\]
 \end{itemize}
 
+\subsection{The Cumulative Distribution Function}   
+
+\textbf{Cumulative Distribution Function}
+\begin{itemize}
+    \item A function of a r.v. $X$, denoted $F$, that gives the probability that the r.v. is 
+    less than or equal to $x$ \[F(x)=P(X \le x) \text{ for } -\infty < x < \infty\]
+    \item While a p.f is defined only for discrete r.v.s and a p.d.f is defined for only 
+    continuous r.v.s, a c.d.f. is defined for both discrete and continuous r.v.'s.
+    \item The c.d.f. is another way of characterizing the distribution of a r.v.
+    \item The value of $F$ at every point $x$ must be a number $F(x)$ in the interval $[0,1]$
+    because $F(x)$ is the probability of the event ${X \le x}$.
+    \item For every value $x$
+    \[P(X > x) = 1 - F(x)\]
+    \item For all values $x_1$ and $x_2$ such that $x_1 < x_2$
+    \[P(x_1 < X \le x_2) = F(x_2) - F(x_1)\]
+    \item For each value $x$
+    \[P(X < x) = F(x^-)\]
+    \item For every value $x$
+    \[P(X=x) = F(x) - F(x^-)\]
+    \begin{itemize}
+        \item For every value $x$, $P(X=x)$ is equal to the amount of the jump that occurs in 
+        $F$ at the point $x$. If $F$ is continuous at that point $x$, that is, if there is no 
+        jump in $F$ at $x$ ($F(x^-)=F(x^+)=F(x)$), then $P(X=x)=0$.
+    \end{itemize}
+\end{itemize}
+
+\textbf{CDF Properties}
+\begin{itemize}
+    \item Nondecreasing: If $x_1 \le x_2$, then $F(x_1) \le F(x_2)$.
+    \item Convergence to 0 and 1 in the limits
+    \[ \lim_{x \to -\infty} F(x)=0 \]
+    \[ \lim_{x \to \infty} F(x)=1 \]
+    \item Right continuous: A c.d.f. is continuous except for the possibility of having some 
+    jumps. If there are jumps, the c.d.f. is continuous from the right
+    \[F(x) = F(x^+)\] at every point $x$.
+\end{itemize}
+
+\textbf{CDF of a Discrete Distribution}
+\begin{itemize}
+    \item $F(x_i)$ will have a jump of magnitude $f(x_i) = P(X = x_i)$ at each possible value $x_i$ of $X$.
+    \item $F(x)$ will be constant and horizontal between every pair of successive jumps. If the 
+    interval $[a,b]$ represents this constant area between successive jumps, then $P(a < X < b)
+    = 0$.
+\end{itemize}
+
+\textbf{CDF of a Continuous Distribution}
+\begin{itemize}
+    \item If $X$ is a continuous r.v., $f(x)$ is its p.d.f, and $F(x)$ is its c.d.f., then $F$
+    is continuous at every $x$,
+    \[F(x) = \int_{-\infty}^{x} f(t) \,dt\] and \[\frac{dF(x)}{dx} = f(x)\] 
+    at all $x$ such that $f$ is continuous.
+    \item The c.d.f. of a continuous r.v. $X$ can be obtained from the p.d.f and vice versa.
+    \begin{itemize}
+        \item The p.d.f is the derivative of the c.d.f.
+        \[f(x) = F'(x)\]
+        \item The c.d.f. is an antiderivative (a function whose derivative is the original 
+        function) of the p.d.f.
+    \end{itemize}
+\end{itemize}
+
+\textbf{Quantile Function}
+\begin{itemize}
+    \item A percentile is a way of expressing where an observation falls in a range of other 
+    observations. It is the value below which a percentage of data falls (divides the data into
+    hundreths).
+    \item If we are looking for the $100p$ ($p$ is strictly between 0 and 1) percentile.
+    of a r.v. $X$ with a c.d.f. $F$, the inverse of $F$, $F^{-1}(p)$ allows us to do so.
+    \item The $p$ quantile of $X$, $F^{-1}(p)$, is the smallest value $x$ such that $F(x) \ge p$.
+    \item The quantile function, $F^{-1}$, is defined on the open interval $(0,1)$.
+    \item Exists for discrete and continuous distributions.
+    \item Certain quantiles have certain names
+    \begin{itemize}
+        \item Lower quartile: 25th percentile
+        \item Median: 50th percentile
+        \item Upper quartile: 75th percentile
+    \end{itemize}
+    \item The quantile function is an alternative way to characterize a distribution.
+\end{itemize}
+
+\subsection{Bivariate Distributions}
 \end{document}
