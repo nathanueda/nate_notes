@@ -796,7 +796,8 @@ columns)
     the projection of $\boldsymbol{b}$ onto the column space of $A$.
     \item Summary: If $A\boldsymbol{x}=\boldsymbol{b}$ has no solution, solve $A\boldsymbol{
     \hat{x}}=\boldsymbol{p}$, which is the closest problem to $A\boldsymbol{x}=\boldsymbol{b}$ 
-    that has a solution.
+    that has a solution. $P\boldsymbol{b}$ projects $\boldsymbol{b}$ into the column space.
+
 \end{itemize} 
 
 \textbf{Projection on a Line}
@@ -841,7 +842,7 @@ columns)
     \begin{figure}[H] 
         \centering 
         \includegraphics[width=3in]{imgs/plane_projection.png}
-        \caption{vectors $\boldsymbol{a}$, column space of $A, \ S$}
+        \caption{vector $\boldsymbol{a}$, column space of $A, \ S$}
     \end{figure}
     \item Since $A$ is a plane, the matrix of $A$ is made up of 2 independent vectors, that is,
     \[ A= \begin{bmatrix}
@@ -873,8 +874,185 @@ columns)
     which we will denote $P$. In this case, we have $\boldsymbol{p} = A{(A^T A)}^{-1} A^T 
     \boldsymbol{b} = P\boldsymbol{b}$.
     \item This idea easily extends to $n$ vectors.
-
 \end{itemize}
 
+\textbf{Special Cases of Projection}
+\begin{enumerate}
+    \item If $\boldsymbol{b}$ is already in the column space, $P\boldsymbol{b}=\boldsymbol{b}$.
+    \item If $\boldsymbol{b}$ is perpendicular to the column space, $P\boldsymbol{b}=0$.
+\end{enumerate}
+The average case has a $b$ that has a component in the column space and a component 
+perpendicular to column space. \\
+
+\subsection{Least Squares Approximations}
+
+\textbf{}
+\begin{itemize}
+    \item Often we have data points that cannot be fit perfectly with a line.
+    \begin{figure}[H] 
+        \centering 
+        \includegraphics[width=3in]{imgs/ols_simple.png}
+        \caption{$x$ axis is $\boldsymbol{t}$, $y$ axis is $\boldsymbol{b}$}
+    \end{figure}
+    \item The line is defined as \[\boldsymbol{b}=C+D\boldsymbol{t}\]
+    \item The equations we would like to solve, but can't, are
+    \[C + 1D = 3\]
+    \[C + 2D = 6\]
+    \[C + 3D = 7\]
+    \item Putting these equations into matrix form, we get
+    \[A\boldsymbol{x} = \boldsymbol{b} \]
+    \[
+    \begin{bmatrix}
+        1 & 1 \\
+        1 & 2 \\
+        1 & 3
+    \end{bmatrix}  
+    \begin{bmatrix}
+        C \\
+        D 
+    \end{bmatrix}  =
+    \begin{bmatrix}
+        3 \\
+        6 \\
+        7
+    \end{bmatrix}  
+    \]
+    but note this matrix form is still not solvable.
+    \item The line we create is the line that minimizes the overall error, where we 
+    define the overall error as the sum of squared error (sum the residuals squared).
+    \item The vector $\boldsymbol{e}$ holds the residuals (the difference in vertical height
+    between the actual point and the line), where $\boldsymbol{e}$ is defined as 
+    \[ \boldsymbol{e} = A\boldsymbol{x} - \boldsymbol{b} \]
+    \item Since we want to minimize the sum of squared errors, we want to minimize the length 
+    of $\boldsymbol{e}$ squared (the length is the sum the components squared, then take the 
+    square root of the result, then we square this result to nullify the square root).
+    \[ {\| \boldsymbol{e} \|}^2 = {\| A\boldsymbol{x} - \boldsymbol{b} \|}^2 \]
+    \item Though we can't solve 
+    \[A\boldsymbol{x} = \boldsymbol{b} \]
+    we can solve
+    \[A\boldsymbol{\hat{x}} = \boldsymbol{p} \]
+    where $\boldsymbol{p}$ is the part of $\boldsymbol{b}$ that is in the column space and
+    \[\boldsymbol{\hat{x}} = \begin{bmatrix}
+        \hat{C} \\
+        \hat{D} 
+    \end{bmatrix}\] 
+    is the least squares solution (the line that minimizes the sum of square errors).
+    \item The equation for $\boldsymbol{\hat{x}}$ is (Strang said this is the most important 
+    equation in statistics)
+    \[A^T A\boldsymbol{\hat{x}}=A^T \boldsymbol{b}\]
+
+    \[
+    A^T A =     
+    \begin{bmatrix}
+        1 & 1 & 1 \\
+        1 & 2 & 3 \\
+    \end{bmatrix}  
+    \begin{bmatrix}
+        1 & 1 \\
+        1 & 2 \\
+        1 & 3
+    \end{bmatrix}  = 
+    \begin{bmatrix}
+        3 & 6 \\
+        6 & 14
+    \end{bmatrix}  
+    \]
+    \[
+    A^T b =
+    \begin{bmatrix}
+        1 & 1 & 1 \\
+        1 & 2 & 3 \\
+    \end{bmatrix}  
+    \begin{bmatrix}
+        3 \\
+        6 \\
+        7
+    \end{bmatrix}  = 
+    \begin{bmatrix}
+        16 \\
+        36
+    \end{bmatrix} 
+    \]
+    \item Putting this together, we get the equations
+    \[ 3\hat{C} + 6\hat{D} = 16 \]
+    \[ 6\hat{C} + 14\hat{D} = 3  6 \]
+
+    So
+    \[
+    \boldsymbol{\hat{x}} = \begin{bmatrix}
+        \hat{C} \\
+        \hat{D} 
+    \end{bmatrix} = 
+    \begin{bmatrix}
+        4/3 \\
+        2
+    \end{bmatrix}
+    \]
+    \item Solving for $\hat{C}$ and $\hat{D}$, we get 
+    \[\hat{D} = 2\]
+    \[\hat{C} = \frac{4}{3}\]
+    \item So, the best line is \[ \frac{4}{3} + 2t\]
+    \item We can now find the vector $\boldsymbol{p}$ (the part of $\boldsymbol{b}$ in the
+    column space)
+    \[ \boldsymbol{p} =
+    \begin{bmatrix}
+        \frac{4}{3} + 2(1) \\
+        \frac{4}{3} + 2(2) \\
+        \frac{4}{3} + 2(3)
+    \end{bmatrix} =
+    \begin{bmatrix}
+        \frac{4}{3} + 2 \\
+        \frac{4}{3} + 4 \\
+        \frac{4}{3} + 6
+    \end{bmatrix} =
+    \begin{bmatrix}
+        \frac{4}{3} + \frac{6}{3} \\
+        \frac{4}{3} + \frac{12}{3} \\
+        \frac{4}{3} + \frac{18}{3}
+    \end{bmatrix} =
+    \begin{bmatrix}
+        10/3 \\
+        16/3 \\
+        22/3 
+    \end{bmatrix}
+    \]
+    \item We can also calculating the vector $\boldsymbol{e}$
+    \[ \boldsymbol{e} =
+    \begin{bmatrix}
+        e_1 \\
+        e_2 \\
+        e_3
+    \end{bmatrix} =
+    \begin{bmatrix}
+        b_1 - p_1 \\
+        b_2 - p_2 \\
+        b_3 - p_3
+    \end{bmatrix} =
+    \begin{bmatrix}
+        3 - 10/3 \\
+        6 - 16/3 \\
+        7 - 22/3
+    \end{bmatrix} =
+    \begin{bmatrix}
+        9/3 - 10/3 \\
+        18/3 - 16/3 \\
+        21/3 - 22/3
+    \end{bmatrix} =
+    \begin{bmatrix}
+        -1/3 \\
+        2/3 \\
+        -1/3
+    \end{bmatrix}
+    \]
+    \item Some notes
+    \begin{itemize}
+        \item $\boldsymbol{b} = \boldsymbol{p} + \boldsymbol{e}$
+        \item $\boldsymbol{b} \perp \boldsymbol{e}$
+    \end{itemize}
+    \item Fitting this line is linear regression. 
+    \item If $A$ has independent columns, then $A^T A$ is invertible.
+\end{itemize}
+
+\subsection{Orthonormal Bases and Gram-Schmidt}
 
 \end{document}

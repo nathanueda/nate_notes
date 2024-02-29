@@ -622,6 +622,11 @@ INPUT ./imgs/plane_projection.png
 INPUT imgs/plane_projection.png
 INPUT ./imgs/plane_projection.png
 INPUT ./imgs/plane_projection.png
+INPUT ./imgs/ols_simple.png
+INPUT ./imgs/ols_simple.png
+INPUT imgs/ols_simple.png
+INPUT ./imgs/ols_simple.png
+INPUT ./imgs/ols_simple.png
 INPUT intro_to_linear_algebra_strang.aux
 INPUT ./intro_to_linear_algebra_strang.out
 INPUT ./intro_to_linear_algebra_strang.out
