@@ -488,7 +488,7 @@ problem is fittingly called, the Gambler's Ruin problem. \\
     \item The support of $X$ is all values $x$ such that $f(x)=P(X=x)>0$.
     \item To be a valid p.d.f.
     \begin{itemize}
-        \item The p.d.f. of $X$ must integrate to 1, that is, $\int_{-\infty}^{\infty} f(x)=1$.
+        \item The p.d.f. of $X$ must integrate to 1, that is, $\int_{-\infty}^{\infty} f(x) \,dx=1$.
         \item For all $x$, $f(x) \ge 0$.
     \end{itemize}
     \item To get a desired probability, integrate the p.d.f. over the appropriate range.
@@ -612,4 +612,100 @@ problem is fittingly called, the Gambler's Ruin problem. \\
 \end{itemize}
 
 \subsection{Bivariate Distributions}
+
+\textbf{Joint/Bivariate Distribution Basics}
+\begin{itemize}
+    \item Often, in real life we are interested in several r.v.s that are related to each 
+    other. For example, if studying a random family, we may want to study the number of people
+    in the family (which would be one r.v.) and the household income (which would be another
+    r.v.). Joint distributions allow us to assign probabilities to these events.
+    \item A joint distribution of two r.v.s $X$ and $Y$ is the collection of all probabilities 
+    of the form $P[(X,Y) \in C]$ for all sets $C$ of pairs of real numbers such that $\{(X, Y)
+    \in C\}$ is an event.
+\end{itemize}
+
+\textbf{Discrete Joint Distribution}
+\begin{itemize}
+    \item Let $X$ and $Y$ be random variables, and consider the ordered pair $(X,Y)$. If there
+    are only finitely or at most countably many different possible values $(x,y)$ for the pair 
+    $(X,Y)$, then we say that $X$ and $Y$ have a discrete joint distribution.
+\end{itemize}
+
+\textbf{Joint Probability Function}
+\begin{itemize}
+    \item The joint p.f. of discrete r.v.s $X$ and $Y$ is the function $f$, such that for every 
+    point $(x,y)$ in the $xy$-plane
+    \[f(x,y)=P(X=x, Y=y)\]
+    where $f(x,y)$ is the probability of $x$ and $y$ occurring.
+    \begin{figure}[H] 
+        \centering 
+        \includegraphics[width=3in]{imgs/joint_pf.png}
+        \caption{Joint p.f. of discrete r.v.s $X$ and $Y$. The height of a vertical bar at 
+        $(x,y)$ represents the probability $P(X=x, Y=y)$. The total summed heights of the vertical
+        bars must be 1.}
+    \end{figure}
+    \item To be a valid joint p.f.
+    \begin{itemize}
+        \item The probabilities of all possible outcomes of $(X,Y)$ sum to 1. That is
+        \[\sum_{\text{All } (x,y)} f(x,y) = 1\]
+        \item All possible values of $(X,Y)$ have a probability greater than 0 and all other 
+        values have a probability of 0. That is, if $(x,y)$ is not one of the possible values 
+        of $(X,Y)$, then $f(x,y)=0$.
+    \end{itemize}
+    \item We can find the probability of the event $(X,Y) \in C$ for any set $C$ of points 
+    (ordered pairs) in the support of $(X,Y)$ by summing over the joint p.f. over $C$
+    \[P[(X,Y) \in C] = \sum_{(x,y) \in C} f(x,y)\]
+\end{itemize}
+
+\textbf{Continuous Joint Distribution}
+\begin{itemize}
+    \item Two r.v.s $X$ and $Y$ have a continuous joint distribution if there exists a 
+    nonnegative function $f$ (joint p.d.f.) defined over the entire $xy$-plane such that for 
+    every subset $C$ of the plane, 
+    \[P[(X,Y) \in C] = \int_C \int f(x,y) \,dxdy\]
+    if the integral exists.
+\end{itemize}
+
+\textbf{Joint Probability Density Function}
+\begin{itemize}
+    \item If $X$ and $Y$ are continuous r.v.s with joint c.d.f $F(x,y)$, their joint p.d.f. is 
+    the derivative of the joint c.d.f. with respect to $x$ and $y$ (take the derivative of $y$
+    treating $x$ as a constant, then take the derivative of $x$ treating $y$ as a constant)
+    \[ f(x,y) = \frac{\partial^2}{\partial x \partial y} F(x,y) \]
+    \begin{figure}[H] 
+        \centering 
+        \includegraphics[width=3in]{imgs/joint_pdf.png}
+        \caption{Joint p.d.f. of continuous r.v.s $X$ and $Y$. When integrating over the region 
+        $C$, we are calculating the volume under the surface of the joint p.d.f and above $A$.
+        The total volume under a valid joint p.d.f. is 1.}
+    \end{figure}
+    \item To be a valid joint p.d.f.
+    \begin{itemize}
+        \item The joint p.d.f. of $X$ and $Y$ must integrate to 1, that is, $\int_{-\infty}^{\infty}
+        \int_{-\infty}^{\infty} f(x,y) \,dxdy =1$.
+        \item For all $x$, $f(x) \ge 0$.
+    \end{itemize}
+\end{itemize}
+
+\textbf{Mixed Bivariate Distributions}\
+\begin{itemize}
+    \item Sometimes, we must consider a mixed bivariate distribution in which we have one 
+    discrete r.v. and one continuous r.v.
+\end{itemize}
+
+\textbf{Joint Probability Function/Probability Density Function}
+\begin{itemize}
+    \item Let $X$ and $Y$ be r.v.s such that $X$ is discrete and $Y$ is continuous. Suppose 
+    that there is a function $f(x,y)$ (join p.f./p.d.f. of $X$ and $Y$) defined on the $xy$-
+    plane such that, for every pair $A$ and $B$ of subsets of the real numbers,
+    \[P(X \in A, Y \in B) = \int_B \sum_{x \in A} f(x,y) \,dy\]
+    if the integral exists.
+\end{itemize}
+
+\textbf{Joint Cumulative Distribution Function}
+\begin{itemize}
+    \item The joint c.d.f. of two continuous r.v.s $X$ and $Y$ is define as the function $F$ such 
+    that for all values of $x$ and $y$ $(-\infty < x < \infty, -\infty < y < \infty)$ 
+    \[F(x,y)=P(X \le x, Y \le y) = \int_{-\infty}^{y} \int_{-\infty}^{x} f(r,s) \,drds\]
+\end{itemize}
 \end{document}
