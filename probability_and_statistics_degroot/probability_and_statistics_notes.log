@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.12.19)  29 FEB 2024 09:30
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.12.19)  1 MAR 2024 10:22
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -349,7 +349,7 @@ Package amsmath Warning: Foreign command \atopwithdelims;
 (amsmath)                 on input line 154.
 
 [5] [6] [7] [8] [9] [10] [11] [12] [13] [14]
-<imgs/joint_pf.png, id=194, 511.9125pt x 375.4025pt>
+<imgs/joint_pf.png, id=199, 511.9125pt x 375.4025pt>
 File: imgs/joint_pf.png Graphic file (type png)
 <use imgs/joint_pf.png>
 Package pdftex.def Info: imgs/joint_pf.png  used on input line 642.
@@ -360,7 +360,7 @@ pdfTeX warning (ext4): destination with the same identifier (name{figure.1}) has
                                                   \__shipout_drop_firstpage_...
 l.657 ...X,Y) \in C] = \sum_{(x,y) \in C} f(x,y)\]
                                                    <./imgs/joint_pf.png>]
-<imgs/joint_pdf.png, id=202, 438.63875pt x 394.47375pt>
+<imgs/joint_pdf.png, id=207, 438.63875pt x 394.47375pt>
 File: imgs/joint_pdf.png Graphic file (type png)
 <use imgs/joint_pdf.png>
 Package pdftex.def Info: imgs/joint_pdf.png  used on input line 677.
@@ -370,23 +370,23 @@ pdfTeX warning (ext4): destination with the same identifier (name{figure.2}) has
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
 l.698     \item L
-                 et $X$ and $Y$ be r.v.s such that $X$ is discrete and $Y$ i... <./imgs/joint_pdf.png>] [17] (./probability_and_statistics_notes.aux)
+                 et $X$ and $Y$ be r.v.s such that $X$ is discrete and $Y$ i... <./imgs/joint_pdf.png>] [17] [18] [19] (./probability_and_statistics_notes.aux)
 Package rerunfilecheck Info: File `probability_and_statistics_notes.out' has not changed.
-(rerunfilecheck)             Checksum: 800A4D1E9746756DD76CFA35FA60F1DE;4021.
+(rerunfilecheck)             Checksum: 73D710F4714A0B3844B1E6CA8B3069D0;4192.
  ) 
 Here is how much of TeX's memory you used:
- 10006 strings out of 476093
- 155887 string characters out of 5791584
+ 10010 strings out of 476093
+ 155931 string characters out of 5791584
  1862793 words of memory out of 5000000
- 30209 multiletter control sequences out of 15000+600000
+ 30210 multiletter control sequences out of 15000+600000
  520686 words of font info for 63 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  72i,9n,77p,458b,508s stack positions out of 10000i,1000n,20000p,200000b,200000s
 {/usr/local/texlive/2022/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}</usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfrm1095.pfb>
-Output written on probability_and_statistics_notes.pdf (17 pages, 399503 bytes).
+Output written on probability_and_statistics_notes.pdf (19 pages, 403558 bytes).
 PDF statistics:
- 284 PDF objects out of 1000 (max. 8388607)
- 232 compressed objects within 3 object streams
- 53 named destinations out of 1000 (max. 500000)
- 179 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 299 PDF objects out of 1000 (max. 8388607)
+ 245 compressed objects within 3 object streams
+ 56 named destinations out of 1000 (max. 500000)
+ 187 words of extra memory for PDF output out of 10000 (max. 10000000)
 

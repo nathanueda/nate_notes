@@ -709,4 +709,88 @@ problem is fittingly called, the Gambler's Ruin problem. \\
     \[F(x,y)=P(X \le x, Y \le y) = \int_{-\infty}^{y} \int_{-\infty}^{x} f(r,s) \,drds\]
     \item The probability that an event occurs such that $X \le x$ and $Y \le y$.
 \end{itemize}
+
+\subsection{Marginal Distributions}
+
+\textbf{Marginal Distributions}
+\begin{itemize}
+    \item Often, we may start with a joint distribution of 2 r.v.s and want to find the 
+    distribution of just 1 of them.
+    \item The distribution of 1 r.v. $X$ computed from a joint distribution is called the 
+    marginal distribution of $X$. 
+    \item Each r.v. will have a marginal c.d.f. as well as a marginal p.d.f or p.f.
+    \item The name marginal distribution derives from the dfact that the marginal distribution
+    are the totals that appear in the amrgins of tables. 
+\end{itemize}
+
+\textbf{Marginal Probability Function}
+\begin{itemize}
+    \item For discrete r.v.s $X$ and $Y$ that have a joint p.f. $f$, the marginal p.f., $f_1$,
+    of $X$ is 
+    \[ f_1(x) = P(X=x)= \sum_{\text{All } y} P(X=x, Y=y) \]
+    \item The above equation is saying, to find the marginal p.f. of $X$, hold the 1 value of 
+    $x$ fixed and then sum over all the outcomes of $Y$.
+\end{itemize}
+
+\textbf{Marginal Probability Density Function}
+\begin{itemize}
+    \item For continuous r.v.s $X$ and $Y$ that have a joint p.d.f. $f$, the marginal p.d.f., 
+    $f_1$, of $X$ is 
+    \[ f_1(x) = \int_{-\infty}^{\infty} f(x,y) \,dy \text{\ \ \ for } -\infty < x < \infty \]
+    \item The above equation is saying, to find the marginal p.d.f. of $X$, hold the 1 value of 
+    $x$ fixed and then integrate over all the outcomes of $Y$.
+\end{itemize}
+
+\textbf{Marginal p.f./p.d.f from a Discrete and Continuous Random Variable}
+\begin{itemize}
+    \item For discrete r.v. $X$ and continuous r.v. $Y$ that have a joint p.f./p.d.f $f$, the 
+    marginal p.f., $f_1$, of $X$ is 
+    \[ f_1(x) = P(X=x) = \int_{-\infty}^{\infty} f(x,y) \,dy \text{\ \ \ for all } x \]
+    \item For discrete r.v. $X$ and continuous r.v. $Y$ that have a joint p.f./p.d.f $f$, the 
+    marginal p.d.f., $f_2$, of $Y$ is 
+    \[ f_2(y) = \sum_{x} f(x,y) \text{\ \ \ for } -\infty < x < \infty \]
+\end{itemize}
+
+\textbf{Independence of Random Variables}
+\begin{itemize}
+    \item If we are trying to decide whether or not to model 2 r.v.s as independent, we should
+    think about whether we would change the distribution of $X$ after we learned the value of 
+    $Y$ or vice versa.
+    \item In general, the marginal distributions do not determine the joint distribution, this 
+    is the reason we wanted to study joint distributions in the first place. However, in the 
+    special case of independence, the marginal distributions are all we need in order to 
+    specify the joint distribution: we can get the joint p.f. by multiplying the marginal 
+    p.f.s.
+\end{itemize}
+
+\textbf{Independence of Discrete Random Variables}
+\begin{itemize}
+    \item 2 discrete r.v.s $X$ (with marginal c.d.f. $F_1$) and $Y$ (with marginal c.d.f. 
+    $F_2$) with joint c.d.f $F$ are independent if for all $x$ and $y$ 
+    \[F(x,y) = F_1(x)F_2(y)\]
+    which says that 2 discrete r.v.s are independent when the joint c.d.f. is the product of 
+    the marginal c.d.f.s of $X$ and $Y$.
+    \item If we let $f$ be the joint p.f. of $X$ and $Y$, $f_1$ be the marginal p.f. of $X$, 
+    and $f_2$ be the marginal p.f. of $Y$, this is equivalent to saying
+    \[ f(x,y) = f_1(x)f_2(y) \]
+    \[ P(X=x, Y=y) = P(X=x)P(Y=y) \]
+    which says that 2 discrete r.v.s are independent when the joint p.f. is the product of the 
+    marginal p.f.s of $X$ and $Y$.
+\end{itemize}
+
+\textbf{Independence of Continuous Random Variables}
+\begin{itemize}
+    \item 2 continuous r.v.s $X$ (with marginal c.d.f. $F_1$) and $Y$ (with marginal c.d.f. 
+    $F_2$) with joint c.d.f $F$ are independent if for all $x$ and $y$ 
+    \[F(x,y) = F_1(x)F_2(y)\]
+    which says that 2 continuous r.v.s are independent when the joint c.d.f. is the product of 
+    the marginal c.d.f.s of $X$ and $Y$.
+    \item If we let $f$ be the joint p.d.f. of $X$ and $Y$, $f_1$ be the marginal p.d.f. of $X$, 
+    and $f_2$ be the marginal p.d.f. of $Y$, this is equivalent to saying
+    \[ P(X=x, Y=y) = P(X=x)P(Y=y)\]
+    \[ f(x,y) = f_1(x)f_2(y)\]
+    which says that 2 continuous r.v.s are independent when the joint p.d.f. is the product of 
+    the marginal p.d.f.s of $X$ and $Y$.
+\end{itemize}
+
 \end{document}
