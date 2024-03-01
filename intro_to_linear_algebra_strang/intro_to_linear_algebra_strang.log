@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.12.19)  29 FEB 2024 12:20
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.12.19)  1 MAR 2024 14:03
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -388,23 +388,34 @@ pdfTeX warning (ext4): destination with the same identifier (name{figure.4}) has
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
 l.900     \[C + 2D = 6\]
-                         <./imgs/ols_simple.png>] [18] [19] (./intro_to_linear_algebra_strang.aux)
+                         <./imgs/ols_simple.png>] [18] [19]
+<imgs/gram_schmidt.png, id=256, 603.25375pt x 239.89626pt>
+File: imgs/gram_schmidt.png Graphic file (type png)
+<use imgs/gram_schmidt.png>
+Package pdftex.def Info: imgs/gram_schmidt.png  used on input line 1129.
+(pdftex.def)             Requested size: 433.62pt x 172.43597pt.
+ [20] [21
+pdfTeX warning (ext4): destination with the same identifier (name{figure.5}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.1202     \]
+              <./imgs/gram_schmidt.png>] [22] (./intro_to_linear_algebra_strang.aux)
 Package rerunfilecheck Info: File `intro_to_linear_algebra_strang.out' has not changed.
 (rerunfilecheck)             Checksum: ED9D29CE07C71C1A1D8A1FE167C68C59;4487.
  ) 
 Here is how much of TeX's memory you used:
- 10108 strings out of 476093
- 157516 string characters out of 5791584
+ 10119 strings out of 476093
+ 157718 string characters out of 5791584
  1870793 words of memory out of 5000000
- 30267 multiletter control sequences out of 15000+600000
+ 30273 multiletter control sequences out of 15000+600000
  523148 words of font info for 71 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  72i,17n,77p,446b,611s stack positions out of 10000i,1000n,20000p,200000b,200000s
 {/usr/local/texlive/2022/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}</usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx8.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmib10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmmib8.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/latxfont/line10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfrm1095.pfb>
-Output written on intro_to_linear_algebra_strang.pdf (19 pages, 441992 bytes).
+Output written on intro_to_linear_algebra_strang.pdf (22 pages, 504272 bytes).
 PDF statistics:
- 357 PDF objects out of 1000 (max. 8388607)
- 287 compressed objects within 3 object streams
- 83 named destinations out of 1000 (max. 500000)
- 181 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 373 PDF objects out of 1000 (max. 8388607)
+ 298 compressed objects within 3 object streams
+ 87 named destinations out of 1000 (max. 500000)
+ 186 words of extra memory for PDF output out of 10000 (max. 10000000)
 

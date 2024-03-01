@@ -1055,4 +1055,181 @@ perpendicular to column space. \\
 
 \subsection{Orthonormal Bases and Gram-Schmidt}
 
-\end{document}
+\textbf{Orthonormal Basics}
+\begin{itemize}
+    \item Orthogonal: Vectors $\boldsymbol{q}_1, \ldots, \boldsymbol{q}_n$ are orthogonal when
+    their dot products $\boldsymbol{q}_i \cdot \boldsymbol{q}_j = 0$ whenever $i \ne j$.
+    \item Normal: A vector $\boldsymbol{u}$ is normal when its length is one, that is, $\| u 
+    \| = 1$.
+    \item Orthonormal: $\boldsymbol{q}_1, \ldots, \boldsymbol{q}_n$ are orthonormal when they 
+    are both orthogonal and normal.
+    \item More formally, the $n$ vectors $\boldsymbol{q}_1, \ldots, \boldsymbol{q}_n$ are 
+    orthonormal if 
+    \[ \boldsymbol{q}_i^T \boldsymbol{q}_j = \begin{cases} 
+        0 & \text{when } i \ne j \text{\ \ \ orthogonal vectors} \\
+        1 & \text{when } i = j \text{\ \ \ unit vectors } \|\boldsymbol{q}_i\| = 1
+     \end{cases}
+    \]
+\end{itemize}
+
+\textbf{Orthonomal Martix}
+\begin{itemize}
+    \item A matrix $Q$ is orthonormal if it has orthonormal columns.
+    \[ Q^T Q =
+    \begin{bmatrix}
+        - \boldsymbol{q}_1^T - \\
+        - \boldsymbol{q}_2^T - \\
+        - \boldsymbol{q}_n^T - \\
+    \end{bmatrix}
+    \begin{bmatrix}
+        | & | & | \\
+        \boldsymbol{q}_1 & \boldsymbol{q}_2 & \boldsymbol{q}_n \\
+        | & | & | \\
+    \end{bmatrix} =
+    I
+    \]
+    \item If $Q$ is square, then $Q^T Q = I$ means that $Q^T = Q^{-1}$.
+\end{itemize}
+
+\textbf{Why Orthonormal Matrices are Cool}
+\begin{itemize}
+    \item Recall the formula for a projection matrix 
+    \[P = A {(A^T A)}^{-1}A^T\]
+    \item If we have $Q$ (orthonormal columns) and we want to project $Q$ onto its column 
+    space
+    \[P = Q {(Q^T Q)}^{-1}Q^T\]
+    since, by definition $Q^T Q = I$, this reduces to
+    \[P = Q Q^T\]
+    \item  Recall the formula for 
+    \[\boldsymbol{\hat{x}} = {(A^T A)}^{-1} A^T \boldsymbol{b}\]
+    \item If we have $Q$ (orthonormal columns) and we want to solve
+    \[\boldsymbol{\hat{x}} = {(Q^T Q)}^{-1} Q^T \boldsymbol{b}\]
+    since, by definition $Q^T Q = I$, this reduces to
+    \[\boldsymbol{\hat{x}} = Q^T \boldsymbol{b}\]
+    this also gives us
+    \[\hat{x}_i = \boldsymbol{q}_i^T \boldsymbol{b}\]
+\end{itemize}
+
+\textbf{Gram-Schmidt Process}
+\begin{itemize}
+    \item A process to create orthonormal vectors from independent vectors.
+    \item The idea is to start with one vector and take it as given. Then add another vector
+    and subtract from every new vector its projections in the direction already set. Continue 
+    this process for every vector that is added. The result is a set of $n$ orthogonal vectors.
+    Next, divide each vector by its length to end with $n$ orthonormal vectors, 
+    $\boldsymbol{q}_1, \ldots,  \boldsymbol{q}_n$.
+    \item The matrix that connects $A$ to $Q$ is the upper triangular matrix $R$. That is, 
+    $A=QR$.
+\end{itemize}
+
+\textbf{Gram-Schmidt Process with 3 Vectors}
+\begin{itemize}
+    \begin{figure}[H] 
+        \centering 
+        \includegraphics[width=6in]{imgs/gram_schmidt.png}
+        \caption{First project $\boldsymbol{b}$ onto the line through $\boldsymbol{a}$ and 
+        find the orthogonal $\boldsymbol{B}$ as $\boldsymbol{b} - \boldsymbol{p}$}. Then 
+        project $\boldsymbol{c}$ onto the $\boldsymbol{AB}$ plane and find $\boldsymbol{C}$ as 
+        $\boldsymbol{c} - \boldsymbol{p}$. Divide by $\|\boldsymbol{A}\|, \|\boldsymbol{B}\|,
+        \|\boldsymbol{C}\|$.
+    \end{figure}
+    \item Given 3 independent vectors, $\boldsymbol{a}, \boldsymbol{b}, \boldsymbol{c}$, we aim 
+    to construct 3 orthogonal vectors $\boldsymbol{A}, \boldsymbol{B}, \boldsymbol{C}$, and 
+    then divide by their lengths to produce orthonormal vectors 
+    \[ \boldsymbol{q}_1 = \frac{\boldsymbol{A}}{\|\boldsymbol{A}\|}\]
+    \[ \boldsymbol{q}_2 = \frac{\boldsymbol{B}}{\|\boldsymbol{B}\|}\]
+    \[ \boldsymbol{q}_3 = \frac{\boldsymbol{C}}{\|\boldsymbol{C}\|}\]
+    \item Begin by letting $\boldsymbol{A} = \boldsymbol{a}$ (this first direction is accepted,
+    and we will make the other vectors perpendicular to it).
+    \item Next, we must make $\boldsymbol{B}$ such that it is perpendicular to 
+    $\boldsymbol{A}$. To do so, start with $\boldsymbol{b}$ and subtract its projection along
+    $\boldsymbol{A}$. That is,
+    \[\boldsymbol{B} = \boldsymbol{b} - P\boldsymbol{A} = \boldsymbol{b} - 
+    \frac{\boldsymbol{A}^T \boldsymbol{b}}{\boldsymbol{A}^T \boldsymbol{A}} \boldsymbol{A}\]
+    \item Next, we must make $\boldsymbol{C}$ such that it is perpendicular to both 
+    $\boldsymbol{A}$ and $\boldsymbol{B}$. To do so, start with $\boldsymbol{c}$ and subtract
+    its projection along $\boldsymbol{A}$ and along $\boldsymbol{B}$. That is,
+    \[\boldsymbol{C} = \boldsymbol{c} - P_A \boldsymbol{A} - P_B \boldsymbol{B} = 
+    \boldsymbol{c} - \frac{\boldsymbol{A}^T \boldsymbol{c}}{\boldsymbol{A}^T \boldsymbol{A}} 
+    \boldsymbol{A} - \frac{\boldsymbol{B}^T \boldsymbol{c}}{\boldsymbol{B}^T \boldsymbol{B}} 
+    \boldsymbol{B}\]
+    \item In this example
+    \[ A = QR \]
+    \[ 
+    \begin{bmatrix}
+        \ & \ & \ \\ 
+        \boldsymbol{a} & \boldsymbol{b} & \boldsymbol{c} \\
+        \ & \ & \ 
+    \end{bmatrix} =
+    \begin{bmatrix}
+        \ & \ & \ \\ 
+        \boldsymbol{q}_1 & \boldsymbol{q}_2 & \boldsymbol{q}_3 \\
+        \ & \ & \ 
+    \end{bmatrix}
+    \begin{bmatrix}
+        \boldsymbol{q}_1^T \boldsymbol{a} & \boldsymbol{q}_1^T \boldsymbol{b} & 
+        \boldsymbol{q}_1^T \boldsymbol{c} \\
+        \ & \boldsymbol{q}_2^T \boldsymbol{b} & \boldsymbol{q}_2^T \boldsymbol{c} \\
+        \ & \ & \boldsymbol{q}_3^T \boldsymbol{c}
+    \end{bmatrix}
+    \]
+
+\end{itemize}
+
+\textbf{Gram-Schmidt Process Example with 3 Vectors}
+\begin{itemize}
+    \item Suppose the independent, non-orthogonal vectors $\boldsymbol{a}$, $\boldsymbol{b}$,
+    and $\boldsymbol{c}$ are
+    \[
+    \boldsymbol{a} =
+    \begin{bmatrix}
+        1 \\
+        -1 \\
+        0
+    \end{bmatrix}, \
+    \boldsymbol{b} =
+    \begin{bmatrix}
+        2 \\
+        0 \\
+        -2
+    \end{bmatrix}, \
+    \boldsymbol{c} =
+    \begin{bmatrix}
+        3 \\
+        -3 \\
+        3
+    \end{bmatrix}    
+    \]
+    \item Then $\boldsymbol{A} = \boldsymbol{a}$ has $\boldsymbol{A}^T \boldsymbol{A} = 2$ and
+    $\boldsymbol{A}^T \boldsymbol{b} = 2$. Subtract from $\boldsymbol{b}$ its projection 
+    $\boldsymbol{p}$ along $\boldsymbol{A}$
+    \[\boldsymbol{B} = \boldsymbol{b} - \frac{\boldsymbol{A}^T \boldsymbol{b}}
+    {\boldsymbol{A}^T \boldsymbol{A}} \boldsymbol{A} = \boldsymbol{b} - \frac{2}{2} 
+    \boldsymbol{A} = \boldsymbol{b} - \boldsymbol{A} = \begin{bmatrix}
+        1 \\ 
+        1 \\ 
+        -2
+    \end{bmatrix}\]
+    Check that $\boldsymbol{A}^T \boldsymbol{B} = 0$ as required.
+    \item Now, subtract the projections of $\boldsymbol{c}$ on $\boldsymbol{A}$ and 
+    $\boldsymbol{B}$ to get $\boldsymbol{C}$
+    \[\boldsymbol{C} = \boldsymbol{c} - \frac{\boldsymbol{A}^T \boldsymbol{c}}
+    {\boldsymbol{A}^T \boldsymbol{A}} \boldsymbol{A} - \frac{\boldsymbol{B}^T \boldsymbol{c}}
+    {\boldsymbol{B}^T \boldsymbol{B}} \boldsymbol{B} = \boldsymbol{c} - \frac{6}{2}
+    \boldsymbol{A} + \frac{6}{6}\boldsymbol{B} = \begin{bmatrix}
+        1 \\
+        1 \\
+        1
+    \end{bmatrix}\]
+    Check that $\boldsymbol{C}$ is perpendicular to both $\boldsymbol{B}$ and $\boldsymbol{C}$
+    as required.
+    \item Finally, divide $\boldsymbol{A}$, $\boldsymbol{B}$, and $\boldsymbol{C}$ by their 
+    lengths, which are 
+    \[ \|\boldsymbol{A}\| = \sqrt{2}, \ \|\boldsymbol{B}\| = \sqrt{6}, \ \|\boldsymbol{C}\| = 
+    \sqrt{3}\]
+    Doing so we get 
+    \[\boldsymbol{q}_1 = \frac{1}{\sqrt{2}}\begin{bmatrix} 1 \\ -1 \\ 0 \end{bmatrix}, \ 
+    \boldsymbol{q}_2 = \frac{1}{\sqrt{6}}\begin{bmatrix} 1 \\ 1 \\ -2 \end{bmatrix}, \
+    \boldsymbol{q}_3 = \frac{1}{\sqrt{3}}\begin{bmatrix} 1 \\ 1 \\ 1 \end{bmatrix}\]
+\end{itemize}
+\end{document} 
