@@ -1,0 +1,194 @@
+\documentclass[11pt]{article}
+\usepackage{hyperref} 
+\usepackage{amsmath, amsfonts, amssymb}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage[margin=1in]{geometry}
+
+\parindent0px
+
+\emergencystretch=0pt
+\pretolerance=150
+\tolerance=10000
+\hbadness=10000
+\hfuzz=0pt
+
+\title{A Primer for the Mathematics of Financial Engineering Notes}
+\author{Nathan Ueda}
+\date{\today} 
+
+\begin{document}
+\maketitle 
+\pagebreak
+\tableofcontents 
+\pagebreak
+
+
+\section{Calculus Review, Options, Put-Call Parity}
+\subsection{Brief Review of Differentiation}
+
+\textbf{Differentiation Basics}
+\begin{itemize}
+    \item Differentiation is a method used to compute the rate of change of a function $f(x)$
+    with respect to its input $x$. This rate of change is known as the derivative of $f$ with
+    respect to $x$. 
+    \item The first derivative of a function $y=f(x)$ is denoted $\frac{dy}{dx}$, where $dy$
+    denotes an infinitesimally small change in $y$ and $dx$ denotes an infinitesimally small 
+    change in $x$. It is defined by 
+    \[\frac{dy}{dx} = \lim_{h \to 0} \left[\frac{f(x+h) - f(x)}{h}\right]\]
+    where as $h$ gets closer to 0, it approaches the slope at the tangent line
+    \item The process of finding the derivative by taking this limit is known as 
+    differentiation from first principles. In practice, it is not convenient to use this method.
+    \item The derivatives of many functions can instead be found using standard derivatives in 
+    conjunction with rules such as the chain rule, product rule, and quotient rule.
+    \item Leibniz's Notation
+    \begin{itemize}
+        \item Given a function $y=f(x)$, the first derivative of $y$ with respect to $x$ is 
+        denoted by 
+        \[ \frac{dy}{dx} \]
+        \item The second derivative of $y$ with respect to $x$ is denoted by 
+        \[ \frac{d}{dx}\left[\frac{dy}{dx}\right]=\frac{d^2y}{dx^2}\]
+        \item The $n$th derivative of $y$ with respect to $x$ is denoted by
+        \[ \frac{d^ny}{dx^n}\]
+        \item The derivative of $y$ with respect to $x$ at the point $x=a$ is denoted by 
+        \[\frac{dy}{dx}|_{x=a}\]
+    \end{itemize}
+    \item The function $f(x)$ is differentiable if it is differentiable at all points $x$.
+    \item 
+\end{itemize}
+
+\textbf{Product Rule}
+\begin{itemize}
+    \item If the two functions $f(x)$ and $g(x)$ are differentiable (i.e. their derivatives
+    exist) then the product is differentiable and 
+    \[(fg)' = f'g + fg'\]
+\end{itemize}
+
+\textbf{Quotient Rule}
+\begin{itemize}
+    \item If the two functions $f(x)$ and $g(x)$ are differentiable (i.e. their derivatives
+    exist) then the quotient is differentiable and 
+    \[\left(\frac{f}{g}\right)' = \frac{gf' - fg'}{g^2}\]
+    \item This has the mnemonic
+    \[\frac{\text{lo de hi} - \text{hi de lo}}{\text{lo lo}}\]
+\end{itemize}
+
+\textbf{Chain Rule}
+\begin{itemize}
+    \item  If the two functions $f(x)$ and $g(x)$ are differentiable then the composite
+    function $f \circ g = f(g(x)) = F'(x)$ is differentiable and 
+    \[ F'(x) = f'(g(x))g'(x)\]
+    \item It is often used for power functions, exponential functions, and logarithmic 
+    functions.
+\end{itemize}
+
+\subsection{Brief Review of Integration}
+
+\textbf{Integration Basics}
+\begin{itemize}
+    \item Integration is a way to figure out what function we differentiated to get the 
+    function $f(x)$.
+\end{itemize}
+
+\textbf{Indefinite Integrals}
+\begin{itemize}
+    \item Given a function $f(x)$, an antiderivative of $f(x)$ is any function $F(x)$ such 
+    that $F'(x) = f(x)$. 
+    \item If $F(x)$ is any antiderivative of $f(x)$ then the most general antiderivative of 
+    $f(x)$ is called an indefinite integral and is denoted 
+    \[\int f(x) dx = F(x) + c, \ \ \ c\text{ is an arbitrary constant}\]
+    where $\int$ is the integral symbol, $f(x)$ is the integrand, $x$ is the integration 
+    variable, and $c$ is the constant of integration. 
+\end{itemize}
+
+\textbf{Indefinite Integrals}
+\begin{itemize}
+    \item Suppose $f(x)$ is a continuous function on $[a,b]$ and also suppose that $F(x)$ is
+    any antiderivative for $f(x)$, then 
+    \[ \int_{a}^{b} f(x) dx = F(x)|_a^b = F(b) - F(a) \]
+\end{itemize}
+
+\textbf{Integration By Parts}
+\begin{itemize}
+    \item Easier formula
+    \[ \int u \,dv = uv - \int v \,du\]
+    \item To use this formula, we will need to identify $u$ and $dv$ and then use the formula.
+    \item Choose $u$ such that
+    \begin{itemize}
+        \item The integral of $v$ is possible.
+        \item The derivative of $u$ is better (reduced power)
+    \end{itemize}
+    \item Choosing $u$ order of operations
+    \begin{itemize}
+        \item L: Log functions
+        \item I: Inverse trig functions
+        \item P: Polynomials
+        \item E: Exponentials
+        \item T: Trig functions
+    \end{itemize}
+    \item It will not always be obvious what the correct values to choose are and, on 
+    occassion, the wrong choice will be made. If this happens, we can always just go back and
+    try a different set of choices. 
+    \item Integration by parts is the counterpart for integration of the product rule.
+\end{itemize}
+
+\textbf{Integration By Substitution}
+\begin{itemize}
+    \item Integration by substituion formula
+    \[ \int f(g(x)) g'(x) \,dx = \int f(u) \,du \text{\ \ \ where } u = g(x) \]
+    \item Integration by substitution is the couterpart for integration of the chain rule.
+\end{itemize}
+
+\subsection{Differentiating Definite Integrals}
+
+\subsection{Limits}
+
+\subsection{L'Hopitals Rule and Connections to Taylor Expansions}
+
+\subsection{Multivariable Functions}
+
+\textbf{Partial Derivatives}
+\begin{itemize}
+    \item In practice, the partial derivative $\frac{\partial f}{\partial x_i} (x)$ is computed
+    by considering the variables $x_1, \ldots, x_{i-1}, x_{i+1}, \ldots, x_n$ to be fixed, and
+    differentiating $f(x)$ as a function of one variable $x_i$.
+    \item Partial derivatives of higher order are defined similarly. The second order partial 
+    derivative of $f(x)$ with respect to $x_i$ and then with respect to $x_j$, with $j \ne i$
+    is defined as
+    \[ \frac{\partial^2f}{\partial x_j \partial x_i} (x) = \frac{\partial}{\partial x_j} \left(
+        \frac{\partial f}{\partial x_i}(x)\right) \]
+\end{itemize}
+
+\textbf{Gradient}
+\begin{itemize}
+    \item The gradient is a vector that points in the direction of maximum increase.
+    \item An $n \times 1$ vectors that stores all the first order partial derivatives.
+    \item Let $f : \mathbb{R}^n \to \mathbb{R}$ be a function of $n$ variables and assume that 
+    $f(x)$ is differentiable with respect to all variables $x_i, \ i = 1, \ldots, n$. The 
+    gradient $\nabla f$ of the function $f(x)$ is the following vector of $n$ components
+    \[ 
+    \nabla f(x) =  
+    \begin{bmatrix}
+        \frac{\partial f}{\partial x_1}(x) \\
+        \vdots \\
+        \frac{\partial f}{\partial x_n}(x) \\
+    \end{bmatrix}
+    \]
+\end{itemize}
+
+\textbf{Hessian}
+\begin{itemize}
+    \item An $n \times n$ matrix that stores all the second order partial derivatives.
+    \item Let $f : \mathbb{R}^n \to \mathbb{R}$ be a function of $n$ variables. The Hessian of 
+    $f(x)$ is the following matrix of $n \times n$ components
+    \[
+    H = \begin{bmatrix}
+        \frac{\partial^2 f}{\partial x_1^2}(x) & \frac{\partial^2 f}{\partial x_2 \partial x_1}(x) & \cdots & \frac{\partial^2 f}{\partial x_n \partial x_1}(x) \\
+        \frac{\partial^2 f}{\partial x_1 \partial x_2}(x) & \frac{\partial^2 f}{\partial x_2^2}(x) & \cdots & \frac{\partial^2 f}{\partial x_n \partial x_2}(x) \\
+        \vdots & \vdots & \ddots & \vdots \\
+        \frac{\partial^2 f}{\partial x_1 \partial x_n}(x) & \frac{\partial^2 f}{\partial x_2 \partial x_n}(x) & \cdots & \frac{\partial^2 f}{\partial x_n^2}(x) \\
+    \end{bmatrix}    
+    \]
+\end{itemize}
+
+\end{document}
