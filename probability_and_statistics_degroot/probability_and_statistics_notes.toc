@@ -21,3 +21,4 @@
 \contentsline {subsection}{\numberline {3.4}Bivariate Distributions}{15}{subsection.3.4}%
 \contentsline {subsection}{\numberline {3.5}Marginal Distributions}{17}{subsection.3.5}%
 \contentsline {subsection}{\numberline {3.6}Conditional Distributions}{19}{subsection.3.6}%
+\contentsline {subsection}{\numberline {3.7}Multivariate Distributions}{21}{subsection.3.7}%
