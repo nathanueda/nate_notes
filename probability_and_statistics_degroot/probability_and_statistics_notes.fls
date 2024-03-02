@@ -598,6 +598,16 @@ INPUT ./imgs/joint_pdf.png
 INPUT imgs/joint_pdf.png
 INPUT ./imgs/joint_pdf.png
 INPUT ./imgs/joint_pdf.png
+INPUT ./imgs/conditional_pf.png
+INPUT ./imgs/conditional_pf.png
+INPUT imgs/conditional_pf.png
+INPUT ./imgs/conditional_pf.png
+INPUT ./imgs/conditional_pf.png
+INPUT ./imgs/conditional_pdf.png
+INPUT ./imgs/conditional_pdf.png
+INPUT imgs/conditional_pdf.png
+INPUT ./imgs/conditional_pdf.png
+INPUT ./imgs/conditional_pdf.png
 INPUT probability_and_statistics_notes.aux
 INPUT ./probability_and_statistics_notes.out
 INPUT ./probability_and_statistics_notes.out
