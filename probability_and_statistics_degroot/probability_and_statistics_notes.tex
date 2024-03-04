@@ -882,4 +882,201 @@ problem is fittingly called, the Gambler's Ruin problem. \\
 
 \subsection{Multivariate Distributions}
 
+\textbf{Multivariate Distributions}
+\begin{itemize}
+    \item Multivariate distributions are simply an extension of the 2 r.v. (bivariate)
+    distributions to $n$ r.v. (multivariate) distributions.
+    \item In general, the joint distribution of more than 2 r.v.s is called a multivariate 
+    distribution.
+    \item The theory of statistical inference relies on mathematical models for observable data
+    in which each observation is a r.v. Therefore, multivariate distributions arise naturally 
+    in the mathematical models for data. 
+\end{itemize}
+
+\textbf{Vector Notation}
+\begin{itemize}
+    \item When dealing with $n$ r.v.s, $X_1, \ldots, X_n$, it is often more convenient to use 
+    the vector notation $\boldsymbol{X}=(X_1, \ldots, X_n)$.
+    \item $\boldsymbol{X}$ is referred to as a \textit{random vector}.
+    \item Instead of speaking of the joint distrubution of the r.v.s $X_1, \ldots, X_n$ with a
+    joint c.d.f. $F(x_1, \ldots, x_n)$, we can simply speak of the distribution of the random 
+    vector $\boldsymbol{X}$ with c.d.f. $F(\boldsymbol{x})$.
+    \item When using vector notation, we must keep in mind that $\boldsymbol{X}$ is an $n$-
+    dimensional random vector, with its c.d.f. being defined as a function on the $n$-
+    dimensional space $\mathbb{R}^n$.
+\end{itemize}
+
+\textbf{Multivariate Discrete Distributions}
+\begin{itemize}
+    \item $n$ r.v.s $X_1, \ldots, X_n$ have a discrete joint distribution if the random vector 
+    $\boldsymbol{X}=(X_1, \ldots, X_n)$ can have only a finite number or an infinite sequence
+    of different possible values $(x_1, \ldots, x_n)$ in $\mathbb{R}^n$.
+    \item The joint p.f. of $X_1, \ldots, X_n$ is defined as the function $f$ such that for 
+    every point $(x_1, \ldots, x_n) \in \mathbb{R}^n$
+    \[f(x_1, \ldots, x_n) = P(X_1=x_1, \ldots, X_n=x_n)\]
+    \[f(\boldsymbol{x}) = P(\boldsymbol{X}=\boldsymbol{x})\]
+    \item If $\boldsymbol{X}$ has a joint discrete distribution with p.f. $f$, then for every 
+    subset $C \subset \mathbb{R}^n$
+    \[P(\boldsymbol{X} \in C) = \sum_{x \in C} f(\boldsymbol{x})\]
+\end{itemize}
+
+\textbf{Multivariate Continuous Distributions}
+\begin{itemize}
+    \item $n$ r.v.s $X_1, \ldots, X_n$ have a continuous joint distribution if there is a 
+    nonnegative function (joint p.d.f. of $\boldsymbol{X}$) $f$ defined on $\mathbb{R}^n$ such 
+    that for every subset $C \subset 
+    \mathbb{R}^n$
+    \[P[(X_1, \ldots, X_n) \in C] = \int \underset{C}{\ldots} \int f(x_1, \ldots, x_n) \,dx_1, 
+    \ldots, \,dx_n \]
+    \[P(\boldsymbol{X} \in C) = \int \underset{C}{\ldots} \int f(\boldsymbol{x}) \,d
+    \boldsymbol{x} \]
+    \item Even if each of \(X_1, \ldots, X_n\), has a continuous distribution, the vector 
+    \(\boldsymbol{X}\) might not have a continuous joint distribution.
+\end{itemize}
+
+\textbf{Multivariate Mixed Distributions}
+\begin{itemize}
+    \item If $X_1, \ldots, X_n$ are a combindation of discrete and continuous r.v.s, their 
+    joint distribution would then be represented by a function $f$, called the \textit{joint
+    p.f./p.d.f.}
+    \item The function has the property that the probability that $\boldsymbol{X}$ lies in a 
+    subset $C \subset \mathbb{R}^n$ is calculated by summing $f(\boldsymbol{x})$ over the 
+    values of the coordinates of $\boldsymbol{x}$ that correspond to the discrete r.v.s and 
+    integrating over the coordinates that correspond to the continuous r.v.s for all points 
+    \(\boldsymbol{x} \in C\).
+\end{itemize}
+
+\textbf{Deriving a Marginal p.d.f. from a Multivariate Continuous Distribution}
+\begin{itemize}
+    \item If the joint distribution of \(n\) r.v.s \(X_1, \ldots, X_n\) is known, then the 
+    marginal distributions of each single r.v. \(X_i\) can be derived from this joint 
+    distribution.
+    \item The marginal joint p.d.f. of any $k$ of the $n$ random variables \(X_1, \ldots, X_n\)
+    can be found by integerating the joint p.d.f. over all possible values of the other \(n-k\)
+    variables. 
+    \item If the joint p.d.f. of \(X_1, \ldots, X_n\) is \(f\), then the marginal p.d.f. 
+    \(f_1\) of \(X_1\) is specified at every value \(x_1\) by the relation 
+    \[f_1(x_1)=\underbrace{\int_{-\infty}^{\infty} \ldots \int_{-\infty}^{\infty}}_{n-1} f(x_1,
+    \ldots, x_n) \,dx_2 \ldots \,dx_n\]
+    \item If the joint p.d.f. of \(X_1, X_2, X_3, X_4\) is \(f\), then the marginal bivariate 
+    p.d.f. \(f_{24}\) of \(X_2\) and \(X_4\) is specified at each point \((x_2, x_4)\) by the 
+    relation 
+    \[f_{24}(x_2, x_4)= \int_{-\infty}^{\infty} \int_{-\infty}^{\infty} f(x_1, x_2, x_3, x_4) 
+    \,dx_1 \,dx_3\]
+\end{itemize}
+
+\textbf{Deriving a Marginal p.f. from a Multivariate Discrete Distribution}
+\begin{itemize}
+    \item If \(n\) r.v.s \(X_1, \ldots, X_n\) have a discrete joint distribution, then the 
+    marginal joint p.f. of each subset of the $n$ variables can be obtained from the relations
+    similar to those for continuous distributions where the integrals are replaced by sums.
+\end{itemize}
+
+\textbf{Deriving a Marginal c.d.f.}
+\begin{itemize}
+    \item The marginal joint c.d.f. fo any $k$ of $n$ r.v.s \(X_1, \ldots, X_n\) can be found 
+    by computing the limiting value of the $n$-dimensional c.d.f. $F$ as $x_j \to \infty$ for 
+    each of the other $n-k$ variables $x_j$. 
+    \item If the joint c.d.f. of \(X_1, \ldots, X_n\) is \(F\), then the marginal c.d.f. 
+    \(F_1\) of \(X_1\) can be obtained from the following relation
+    \[F_1(x_1)=P(X_1 \le x_1) = P(X_1 \le x_1, X_2 < \infty, \ldots, X_n < \infty)\]
+    \[F_1(x_1)=\lim_{x_2, \ldots, x_n \to \infty} F(x_1, x_2, \ldots, x_n) \]
+    \item If $F$ is the joint c.d.f. of 4 r.v.s $X_1, X_2, X_3, X_4$, then the marginal 
+    bivariate c.d.f. $F_{24}$ of $X_2$ and $X_4$ is specified at every point $(x_2, x_4)$ by
+    the relation 
+    \[F_{24}(x_2, x_4) = \lim_{x_1, x_3 \to \infty} F(x_1, x_2, x_3, x_4)\]
+\end{itemize}
+
+\textbf{Independent Random Variables}
+\begin{itemize}
+    \item $n$ r.v.s $X_1, \ldots, X_n$ are independent if, for every $n$ sets $A_1, \ldots, 
+    A_n$ of real numbers 
+    \[P(X_1 \in A_1, \ldots, X_n \in A_n) = P(X_1 \in A_1) \ldots P(X_n \in A_n)\]
+    \item Let $F$ denote the joint c.d.f. of $X_1, \ldots, X_n$ and let $F_i$ denote the 
+    marginal univariate c.d.f. of $X_i$ for $i = 1, \ldots, n$. The variables $X_1, \ldots, 
+    X_n$ are independent if and only if, for all points $(x_1, \ldots, x_n) \in \mathbb{R}^n$
+    \[F(x_1, \ldots, x_n) = F_1(x_1) \ldots F_n(x_n)\]
+    \item If $X_1, \ldots, X_n$ have a continuous, discrete, or mixed joint distribution for 
+    which the joint p.d.f., joint p.f., or joint p.f./p.d.f. is $f$, and if $f_i$ is the 
+    marginal univariate p.d.f. or p.f. of $X_i$ for $i = 1, \ldots, n$, then $X_1, \ldots X_n$
+    are independent if and only if the following relation is satisfied at all points $x_1, 
+    \ldots, x_n \in \mathbb{R}^n$
+    \[f(x_1, \ldots, x_n)=f_1(x_1) \ldots f_n(x_n)\]
+    \item Consider a given probability distribution of the real line that can be represented 
+    by either a p.f. or a p.d.f. $f$. It is said that $n$ r.v.s $X_1, \ldots X_n$ form a 
+    \textit{random sample} from this distribution if these r.v.s are independent and the 
+    marginal p.f. or p.d.f. of each of them is $f$. Such r.v.s are also said to be \textit{
+    independent and identically distributed (i.i.d.)}. We refer to the number $n$ of r.v.s as 
+    the \textit{sample size}.
+    \item $n$ r.v.s $X_1, \ldots, X_n$ each with marginal p.f./p.d.f. $f$ and joint 
+    distribution $g$ if and only if, at all points $(x_1, \ldots, x_n) \in \mathbb{R}^n$
+    \[g(x_1, \ldots, x_n) = f(x_1) \ldots f(x_n)\]
+    
+    \textbf{Conditional Multivariate Distributions}
+    \begin{itemize}
+        \item Suppose that $n$ r.v.s $X_1, \ldots, X_n$ have a continuous distribution for 
+        which the joint p.d.f. is $f$ and that $f_0$ denotes the marginal joint p.d.f. of the
+        $k < n$ r.v.s $X_1, \ldots, X_k$. Then for all values of $x_1, \ldots x_k$ such that 
+        $f_0(x_1, \ldots, x_k) > 0$, the conditional p.d.f. of $(X_{k+1}, \ldots X_n)$ given 
+        that $X_1=x_1, \ldots, X_k=x_k$ is defined as 
+        \[g_{k+1 \ldots n}(x_{k+1}, \ldots x_n | x_1, \ldots x_k) = \frac{f(x_1, \ldots x_n)}
+        {f_0(x_1, \ldots, x_k)}\]
+        \item More generally, suppose that the random vector $\boldsymbol{X}=(X_1, \ldots X_n)
+        $ is divided into 2 subvectors $\boldsymbol{Y}$ and $\boldsymbol{Z}$ where 
+        $\boldsymbol{Y}$ is a $k$-dimensional random vector comprising $k$ of the $n$ r.v.s in 
+        $\boldsymbol{X}$, and $\boldsymbol{Z}$ is an $(n-k)$-dimensional random vector 
+        comprising of the other $n-k$ random variables in $\boldsymbol{X}$. Suppose also that 
+        the $n$-dimensional joint p.f., p.d.f., or p.f./p.d.f. of $(\boldsymbol{Y}, 
+        \boldsymbol{Z})$ is $f$ and that the marginal $(n-k)$-dimensional p.f., p.d.f., or
+        p.f./p.d.f. of $\boldsymbol{Z}$ is $f_2$. Then for every given point $\boldsymbol{z}
+        \in \mathbb{R}^{n-k}$ such that $f_2(\boldsymbol{z})>0$, the conditional $k$
+        -dimensional p.f., p.d.f., or p.f./p.d.f. $g_1$ of $\boldsymbol{Y}$ given 
+        $\boldsymbol{Z} = \boldsymbol{z}$ is defined as 
+        \[g_1(\boldsymbol{y}|\boldsymbol{z}) = \frac{f(\boldsymbol{y}, \boldsymbol{z})}
+        {f_2(\boldsymbol{z})}\]
+        for $\boldsymbol{y} \in \mathbb{R}^k$. \\
+
+        This can be rewritten as
+        \[f(\boldsymbol{y}, \boldsymbol{z}) = g_1(\boldsymbol{y}|\boldsymbol{z})f_2(
+        \boldsymbol{z})\]
+        \item To determine the conditional version given $\boldsymbol{W} = \boldsymbol{w}$ of 
+        a result just proven, simply add conditional on $\boldsymbol{W} = \boldsymbol{w}$ to 
+        every probabilistic statement in the result. 
+    \end{itemize}
+
+    \textbf{Multivariate Law of Total Probability and Bayes' Theorem}
+    \begin{itemize}
+        \item Suppose that the random vector $\boldsymbol{X}=(X_1, \ldots X_n)
+        $ is divided into 2 subvectors $\boldsymbol{Y}$ and $\boldsymbol{Z}$ where 
+        $\boldsymbol{Y}$ is a $k$-dimensional random vector comprising $k$ of the $n$ r.v.s in 
+        $\boldsymbol{X}$, and $\boldsymbol{Z}$ is an $(n-k)$-dimensional random vector 
+        comprising of the other $n-k$ random variables in $\boldsymbol{X}$. Suppose also that 
+        the $n$-dimensional joint p.f., p.d.f., or p.f./p.d.f. of $(\boldsymbol{Y}, 
+        \boldsymbol{Z})$ is $f$ and that the marginal $(n-k)$-dimensional p.f., p.d.f., or
+        p.f./p.d.f. of $\boldsymbol{Z}$ is $f_2$. If $\boldsymbol{Z}$ has a continuous joint
+        distribution, the marginal p.d.f. of $\boldsymbol{Y}$ is 
+        \[f_1(\boldsymbol{y})= \underbrace{\int_{-\infty}^{\infty} \ldots \int_{-\infty}^{
+        \infty} }_{n-k} g_1(\boldsymbol{y}|\boldsymbol{z})f_2(\boldsymbol{z})\,d
+        \boldsymbol{z}\]
+        and the conditional p.d.f. of $\boldsymbol{Z}$ given $\boldsymbol{Y}=\boldsymbol{y}$ 
+        is
+        \[g_2(\boldsymbol{z}|\boldsymbol{y})=\frac{g_1(\boldsymbol{y}|\boldsymbol{z})f_2(
+        \boldsymbol{z})}{f_1(\boldsymbol{y})}\]
+        \item If $\boldsymbol{Z}$ has a discrete distribution, then the multiple integreal 
+        must be replaced with a multiple summation. 
+    \end{itemize}
+
+    \textbf{Conditionally Independent Random Variables}
+    \begin{itemize}
+        \item Let $\boldsymbol{Z}$ be a random vector with joint p.f., p.d.f., or p.f./p.d.f.
+        $f_0(\boldsymbol{z})$. Several random variables $X_1, \ldots, X_n$ are \textit{
+        conditionally independent} given $\boldsymbol{Z}$ if, for all $\boldsymbol{z}$ such 
+        that $f_0(\boldsymbol{z})>0$, we have 
+        \[g(\boldsymbol{x}|\boldsymbol{z})= \prod_{i=1}^{n}g_i(x_i|\boldsymbol{z})\]
+    \end{itemize}
+
+\end{itemize}
+
+
+
 \end{document}
