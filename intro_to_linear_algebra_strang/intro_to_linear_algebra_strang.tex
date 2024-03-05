@@ -1232,4 +1232,149 @@ perpendicular to column space. \\
     \boldsymbol{q}_2 = \frac{1}{\sqrt{6}}\begin{bmatrix} 1 \\ 1 \\ -2 \end{bmatrix}, \
     \boldsymbol{q}_3 = \frac{1}{\sqrt{3}}\begin{bmatrix} 1 \\ 1 \\ 1 \end{bmatrix}\]
 \end{itemize}
+
+\section{Determinants}
+
+\subsection{3 by 3 Determinants and Cofactors}
+
+\textbf{Determinant Basics}
+\begin{itemize}
+    \item Needed for eigenvalues.
+    \item A number associated with every square matrix only.
+    \item Commonly written det $A=|A|$ 
+    \item A matrix is invertible when the determinant is nonzero.
+    \item A matrix is singular when the determinant is zero. 
+\end{itemize}
+
+\textbf{Determinant Properties}
+\begin{enumerate}
+    \item det $I=1$
+    \item Row exchange reverse the sign of the determinant. 
+    \begin{itemize}
+        \item The determinant of a permutation matrix $P$ is either 1 or -1.
+        \item From the identity matrix, an odd amount of row exchanges results in a 
+        determinant of -1, while an even amount of row exchanges results in a determinant of 1.
+    \end{itemize}
+    \item
+    \begin{enumerate}
+        \item If we mutiply 1 row by $t$ and leave the other $n-1$ rows alone, the factor $t$ 
+        comes out.
+        \[
+            \begin{vmatrix}
+                ta & tb \\ 
+                c & d 
+            \end{vmatrix} = 
+            t \begin{vmatrix}
+                a & b \\
+                c & d
+            \end{vmatrix}
+        \]
+        \item The determinant is linear for each row. It behaves like a linear function on the 
+        rows of the matrix.
+        \[
+            \begin{vmatrix}
+                a+a' & b+b' \\ 
+                c & d 
+            \end{vmatrix} = 
+            \begin{vmatrix}
+                a & b \\ 
+                c & d 
+            \end{vmatrix} +
+            \begin{vmatrix}
+                a' & b' \\ 
+                c & d 
+            \end{vmatrix} 
+            \]
+    \end{enumerate}
+    \item If 2 rows are equal, the determinant of the matrix is 0.
+    
+    This is because of property 2, the exchange rule. On the one hand, exchanging the two 
+    identical rows does not change the determinant. On the other hand, exchanging the two rows
+    changes the sign of the determinant. Therefore the determinant must be 0. 
+    \item If \(i \ne j\), subtracting $t$ times row $i$ from row $j$ doesn't change the 
+    determinant.
+
+    In 2 dimensions, this argument would look like 
+    \[
+    \begin{vmatrix}
+        a & b \\
+        c - ta & d - tb 
+    \end{vmatrix}  = 
+    \begin{vmatrix}
+        a & b \\
+        c & d 
+    \end{vmatrix} + 
+    \begin{vmatrix}
+        a & b \\
+        -ta & -tb 
+    \end{vmatrix} = 
+    \begin{vmatrix}
+        a & b \\
+        c & d 
+    \end{vmatrix} - 
+    t \begin{vmatrix}
+        a & b \\
+        a & b 
+    \end{vmatrix} = 
+    \begin{vmatrix}
+        a & b \\
+        c & d 
+    \end{vmatrix} - 
+    t (0) = 
+    \begin{vmatrix}
+        a & b \\
+        c & d 
+    \end{vmatrix}
+    \]
+    \item If $A$ has a row that is all zeros, then its determinant is 0. 
+    We get this property from property 3(a) by letting $t=0$.
+    \item  The determinant of an upper triangular matrix is the product of the diagonal 
+    entries (pivots) \(d_1 d_2 \ldots d_n\).
+
+    Property 5 tells us that the determinant of the triangular matrix won't change if we use 
+    elimination to convert it to a diagonal matrix with the entries $d_i$ on its diagonal. 
+    Then property 3 (a) tells us that the determinant of this diagonal matrix is the product 
+    \(d_1 d_2 \ldots d_n\) times the determinant of the identity matrix (we can factor out
+    each $d_i$ 1 by 1). Property 1 completes the argument. Note that we cannot use elimination 
+    to get a diagonal matrix if one of the $d_i$ is zero. In that case elimination will give 
+    us a row of zeros and property 6 gives us the conclusion we want. 
+    \item The determinant of matrix $A$ is 0 when $A$ is singular. 
+    
+    If $A$ is singular, then we can use elimination to get a row of zeros, and property 6 
+    tells us that the determinant is zero. If $A$ is not singular, then elimination produces a 
+    full set of pivots \(d_1, d_2, \ldots, d_n\) and the determinant is $d_1 \ldots d_n \ne 0$
+    (with minus signs from row exchanges). \\
+
+    We now have a very practical formula for the determinant of a non-singular matrix. In fact, 
+    the way computers find the determinants of large matrices is to first perform elimination 
+    (keeping track of whether the number of row exchanges is odd or even) and then multiply 
+    the pivots.
+    \item $\text{det } AB = (\text{det }A) (\text{det }B)$
+    
+    This is very useful. Although the determinant of a sum does not equal the sum of the 
+    determinants, it is true that the determinant of a product equals the product of the 
+    determinants. \\
+
+    For example \[\text{det } A^{-1}= \frac{1}{\text{det } A}\]
+    since 
+    \[A^{-1}A=I\]
+    \[(\text{det }A^{-1}) (\text{det }A)=1\]
+
+    Also, 
+    \[\text{det }A^2 = {(\text{det}A)}^2\]
+    \[\text{det }2A = 2^n\text{ det }A\]
+
+    \item $\text{det } A^T = \text{det } A$
+\end{enumerate}
+\textbf{2 by 2 Determinants}
+\begin{itemize}
+    \item The determinant of the 2 by 2 matrix $A$ is 
+    \[
+    |A| = \begin{vmatrix}
+        a & b \\ 
+        c & d 
+    \end{vmatrix} = ad - bc   
+    \]
+\end{itemize}
+
 \end{document} 

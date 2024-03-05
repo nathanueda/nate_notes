@@ -18,3 +18,5 @@
 \contentsline {subsection}{\numberline {4.2}Projections onto Lines and Subspaces}{15}{subsection.4.2}%
 \contentsline {subsection}{\numberline {4.3}Least Squares Approximations}{17}{subsection.4.3}%
 \contentsline {subsection}{\numberline {4.4}Orthonormal Bases and Gram-Schmidt}{19}{subsection.4.4}%
+\contentsline {section}{\numberline {5}Determinants}{22}{section.5}%
+\contentsline {subsection}{\numberline {5.1}3 by 3 Determinants and Cofactors}{22}{subsection.5.1}%
