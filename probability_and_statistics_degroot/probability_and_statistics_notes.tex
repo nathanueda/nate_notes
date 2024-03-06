@@ -1074,9 +1074,87 @@ problem is fittingly called, the Gambler's Ruin problem. \\
         that $f_0(\boldsymbol{z})>0$, we have 
         \[g(\boldsymbol{x}|\boldsymbol{z})= \prod_{i=1}^{n}g_i(x_i|\boldsymbol{z})\]
     \end{itemize}
-
 \end{itemize}
 
+\subsection{Functions of a Random Variable}
+
+\textbf{Why Functions of a Random Variable Are Important}
+\begin{itemize}
+    \item Often we find after computing the distribution of a r.v. $X$, we actually want to 
+    find the distribution of some function of $X$.
+    \item An example is if $X$ is the rate at which customers are served in a queue, but we 
+    want the average waiting time, defined as $Y = 1/X$.
+    \item Having the distribution of $X$ is enough to find the distribution of some function 
+    of $X$.
+\end{itemize}
+
+\textbf{Deriving a p.f. for a Function of a Discrete Random Variable}
+\begin{itemize}
+    \item Let $X$ have a discrete distribution with p.f. $f$, and let $Y=r(X)$ for some 
+    function of $r$ defined on the set of possible values of $X$. For each possible value $y$
+    of $Y$, the p.f. $g$ of $Y$ is
+
+    \[g(y) = P(Y=y) = P[r(X)=y] = \sum_{x:r(x)=y} f(x)\]
+
+    which says that the $P(Y=y)$ is equal to the summation of the probabilities of all values 
+    where $r(x)=y$. In other words, for some value of $y$, we see all the values where $r(x)
+    =y$ and sum over each probability, that is, for each $P(X=x)$.
+
+    \item Example
+    \begin{itemize}
+        \item Let $X$ have the uniform distribution on integers $1, \ldots, 9$.
+        \item Suppose we are interested in how far $X$ is from the middle of the distribution, 
+        namely, 5. 
+        \item We can define $Y= |X-5|$ and compute probabilities. For example, we could 
+        compute $P(Y=1) = P(X=4 \cup X=6) = \frac{1}{9} + \frac{1}{9} = \frac{2}{9}$ (here, 
+        $r(x)=y$ exactly when $x=4$ or $x=6$).
+    \end{itemize}
+\end{itemize}
+
+\textbf{Deriving a c.d.f. for a Function of a Continuous Random Variable}
+\begin{itemize}
+    \item The process for deriving the probability distribution for a continuous r.v. differs
+    from the procedure for deriving the probability distribution for a discrete r.v. 
+    \item Suppose that a continuous r.v. $X$ with a p.d.f. $f$ and another continuous r.v. $Y$
+    is defined as $Y=r(X)$. For each real number $y$, the c.d.f., $G(y)$ of $Y$ can be derived
+    as 
+    \[G(y) = P(Y \le y) = P[r(X) \le y] = \int_{{x:r(x) \le y}} f(x) \,dx \]
+
+    which says that $P(Y \le y)$ is equal to the integral of the p.d.f. of $x$ for all values 
+    where $r(x) \le y$.
+\end{itemize}
+
+\textbf{Deriving a p.d.f. for a Function of a Continuous Random Variable}
+\begin{itemize}
+    \item Suppose that a continuous r.v. $X$ with a p.d.f. $f$ and another continuous r.v. $Y$
+    is defined as $Y=r(X)$. The p.d.f. of $Y$, defined as $g$, can be obtained from the 
+    relation
+    \[g(y) = \frac{d}{dy} G(y)\]
+    \item Example 
+    \begin{itemize}
+        \item For 2 continuous r.v.s $X$ and $Y$, derive the p.d.f. for $Y=X^2$ when $X$ has
+        the uniform distribution on the interval $[-1,1]$, so
+        \[
+        \begin{cases}
+            1/2 & \text{for } -1 \le x \le 1 \\
+            0 & \text{otherwise}
+        \end{cases}    
+        \]
+    \end{itemize}
+    To find the p.d.f. of $Y$, we will first find the c.d.f. of $Y$ and then use the c.d.f. to 
+    find the p.d.f.
+    Since $Y=X^2$, then $Y$ must belong to the interval $0 \le Y \le 1$. Thus, for each value 
+    of $Y$ such that $0 \le Y \le 1$, the c.d.f. $G(y)$ of $Y$ is 
+    
+    \[G(y) = P(Y \le y) = P[r(X) \le y] = \int_{{x:r(x) \le y}} f(x) \,dx \]
+    \[G(y) = P(Y \le y) = P[r(X) \le y] = P[X^2 \le y] = P(-\sqrt{y} \le X \le \sqrt{y}) =\] 
+    \[\int_{-\sqrt{y}}^{\sqrt{y}} 1/2 \,dx = \frac{1}{2}x |_{-\sqrt{y}}^{\sqrt{y}} = 
+    \frac{\sqrt{y}}{2} - -\frac{\sqrt{y}}{2} = \sqrt{y}\]
+    
+    Now to find the p.d.f. of $Y$
+    \[g(y) = \frac{d}{dy} G(y)\]
+    \[g(y) = \frac{d}{dy} \sqrt{y} = \frac{1}{2\sqrt{y}}\]
+\end{itemize}
 
 
 \end{document}

@@ -1,6 +1,6 @@
 # Fdb version 4
-["pdflatex"] 1709590057 "/Users/nathanueda/VSCode/nate_notes/probability_and_statistics_degroot/probability_and_statistics_notes.tex" "probability_and_statistics_notes.pdf" "probability_and_statistics_notes" 1709590058 0
-  "/Users/nathanueda/VSCode/nate_notes/probability_and_statistics_degroot/probability_and_statistics_notes.tex" 1709590056 52500 423033cee7ad679bac318c62743c7543 ""
+["pdflatex"] 1709768460 "/Users/nathanueda/VSCode/nate_notes/probability_and_statistics_degroot/probability_and_statistics_notes.tex" "probability_and_statistics_notes.pdf" "probability_and_statistics_notes" 1709768461 0
+  "/Users/nathanueda/VSCode/nate_notes/probability_and_statistics_degroot/probability_and_statistics_notes.tex" 1709768459 56252 40dd766e7f50d5dac94a45b9451857a9 ""
   "/usr/local/texlive/2022/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc" 1136849721 2900 1537cc8184ad1792082cd229ecc269f4 ""
   "/usr/local/texlive/2022/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/local/texlive/2022/texmf-dist/fonts/tfm/jknappen/ec/tcrm1095.tfm" 1136768653 1536 02c06700a42be0f5a28664c7273f82e7 ""
@@ -112,10 +112,10 @@
   "imgs/conditional_pf.png" 1709395263 77164 f35906b74dcb6860c661df61cb591fa0 ""
   "imgs/joint_pdf.png" 1709226963 214818 96f8be9abb056c628a09dddbe9c65b9e ""
   "imgs/joint_pf.png" 1709225996 76789 26a39996769aea1b411b754014f8c220 ""
-  "probability_and_statistics_notes.aux" 1709590058 4975 c0772dddc4ffb35b876b09708ff8f9e3 "pdflatex"
-  "probability_and_statistics_notes.out" 1709590058 4569 946f9fb54f7f20f60b69b9c57ff9ed21 "pdflatex"
-  "probability_and_statistics_notes.tex" 1709590056 52500 423033cee7ad679bac318c62743c7543 ""
-  "probability_and_statistics_notes.toc" 1709590058 2178 334603478ec2a28cb5301fee800028d5 "pdflatex"
+  "probability_and_statistics_notes.aux" 1709768461 5113 c7bfe56106cb22a8ad19453d2a31885f "pdflatex"
+  "probability_and_statistics_notes.out" 1709768461 4789 7d154235af949f7043629ed5e07b2594 "pdflatex"
+  "probability_and_statistics_notes.tex" 1709768459 56252 40dd766e7f50d5dac94a45b9451857a9 ""
+  "probability_and_statistics_notes.toc" 1709768461 2275 67ab7c54d22b5b17efc518697ccb35e6 "pdflatex"
   (generated)
   "probability_and_statistics_notes.aux"
   "probability_and_statistics_notes.log"
