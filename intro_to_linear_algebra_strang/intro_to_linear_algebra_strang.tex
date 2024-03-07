@@ -1246,6 +1246,23 @@ perpendicular to column space. \\
     \item A matrix is singular when the determinant is zero. 
 \end{itemize}
 
+\textbf{Cofactor Formula}
+\begin{itemize}
+    \item For an $n \times n$ matrix $A$, the cofactor uses $n$! terms, have of which are 
+    positive, half of which are negative. 
+    \item The cofactor formula is a way of connecting an $n \times n$ determinant to an 
+    $(n-1) \times (n-1)$ determinant.
+    \item Each summed matrix will have one entry from each row and each column.
+    \item For the $i,j$ cofactor $C_{ij}$, start by removing row $i$ and column $j$ from the 
+    matrix $A$. $C_{ij}$ equals ${(-1)}^{i+j}$ time the determinant of the remaining matrix 
+    (size $n-1$).
+    \item The cofactor formula along row $i$ is det $A = a_{i1}C_{i1} + \cdots + a_{in}C_{in}$.
+    \item Useful when the martix entries are mostly 0, then there are few cofactors to 
+    find.
+\end{itemize}
+
+\subsection{Computing and Using Determinants}
+
 \textbf{Determinant Properties}
 \begin{enumerate}
     \item det $I=1$
@@ -1375,6 +1392,14 @@ perpendicular to column space. \\
         c & d 
     \end{vmatrix} = ad - bc   
     \]
+\end{itemize}
+
+\subsection{Areas and Volumes by Determinants}
+
+\textbf{Geometric Interpretation of the Determinant}
+\begin{itemize}
+    \item The absolute value of a matrix is equal to the volume of the parallelepiped spanned
+    by the row vectors of that matrix. 
 \end{itemize}
 
 \end{document} 

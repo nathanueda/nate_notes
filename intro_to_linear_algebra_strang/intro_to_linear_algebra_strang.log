@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.12.19)  4 MAR 2024 16:14
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.12.19)  6 MAR 2024 19:20
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -345,7 +345,7 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 \openout4 = `intro_to_linear_algebra_strang.toc'.
 
  [2] [3]
-<imgs/triangle_inequality.png, id=142, 441.65pt x 426.59375pt>
+<imgs/triangle_inequality.png, id=152, 441.65pt x 426.59375pt>
 File: imgs/triangle_inequality.png Graphic file (type png)
 <use imgs/triangle_inequality.png>
 Package pdftex.def Info: imgs/triangle_inequality.png  used on input line 101.
@@ -356,7 +356,7 @@ pdfTeX warning (ext4): destination with the same identifier (name{figure.1}) has
                                                   \__shipout_drop_firstpage_...
 l.129 W
        hen $A \in \mathbb{R}^{m \times n}$ and $B \in \mathbb{R}^{n \times p}$: <./imgs/triangle_inequality.png>] [5] [6] [7] [8] [9] [10] [11] [12] [13] [14]
-<imgs/line_projection.png, id=233, 316.18124pt x 193.72375pt>
+<imgs/line_projection.png, id=243, 316.18124pt x 193.72375pt>
 File: imgs/line_projection.png Graphic file (type png)
 <use imgs/line_projection.png>
 Package pdftex.def Info: imgs/line_projection.png  used on input line 808.
@@ -367,7 +367,7 @@ pdfTeX warning (ext4): destination with the same identifier (name{figure.2}) has
                                                   \__shipout_drop_firstpage_...
 l.816     \item T
                  he projection $\boldsymbol{p}$ is some multiple of $\boldsy... <./imgs/line_projection.png>]
-<imgs/plane_projection.png, id=240, 390.45876pt x 228.855pt>
+<imgs/plane_projection.png, id=250, 390.45876pt x 228.855pt>
 File: imgs/plane_projection.png Graphic file (type png)
 <use imgs/plane_projection.png>
 Package pdftex.def Info: imgs/plane_projection.png  used on input line 844.
@@ -378,7 +378,7 @@ pdfTeX warning (ext4): destination with the same identifier (name{figure.3}) has
                                                   \__shipout_drop_firstpage_...
 l.865     \boldsymbol{\hat{x}}) = 0 \]
                                        <./imgs/plane_projection.png>]
-<imgs/ols_simple.png, id=248, 533.995pt x 405.515pt>
+<imgs/ols_simple.png, id=258, 533.995pt x 405.515pt>
 File: imgs/ols_simple.png Graphic file (type png)
 <use imgs/ols_simple.png>
 Package pdftex.def Info: imgs/ols_simple.png  used on input line 894.
@@ -389,7 +389,7 @@ pdfTeX warning (ext4): destination with the same identifier (name{figure.4}) has
                                                   \__shipout_drop_firstpage_...
 l.900     \[C + 2D = 6\]
                          <./imgs/ols_simple.png>] [18] [19]
-<imgs/gram_schmidt.png, id=266, 603.25375pt x 239.89626pt>
+<imgs/gram_schmidt.png, id=276, 603.25375pt x 239.89626pt>
 File: imgs/gram_schmidt.png Graphic file (type png)
 <use imgs/gram_schmidt.png>
 Package pdftex.def Info: imgs/gram_schmidt.png  used on input line 1129.
@@ -401,21 +401,21 @@ pdfTeX warning (ext4): destination with the same identifier (name{figure.5}) has
 l.1202     \]
               <./imgs/gram_schmidt.png>] [22] [23] [24] (./intro_to_linear_algebra_strang.aux)
 Package rerunfilecheck Info: File `intro_to_linear_algebra_strang.out' has not changed.
-(rerunfilecheck)             Checksum: 980877CC1EAA2FA89407380EAAD229F2;4829.
+(rerunfilecheck)             Checksum: FECC43CECD8D7BA8C092DFD2F4AF81AA;5291.
  ) 
 Here is how much of TeX's memory you used:
- 10137 strings out of 476093
- 157866 string characters out of 5791584
+ 10141 strings out of 476093
+ 157926 string characters out of 5791584
  1870793 words of memory out of 5000000
- 30275 multiletter control sequences out of 15000+600000
+ 30277 multiletter control sequences out of 15000+600000
  523148 words of font info for 71 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 72i,17n,77p,446b,615s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 72i,17n,77p,446b,611s stack positions out of 10000i,1000n,20000p,200000b,200000s
 {/usr/local/texlive/2022/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}</usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx8.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmib10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmmib8.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/latxfont/line10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfrm1095.pfb>
-Output written on intro_to_linear_algebra_strang.pdf (24 pages, 509782 bytes).
+Output written on intro_to_linear_algebra_strang.pdf (24 pages, 511866 bytes).
 PDF statistics:
- 407 PDF objects out of 1000 (max. 8388607)
- 329 compressed objects within 4 object streams
- 103 named destinations out of 1000 (max. 500000)
- 202 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 417 PDF objects out of 1000 (max. 8388607)
+ 339 compressed objects within 4 object streams
+ 105 named destinations out of 1000 (max. 500000)
+ 218 words of extra memory for PDF output out of 10000 (max. 10000000)
 
