@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.12.19)  6 MAR 2024 15:41
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.12.19)  6 MAR 2024 17:57
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -349,7 +349,7 @@ Package amsmath Warning: Foreign command \atopwithdelims;
 (amsmath)                 on input line 154.
 
 [5] [6] [7] [8] [9] [10] [11] [12] [13] [14]
-<imgs/joint_pf.png, id=214, 511.9125pt x 375.4025pt>
+<imgs/joint_pf.png, id=219, 511.9125pt x 375.4025pt>
 File: imgs/joint_pf.png Graphic file (type png)
 <use imgs/joint_pf.png>
 Package pdftex.def Info: imgs/joint_pf.png  used on input line 642.
@@ -360,7 +360,7 @@ pdfTeX warning (ext4): destination with the same identifier (name{figure.1}) has
                                                   \__shipout_drop_firstpage_...
 l.657 ...X,Y) \in C] = \sum_{(x,y) \in C} f(x,y)\]
                                                    <./imgs/joint_pf.png>]
-<imgs/joint_pdf.png, id=222, 438.63875pt x 394.47375pt>
+<imgs/joint_pdf.png, id=227, 438.63875pt x 394.47375pt>
 File: imgs/joint_pdf.png Graphic file (type png)
 <use imgs/joint_pdf.png>
 Package pdftex.def Info: imgs/joint_pdf.png  used on input line 677.
@@ -371,13 +371,13 @@ pdfTeX warning (ext4): destination with the same identifier (name{figure.2}) has
                                                   \__shipout_drop_firstpage_...
 l.698     \item L
                  et $X$ and $Y$ be r.v.s such that $X$ is discrete and $Y$ i... <./imgs/joint_pdf.png>] [17] [18]
-<imgs/conditional_pf.png, id=237, 662.475pt x 303.1325pt>
+<imgs/conditional_pf.png, id=242, 662.475pt x 303.1325pt>
 File: imgs/conditional_pf.png Graphic file (type png)
 <use imgs/conditional_pf.png>
 Package pdftex.def Info: imgs/conditional_pf.png  used on input line 827.
 (pdftex.def)             Requested size: 433.62pt x 198.41216pt.
  [19]
-<imgs/conditional_pdf.png, id=243, 713.66624pt x 259.97125pt>
+<imgs/conditional_pdf.png, id=248, 713.66624pt x 259.97125pt>
 File: imgs/conditional_pdf.png Graphic file (type png)
 <use imgs/conditional_pdf.png>
 Package pdftex.def Info: imgs/conditional_pdf.png  used on input line 842.
@@ -392,23 +392,23 @@ pdfTeX warning (ext4): destination with the same identifier (name{figure.4}) has
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
 l.855     \item I
-                 f $f_2(y)$ is the marginal p.f. or p.d.f. of a r.v. $Y$ and... <./imgs/conditional_pf.png> <./imgs/conditional_pdf.png>] [21] [22] [23] [24] [25] [26] (./probability_and_statistics_notes.aux)
+                 f $f_2(y)$ is the marginal p.f. or p.d.f. of a r.v. $Y$ and... <./imgs/conditional_pf.png> <./imgs/conditional_pdf.png>] [21] [22] [23] [24] [25] [26] [27] [28] (./probability_and_statistics_notes.aux)
 Package rerunfilecheck Info: File `probability_and_statistics_notes.out' has not changed.
-(rerunfilecheck)             Checksum: 7D154235AF949F7043629ED5E07B2594;4789.
+(rerunfilecheck)             Checksum: 534721D28CFFD4ABB540032B958C9E18;5070.
  ) 
 Here is how much of TeX's memory you used:
- 10055 strings out of 476093
- 156635 string characters out of 5791584
+ 10059 strings out of 476093
+ 156679 string characters out of 5791584
  1864793 words of memory out of 5000000
- 30233 multiletter control sequences out of 15000+600000
+ 30234 multiletter control sequences out of 15000+600000
  523148 words of font info for 71 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  72i,9n,77p,458b,572s stack positions out of 10000i,1000n,20000p,200000b,200000s
 {/usr/local/texlive/2022/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}</usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmib10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfrm1095.pfb>
-Output written on probability_and_statistics_notes.pdf (26 pages, 657108 bytes).
+Output written on probability_and_statistics_notes.pdf (28 pages, 663417 bytes).
 PDF statistics:
- 371 PDF objects out of 1000 (max. 8388607)
- 298 compressed objects within 3 object streams
- 68 named destinations out of 1000 (max. 500000)
- 221 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 385 PDF objects out of 1000 (max. 8388607)
+ 309 compressed objects within 4 object streams
+ 71 named destinations out of 1000 (max. 500000)
+ 229 words of extra memory for PDF output out of 10000 (max. 10000000)
 

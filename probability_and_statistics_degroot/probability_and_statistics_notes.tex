@@ -1156,5 +1156,100 @@ problem is fittingly called, the Gambler's Ruin problem. \\
     \[g(y) = \frac{d}{dy} \sqrt{y} = \frac{1}{2\sqrt{y}}\]
 \end{itemize}
 
+\subsection{Functions of Two or More Random Variables}
+
+\textbf{Why Functions of Two or More Random Variables are Important}
+\begin{itemize}
+    \item When observing data consisting of the values of several r.v.s, we need to summarize 
+    the observed values in order to be able to focus on the information in the data. 
+    \item Sumamrizing consists of constructing 1 or a few functions of the r.v.s that capture
+    the bulk of the information. 
+\end{itemize}
+
+\textbf{Deriving a Joint p.f. for a Function of Discrete Random Variables}
+\begin{itemize}
+    \item Suppose that $n$ r.v.s $X_1, \ldots, X_n$ have a discrete joint distribution for 
+    which the joint p.f. is $f$, and that $m$ functions $Y_1, \ldots, Y_m$ of these $n$ r.v.s
+    are defined as 
+    \begin{align*}
+        Y_1 &= r_1(X_1, \ldots, X_n) \\
+        Y_2 &= r_2(X_1, \ldots, X_n) \\
+        \vdots \\
+        Y_m &= r_m(X_1, \ldots, X_n)
+    \end{align*}
+
+    for given values $y_1, \ldots, y_m$ of the $m$ r.v.s $Y_1, \ldots, Y_m$, let $A$ denote
+    the set of all points $(x_1, \ldots, x_n)$ such that
+
+    \begin{align*}
+        y_1 &= r_1(x_1, \ldots, x_n) \\
+        y_2 &= r_2(x_1, \ldots, x_n) \\
+        \vdots \\ 
+        y_m &= r_m(x_1, \ldots, x_n)
+    \end{align*}
+
+    then the value of the joint p.f. $g$ of $Y_1, \ldots, Y_m$ is specified at the point 
+    $(y_1, \ldots, y_m)$ by the relation 
+
+    \[g(y_1, \ldots, y_m) = \sum_{(x_1, \ldots, x_n) \in A} f(x_1, \ldots, x_n)\]
+
+    In words, this says that the joint p.f. of $g(y_1, \ldots y_m)$ is equal to the summation 
+    of the probabilities of all the values where $r(\boldsymbol{x})= \boldsymbol{y}$. In other 
+    words, for some value of $\boldsymbol{y}$, where $\boldsymbol{y}$ is a vector, we see all 
+    the values where $r(\boldsymbol{x})= \boldsymbol{y}$ and sum over each probability.
+
+    \item Example 
+    \begin{itemize}
+        \item Suppose 3 different investment firms are trying to advertise their mutual funds 
+        by showing how many perform better than the market. Each company has 10 funds, so 
+        there are 30 in total. Suppose the first 10 funds belong to firm 1, the second 10 to
+        firm 2, and the last 10 to firm 3. Let $X_i=1$ if fund $i$ performs better than the 
+        market and $X_i=0$ otherwise, for $i=1, \ldots, 30$. Then, we are interested in 3 
+        functions
+        \begin{align*}
+            Y_1 &= X_{1}+ \cdots + X_{10} \\
+            Y_2 &= X_{11} + \cdots + X_{20} \\
+            Y_3 &= X_{21} + \cdots + X_{30}
+        \end{align*}
+
+        and we would like to determine the joint p.f. $g$ of $(Y_1, Y_2, Y_3)$ at the point 
+        $(3, 5, 8)$. That is, we want $g(3,5,8)=P(Y_1=3, Y_2=5, Y_3=8)$.
+
+        \item We define the set $A$ as 
+        \[ A = \{ (x_1, \ldots, x_{30}): x_1 + \cdots + x_{10} = 3, x_{11} + \cdots + x_{20} = 5
+        , x_{21} + \cdots + x_{30} = 8 \} \]
+
+        \item The amount of points in the set $A$ are 
+        \[ {10 \choose 3} {10 \choose 5} {10 \choose 8} = 1,360,800 \]
+
+        \item If we assume that all $2^{30}$ possible values of the vector $(X_1, \ldots, 
+        X_{30})$ are equally likely (big assumption), then 
+        \[ g(3,5,8) = \frac{1,360,800}{2^{30}} = 1.26 \times 10^{-3} \]
+    \end{itemize}
+
+    \textbf{Binomial and Bernoulli Distributions}
+    \begin{itemize}
+        \item Assume that $X_1, \ldots, X_n$ are i.i.d. r.v.s having the Bernoulli 
+        distribution with parameter $p$. Let $Y = X_1 + \cdots + X_n =$. Then $Y$ has the 
+        binomial distribution with parameters $n$ and $p$.
+    \end{itemize}
+\end{itemize}
+
+\textbf{Deriving a c.d.f. for a Function of Countinuous Random Variables}
+\begin{itemize}
+    \item Suppose that the joint p.d.f. of $\boldsymbol{X} = (X_1, \ldots, X_n)$ is 
+    $f(\boldsymbol{x})$ and that $Y = r(\boldsymbol{X})$. For each real number $y$, define 
+    $A_y = \{ \boldsymbol{x}: r(\boldsymbol{x} \le y) \}$. Then the c.d.f. $G(y)$ of $Y$ is 
+    \[ G(y) = \int \underset{A_y}{\ldots} \int f(\boldsymbol{x}) \,d\boldsymbol{x}\]
+\end{itemize}
+
+\textbf{Convolution}
+\begin{itemize}
+    \item A \textit{convolution} is a sum of independent r.v.s.
+    \item Let $X_1$ and $X_2$ by independent continuous r.v.s and let $Y=X_1+X_2$. The 
+    distribution of $Y$ is called the \textit{convolution} of the distributions of $X_1$ and 
+    $X_2$. The p.d.f. of $Y$ is sometimes called the convolution of the p.d.f.'s of $X_1$ and 
+    $X_2$.
+\end{itemize}
 
 \end{document}
