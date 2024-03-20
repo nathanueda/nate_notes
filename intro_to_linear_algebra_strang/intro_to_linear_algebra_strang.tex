@@ -1257,6 +1257,14 @@ perpendicular to column space. \\
     matrix $A$. $C_{ij}$ equals ${(-1)}^{i+j}$ time the determinant of the remaining matrix 
     (size $n-1$).
     \item The cofactor formula along row $i$ is det $A = a_{i1}C_{i1} + \cdots + a_{in}C_{in}$.
+    \item Inverse matrix formula for a $2 \times 2$ matrix 
+    \[ A^{-1} = \frac{1}{ad - bc} 
+    \begin{bmatrix}
+        d & -b \\
+        -c & a 
+    \end{bmatrix} \]
+    \item Inverse matrix formula for a $n \times n$ matrix 
+    \[A^{-1} = \frac{C^T}{\text{det }A}\]
     \item Useful when the martix entries are mostly 0, then there are few cofactors to 
     find.
 \end{itemize}
