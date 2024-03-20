@@ -1252,4 +1252,149 @@ problem is fittingly called, the Gambler's Ruin problem. \\
     $X_2$.
 \end{itemize}
 
+\subsection{Markov Chains}
+
+\textbf{Markov Chains Basics}
+\begin{itemize}
+    \item A Markov chain model is a popular model for systems that change over time in a 
+    random manner.
+    \item A Markov chain is a sequence of r.v.s, one for each time period. 
+    \item At each time period, the corresponding r.v. gives the state of the system.
+    \item The conditional distribution of each future state given the past states and the 
+    present state depends on the present state. 
+\end{itemize}
+
+\textbf{Stochastic Processes}
+\begin{itemize}
+    \item A sequence of r.v.s $X_1, X_2, \ldots$ indexed by time is called a 
+    \textit{stochastic process} or \textit{random process} with discrete time parameter. 
+    \item The first r.v. $X_1$ is called the \textit{initial state} of the process; and for 
+    $n=2, 3, \ldots$, the r.v. $X_n$ is called the \textit{state of the process at time} $n$.
+    \item A discrete time parameter means that the process is only observed at discrete or 
+    separated points in time (such as at 2 minute intervals) instead of continuously in time.
+    \item Example 
+    \begin{itemize}
+        \item For an office with 5 telephone lines, let $X_n$ for $n=1, 2, \ldots$ denote the 
+        number of lines being used at time $n$ (where each $n$ is observed at 2 minute 
+        intervals). 
+        \item The state of the process at any time is the number of lines being used at that 
+        time. Therefore, it must take a value between 0 and 5. 
+    \end{itemize}
+    \item To describe the complete probability model for a particular process, it is necessary 
+    to specify the distribution for the initial state $X_1$ and also to specify for each $n=1,
+    2, \ldots$ the conditional distribution of the subsequent state $X_{n+1}$ given $X_1, 
+    \ldots X_n$. These conditional distributions are equivalent to the collection of 
+    conditional c.d.f.s of the following form 
+    \[ P(X_{n+1} \le b | X_1 = x_1, \ldots, X_n = x_n) \]
+\end{itemize}
+
+\textbf{Markov Chains}
+\begin{itemize}
+    \item A Markov chain is a special type of stochastic process, defined in terms of the 
+    conditional distributions of future states given the present and past states. 
+    \item A stochastic process with discrete time parameter is a \textit{Markov chain} if, for
+    each time $n$, the conditional distributions of all $X_{n+j}$ for $j \ge 1$ given $X_1, 
+    \ldots, X_n$ depend only on $X_n$ and not on the earlier states $X_1, \ldots, X_{n-1}$. In 
+    symbols, for $n=1, 2, \ldots$ and for each $b$ and each possible sequence of states $x_1, 
+    \ldots, x_n$ 
+    \[ P(X_{n+1} \le b | X_1=x_1, \ldots, X_n=x_n) = P(X_{n+1} \le b | X_n = x_n)\]
+
+    which means that the conditional distribution of some state only depends on the state 
+    immediately prior. 
+    \item A Markov chain is called finite if there are only finitely many possible states. 
+    \item For a finite Markov chain, the joint p.f. for the first $n$ states is 
+    \[ P(X_n=x_n | X_{n-1}= x_{n-1}) \]
+\end{itemize}
+
+\textbf{Transition Distributions/Stationary Transition Distributions}
+\begin{itemize}
+    \item Consider a finite Markov chain with $k$ possible states. The conditional 
+    distributions of the state at time $n+1$ given the states at time $n$, that is $P(X_{n+1}
+    = j | X_n = i)$ for $i,j = 1, \ldots, k$ and $n = 1, 2, \ldots$ are called the \textit{
+    transition distributions} of the Markov chain. 
+    \item If the distribution is the same for every time $n$ $(n=1, 2, \ldots)$, then the 
+    Markov chain has \textit{stationary transition distributions}.
+\end{itemize}
+
+\section{Expectation}
+
+\subsection{The Expectation of a Random Variable}
+\subsection{Properties of Expectations}
+\subsection{Variance}
+\subsection{Moments}
+\textbf{Moments Basics}
+\begin{itemize}
+    \item They have useful properties and some moments can be used for additional summaries of 
+    a distribution. 
+\end{itemize}
+
+\textbf{Raw Moments}
+\begin{itemize}
+    \item For each r.v. $X$ and every positive integer $k$, the expectation $E(X^k)$ is called 
+    the $k$th \textit{raw moment} of $X$.
+    \item Notably, following raw moments, the mean of $X$ is the first moment of $X$.
+    \item First Four Raw Moments
+    \begin{enumerate}
+        \item $E(X)=\frac{\sum_{i=1}^{n} x_i}{n}$
+        \item $E(X^2)=\frac{\sum_{i=1}^{n} x_i^2}{n}$
+        \item $E(X^3)=\frac{\sum_{i=1}^{n} x_i^3}{n}$
+        \item $E(X^4)=\frac{\sum_{i=1}^{n} x_i^4}{n}$
+    \end{enumerate}
+\end{itemize}
+
+\textbf{Existence of Moments}
+\begin{itemize}
+    \item The $k$th moment exists if and only if $E({|X|}^k) < \infty$
+    \item If $E({|X|}^k) < \infty$ for some positive integer $k$, then $E({|X|}^j) < \infty$ 
+    for every positive integer $j$ such that $j < k$. In other words, if we know the $k$th 
+    moment exists, then we know all moments prior to $k$ also exist.
+\end{itemize}
+
+\textbf{Centered Moments}
+\begin{itemize}
+    \item Suppose that $X$ is a r.v. for which $E(X)=\mu$. For every positive integer $k$, the 
+    expectation $E[{(X-\mu)}^k]$ is called the $k$th \textit{central moment} of $X$ about the 
+    mean.
+    \item Subtracting the mean, we are effectively netting out the effect of the first moment.
+    \item Notably, following central moments, the variance of $X$ is the second moment of $X$.
+    \item First Four Central Moments
+    \begin{enumerate}
+        \item $E[(X-\mu)]=\frac{\sum_{i=1}^{n} (x_i-\mu)}{n}=0$
+        \item $E[{(X-\mu)}^2]=\frac{\sum_{i=1}^{n} {(x_i-\mu)}^2}{n}$
+        \item $E[{(X-\mu)}^3]=\frac{\sum_{i=1}^{n} {(x_i-\mu)}^3}{n}$
+        \item $E[{(X-\mu)}^4]=\frac{\sum_{i=1}^{n} {(x_i-\mu)}^4}{n}$
+    \end{enumerate}
+\end{itemize}
+
+\textbf{Standardized Moments}
+\begin{itemize}
+    \item Let $X$ be a r.v. with mean $\mu$, standard deviation $\sigma$, and finite third 
+    moment. The \textit{skewness} of $X$  is defined to be $\frac{E[{(X-\mu)}^3]}{\sigma^3}$
+    \item Dividing the third central moment by $\sigma^3$ nets out the effect of the first and 
+    second moment. It makes the skewness measure only the lack of symmetry rather than the 
+    spread of the distribution. 
+    \item Notably, following standardized moments, the skewness of $X$ is the third moment of 
+    $X$ and the kurtosis is the fourth moment of $X$.
+    \item First Four Standardized Moments
+    \begin{enumerate}
+        \item $E[(X-\mu)]/\sigma=\frac{\sum_{i=1}^{n} (x_i-\mu)}{n\sigma}=0$
+        \item $E[{(X-\mu)}^2]/\sigma^2=\frac{\sum_{i=1}^{n} {(x_i-\mu)}^2}{n\sigma^2}=0$
+        \item $E[{(X-\mu)}^3]/\sigma^3=\frac{\sum_{i=1}^{n} {(x_i-\mu)}^3}{n\sigma^3}$
+        \item $E[{(X-\mu)}^4]/\sigma^4=\frac{\sum_{i=1}^{n} {(x_i-\mu)}^4}{n\sigma^4}$
+    \end{enumerate}
+\end{itemize}
+
+\textbf{Sampling Adjustments for the First Three Moments}
+\begin{enumerate}
+    \item $E(X)=\frac{\sum_{i=1}^{n} x_i}{n}$
+    \item $E[{(X-\mu)}^2]=\frac{\sum_{i=1}^{n} {(x_i-\mu)}^2}{n} \to \frac{\sum_{i=1}^{n} {(x_i-\bar{x})}^2}{n-1}$
+    \item $E[{(X-\mu)}^3]/\sigma^3=\frac{\sum_{i=1}^{n} {(x_i-\mu)}^3}{n\sigma^3} \to \frac{n}{(n-1)(n-2)}\frac{\sum_{i=1}^{n} {(x_i-\bar{x})}^3}{s^3}$
+\end{enumerate}
+
+\textbf{Moment Generating Functions}
+\begin{itemize}
+    \item A m.g.f. is a generating function that encodes the moments of a distribution.
+    \item A distribution is fully characterized by its m.g.f. (same information as from c.d.f.
+    or p.d.f.).
+\end{itemize}
 \end{document}

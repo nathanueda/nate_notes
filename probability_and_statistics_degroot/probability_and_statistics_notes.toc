@@ -24,3 +24,9 @@
 \contentsline {subsection}{\numberline {3.7}Multivariate Distributions}{21}{subsection.3.7}%
 \contentsline {subsection}{\numberline {3.8}Functions of a Random Variable}{25}{subsection.3.8}%
 \contentsline {subsection}{\numberline {3.9}Functions of Two or More Random Variables}{27}{subsection.3.9}%
+\contentsline {subsection}{\numberline {3.10}Markov Chains}{28}{subsection.3.10}%
+\contentsline {section}{\numberline {4}Expectation}{30}{section.4}%
+\contentsline {subsection}{\numberline {4.1}The Expectation of a Random Variable}{30}{subsection.4.1}%
+\contentsline {subsection}{\numberline {4.2}Properties of Expectations}{30}{subsection.4.2}%
+\contentsline {subsection}{\numberline {4.3}Variance}{30}{subsection.4.3}%
+\contentsline {subsection}{\numberline {4.4}Moments}{30}{subsection.4.4}%
