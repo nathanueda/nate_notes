@@ -1319,6 +1319,65 @@ problem is fittingly called, the Gambler's Ruin problem. \\
 \section{Expectation}
 
 \subsection{The Expectation of a Random Variable}
+
+\textbf{Why Expectation is Important}
+\begin{itemize}
+    \item Although the distribution of a r.v. $X$ contains all the probabilistic information 
+    about $X$, it is often too cumbersome to present the entire distribution of $X$.
+    \item Instead, we can summarize the data in multiple ways. One such way is to summarize 
+    what the average, or expected value, of $X$ we expect to see.
+\end{itemize}
+
+\textbf{Expectation Basics}
+\begin{itemize}
+    \item The intuitive idea of the mean of a r.v. is that it is the weighted average of the 
+    possible values of the r.v. with the weights equal to the probabilities.
+    \item The expectation of $X$ depends only on the distribution of $X$.
+    \item The expectation of a r.v., or equivalently, the mean of its distribution can be 
+    regarded as being the center of gravity of that distribution. 
+    \item Can be affected greatly by even a very small change in the amount of probability 
+    that is assigned to a very large value of $x$. 
+\end{itemize}
+
+\textbf{Expectation for a Discrete Distribution}
+\begin{itemize}
+    \item Let $X$ be a bounded discrete r.v. whose p.f. is $f$. The \textit{expectation} of 
+    $X$, denoted $E(X)$, is a number defined as 
+    \[E(X) = \sum_{\text{All } x}x f(x)\]
+\end{itemize}
+
+\textbf{Expectation for a Continuous Distribution}
+\begin{itemize}
+    \item Let $X$ be a bounded continuous r.v. whose p.d.f. is $f$. The \textit{expectation} 
+    of $X$, denoted $E(X)$, is a number defined as 
+    \[E(X) = \int_{\text{All } x}x f(x) \,dx\]
+\end{itemize}
+
+\textbf{Law of the Unconscious Statistician (1-D)}
+\begin{itemize}
+    \item 1-D LOTUS provides a method to find $E(g(X))$ directly using the distribution of $X$ 
+    without having to find the distribution of $g(X)$.
+    \item The name comes from the fact that going from $E(X)$ to $E(g(X))$ it is tempting to 
+    just change $x$ to $g(x)$ in the definition, which can be done very easily and 
+    mechanically, perhaps in a state of unconsciousness. Although it may sound too good to be 
+    true, but LOTUS says it is true. 
+    \item If $X$ has a continuous distribution, then LOTUS says
+    \[E(g(X)) = \int_{-\infty}^{\infty} g(x) f(x) \,dx\]
+    \item If $X$ has a discrete distribution, then LOTUS says
+    \[E(g(X)) = \sum_{\text{All } x} g(x) f(x)\]
+\end{itemize}
+
+\textbf{Law of the Unconscious Statistician (2-D)}
+\begin{itemize}
+    \item 2-D LOTUS provides a method to find $E(g(X,Y))$ directly using the joint 
+    distribution of $X$ and $Y$ without having to find the distribution of $g(X,Y)$.
+    \item If $X$ and $Y$ are continuous with joint p.d.f $f(x,y)$, then LOTUS says
+    \[E(g(X,y)) = \int_{-\infty}^{\infty} \int_{-\infty}^{\infty} g(x,y) f(x,y) \,dx \,dy\]
+    \item If $X$ and $Y$ are discrete with joint p.f. $f(x,y)$, then LOTUS says
+    \[E(g(X)) = \sum_{\text{All } x} \sum_{\text{All } y} g(x,y) f(x,y)\]
+    \item 2-D LOTUS easily extends to $n$-D LOTUS.
+\end{itemize}
+
 \subsection{Properties of Expectations}
 \subsection{Variance}
 \subsection{Moments}
@@ -1397,4 +1456,11 @@ problem is fittingly called, the Gambler's Ruin problem. \\
     \item A distribution is fully characterized by its m.g.f. (same information as from c.d.f.
     or p.d.f.).
 \end{itemize}
+
+
+\section{Special Distributions}
+\section{Large Random Samples}
+
+\section{Estimation}
+
 \end{document}

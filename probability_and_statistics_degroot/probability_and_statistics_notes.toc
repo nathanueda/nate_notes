@@ -27,6 +27,9 @@
 \contentsline {subsection}{\numberline {3.10}Markov Chains}{28}{subsection.3.10}%
 \contentsline {section}{\numberline {4}Expectation}{30}{section.4}%
 \contentsline {subsection}{\numberline {4.1}The Expectation of a Random Variable}{30}{subsection.4.1}%
-\contentsline {subsection}{\numberline {4.2}Properties of Expectations}{30}{subsection.4.2}%
-\contentsline {subsection}{\numberline {4.3}Variance}{30}{subsection.4.3}%
-\contentsline {subsection}{\numberline {4.4}Moments}{30}{subsection.4.4}%
+\contentsline {subsection}{\numberline {4.2}Properties of Expectations}{31}{subsection.4.2}%
+\contentsline {subsection}{\numberline {4.3}Variance}{31}{subsection.4.3}%
+\contentsline {subsection}{\numberline {4.4}Moments}{31}{subsection.4.4}%
+\contentsline {section}{\numberline {5}Special Distributions}{33}{section.5}%
+\contentsline {section}{\numberline {6}Large Random Samples}{33}{section.6}%
+\contentsline {section}{\numberline {7}Estimation}{33}{section.7}%
