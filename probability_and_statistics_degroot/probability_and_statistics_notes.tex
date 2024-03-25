@@ -1379,6 +1379,55 @@ problem is fittingly called, the Gambler's Ruin problem. \\
 \end{itemize}
 
 \subsection{Properties of Expectations}
+
+\textbf{Why Properties of Expectation are Important}
+\begin{itemize}
+    \item They allow us to simplify the calculation of expectations for some common functions
+    of r.v.s.
+\end{itemize}
+
+\textbf{Theorems}
+\begin{itemize}
+    \item If $Y = aX + b$, where $X$ and $Y$ are r.v.s and $a$ and $b$ are finite constants, then 
+    
+    \[E(Y)= aE(X) + b\]
+    
+    In other words, the expectation of a linear function of a r.v. is a linear function of its 
+    expectation. 
+    \item Linearity of expectation: 
+    \begin{itemize}
+        \item For any r.v.s $X, Y$ and any constant $c$ 
+        
+        \[E(X+Y) = E(X) + E(Y)\]
+
+        In other words, the expectation of the sum of r.v.s is equivalent to the sum of their 
+        expectations.
+
+        \[E(cX) = cE(X)\]
+
+        In other words, constants factor our from expectation.
+        \item Linearity of expectation holds even if $X$ and $Y$ are dependent.
+    \end{itemize}
+    
+    \item Jensen's Inequality states the for a convex function $g$ and a random vector $X$ 
+    with finite mean
+
+    \[E(g(X)) \ge g(E(X))\]
+    
+    \item Expectation of a product of independent r.v.s
+    \begin{itemize}
+        \item If $X_1, \ldots, X_n$ are $n$ independent r.v.s, then 
+        
+        \[ E(\prod_{i=1}^{n} X_i) = \prod_{i=1}^{n} E(X_i) \]
+        
+        In other words, the expectation of a product of r.v.s is equivalent to the product of 
+        their expectations so long that the r.v.s are independent.
+    \end{itemize}
+
+
+    
+\end{itemize}
+
 \subsection{Variance}
 \subsection{Moments}
 \textbf{Moments Basics}
