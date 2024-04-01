@@ -1,15 +1,31 @@
 \contentsline {section}{\numberline {1}Time Series Basics}{3}{section.1}%
-\contentsline {section}{\numberline {2}Stationarity}{3}{section.2}%
-\contentsline {subsection}{\numberline {2.1}Strongly Stationarity and Weakly Stationarity}{3}{subsection.2.1}%
-\contentsline {subsection}{\numberline {2.2}Testing for Stationarity}{4}{subsection.2.2}%
-\contentsline {section}{\numberline {3}White Noise}{5}{section.3}%
-\contentsline {section}{\numberline {4}Autocovariance and Autocorrelation}{5}{section.4}%
-\contentsline {subsection}{\numberline {4.1}Autocovariance}{5}{subsection.4.1}%
-\contentsline {subsection}{\numberline {4.2}Autocorrelation}{6}{subsection.4.2}%
-\contentsline {subsection}{\numberline {4.3}Testing for autocorrelation}{6}{subsection.4.3}%
-\contentsline {section}{\numberline {5}Autoregressive Processes}{7}{section.5}%
-\contentsline {subsection}{\numberline {5.1}AR(1) Models}{7}{subsection.5.1}%
-\contentsline {subsection}{\numberline {5.2}AR($p$) Models}{8}{subsection.5.2}%
-\contentsline {section}{\numberline {6}Moving Average Processes}{9}{section.6}%
-\contentsline {section}{\numberline {7}Misc.}{9}{section.7}%
-\contentsline {section}{\numberline {8}Definitions}{9}{section.8}%
+\contentsline {section}{\numberline {2}Stationarity and Ergodicity}{3}{section.2}%
+\contentsline {subsection}{\numberline {2.1}Basics and Importance}{3}{subsection.2.1}%
+\contentsline {subsection}{\numberline {2.2}Strongly Stationarity and Weakly Stationarity}{3}{subsection.2.2}%
+\contentsline {subsection}{\numberline {2.3}Testing for Stationarity}{4}{subsection.2.3}%
+\contentsline {subsection}{\numberline {2.4}Ergodicity}{5}{subsection.2.4}%
+\contentsline {subsection}{\numberline {2.5}Law of Large Numbers and Central Limit Theorem for an Autocorrelated Process}{5}{subsection.2.5}%
+\contentsline {section}{\numberline {3}White Noise}{6}{section.3}%
+\contentsline {section}{\numberline {4}Autocovariance and Autocorrelation}{6}{section.4}%
+\contentsline {subsection}{\numberline {4.1}Autocovariance}{6}{subsection.4.1}%
+\contentsline {subsection}{\numberline {4.2}Autocorrelation}{7}{subsection.4.2}%
+\contentsline {subsection}{\numberline {4.3}Testing for autocorrelation}{7}{subsection.4.3}%
+\contentsline {section}{\numberline {5}Lag and Difference Operators}{8}{section.5}%
+\contentsline {subsection}{\numberline {5.1}Lag Operators}{8}{subsection.5.1}%
+\contentsline {subsection}{\numberline {5.2}Difference Operators}{8}{subsection.5.2}%
+\contentsline {section}{\numberline {6}Autoregressive Processes}{9}{section.6}%
+\contentsline {subsection}{\numberline {6.1}AR(1) Models}{9}{subsection.6.1}%
+\contentsline {subsection}{\numberline {6.2}AR($p$) Models}{10}{subsection.6.2}%
+\contentsline {section}{\numberline {7}Moving Average Processes}{11}{section.7}%
+\contentsline {subsection}{\numberline {7.1}MA($1$)}{11}{subsection.7.1}%
+\contentsline {subsection}{\numberline {7.2}MA($q$)}{11}{subsection.7.2}%
+\contentsline {section}{\numberline {8}ARMA Processes}{11}{section.8}%
+\contentsline {subsection}{\numberline {8.1}ARMA($p,q$)}{11}{subsection.8.1}%
+\contentsline {section}{\numberline {9}ARIMA Processes}{11}{section.9}%
+\contentsline {section}{\numberline {10}Impulse Response Functions}{12}{section.10}%
+\contentsline {section}{\numberline {11}Unit Root Tests}{12}{section.11}%
+\contentsline {section}{\numberline {12}Regression}{13}{section.12}%
+\contentsline {section}{\numberline {13}Estimation for AR Models}{13}{section.13}%
+\contentsline {subsection}{\numberline {13.1}OLS for AR($p$) Process}{13}{subsection.13.1}%
+\contentsline {section}{\numberline {14}Misc.}{14}{section.14}%
+\contentsline {section}{\numberline {15}Definitions}{14}{section.15}%

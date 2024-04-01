@@ -34,26 +34,41 @@
     \[ \{x_1, x_2, \ldots, x_T\} \text{ or }  \{x_t\}, \, t = 1, 2, \ldots, T \]
 \end{itemize}
 
-
-\textbf{Common time series properties}
-\begin{itemize}
-    \item Time series are typically not i.i.d. (i.e. if GNP is unusually high today, GNP will 
-    likely be unusually high tomorrow).
-\end{itemize}
-
 \textbf{Modeling time series data}
 \begin{itemize}
     \item The models impose structure, so when dealing with model selection, it is important 
     to evaluate to see if the model captures the features you believe to be present in the data.
 \end{itemize}
 
-\section{Stationarity}
+\section{Stationarity and Ergodicity}
+
+\subsection{Basics and Importance}
+\begin{itemize}
+    \item Time series are typically not i.i.d. (i.e. if GNP is unusually high today, GNP will 
+    likely be unusually high tomorrow). So instead, we need different desirable properties for 
+    time series data. Two of the most important of these properties are stationarity and 
+    ergodicity. 
+    \item Stationarity is a property for time series with some time-invariant behavior.
+    \item Ergodicity is a property for times series that expresses the idea that the effect of 
+    the past on the future eventually dies out.
+    \item Time series with these properties are easy to estimate and have desirable properties.
+    \item Time series that are nonstationarity and nonergodic require a different set of
+    techniques.
+    \item Under the assumption of i.i.d r.v.s, we had LLN and CLT. For r.v.s that are not 
+    i.i.d. and are instead autocorrelated, stationarity and ergodicity are similar results.
+    \item In practice, by saying the time series is ergodic, it is typically implied it is both
+    stationary and ergodic. 
+    \item If a times series is stationary, it does not imply ergodicity; however, a time series 
+    that is ergodic is always stationary.
+    \item Takeaway: Ensure your time series is stationary and ergodic. 
+\end{itemize}
+
 \subsection{Strongly Stationarity and Weakly Stationarity}
 \begin{itemize}
     \item A process $\{x_t\}$ is \textit{strongly stationary} or \textit{strictly stationary}
     if all aspects of its behavior are unchanged by shifts in time. More formally, it is
     defined as the requirement that for every $m$ and $n$, the distributions of $\{x_1, \ldots,
-    x_n\}$ and $\{x_{1+m}, \ldots, x_{n+m}\}$ are the same, that is, the probability 
+    x_n\}$ and $\{x_{1+m}, \ldots, x_{n+m}\}$ are the same, that is, the joint probability 
     distribution of a sequence of $n$ observations does not depend on their time origin.
    \item A process $\{x_t\}$ is \textit{weakly stationary} or \textit{covariance stationary} if 
    its mean, variance, and covariance are unchanged by time shifts. More formally, it is 
@@ -76,19 +91,37 @@
 \begin{itemize}
     \item When a times series is observed, a natural question is whether it appears to be 
     stationary. 
-    
     \item \textbf{Time series plot}:
     Looking at a \textit{time series plot} (plot of the series in chronological 
     order) may be useful. If the time series is a stationary series, it should show some random 
     oscillation around some fixed level, a phenomenon called \textit{mean reversion}. If the 
     series wanders without returning repeatedly to some fixed level, then the series should not
     be modeled as a stationary process. 
- 
     \begin{figure}[H] 
          \centering 
          \includegraphics[width=4in]{imgs/stationary_vs_nonstationary.png}
          \caption{Stationary vs. non-stationary time series}
      \end{figure}
+     \item If all the roots of a characteristic polynomial for an AR process are greater than 1 
+     in absolute value, then the AR process is stationary.
+     \item Any finite-order $\text{MA}(q)$ process is stationary and ergodic.
+\end{itemize}
+
+\subsection{Ergodicity}
+\begin{itemize}
+    \item A stochastic process $\{x_t\}$ is ergodic if any two random variables sufficiently 
+    far apart in time are essentially independent. In other words, $\{x_t\}$ is ergodic if 
+    $x_t$ and $x_{t-j}$ are close to uncorrelated if $j$ is large enough.
+\end{itemize}
+
+\subsection{Law of Large Numbers and Central Limit Theorem for an Autocorrelated Process}
+\begin{itemize}
+    \item The \textit{ergodic theorem} is a LLM for an autocorrelated process that states, if 
+    $\{x_t\}$ is stationary and ergodic, then 
+    \[\bar{x}_T= \frac{1}{T} \sum_{t=1}^{T} x_t \rightarrow \text{E}(x_t) \text{ as } T 
+    \rightarrow \infty\]
+    \item If $\{x_t\}$ is stationary and ergodic, then the asymptotic distribution of the 
+    sample mean is normal 
 \end{itemize}
 
 \section{White Noise}
@@ -120,7 +153,6 @@
 \end{itemize}
 
 \section{Autocovariance and Autocorrelation}
-
 \subsection{Autocovariance}
 \begin{itemize}
     \item Autocovariance: Specifies the covariance between the value of a process at two times.
@@ -177,6 +209,27 @@
     \ldots, \rho_K$ is nonzero. 
 \end{itemize}
 
+\section{Lag and Difference Operators}
+\begin{itemize}
+    \item These operators are useful in describing some time series models.
+\end{itemize}
+\subsection{Lag Operators}
+\begin{itemize}
+    \item The lag operator moves the index back one unit in time.
+    \item The lag operator $L$ is defined 
+    \[ L x_t = x_{t-1}\]
+    \[ L^j x_t = x_{t-j}\]
+    \item Also commonly referred to as a backwards operator. 
+\end{itemize}
+
+\subsection{Difference Operators}
+\begin{itemize}
+    \item Defined as $\Delta = 1 - L$ so that 
+    \[\Delta x_t = x_t - L x_t = x_t - x_{t-1}\]
+    \item $\Delta^k$ is called the $k$-th order differencing operator. 
+    \[\Delta^k x_t = {(1-L)}^k x_t\]
+\end{itemize}
+
 \section{Autoregressive Processes}
 
 \begin{itemize}
@@ -186,6 +239,7 @@
     ``error.''
     \item The term \textit{autoregression} refers to the regression of the process on its own 
     past values. 
+    \item The ACF of AR processes declines geometrically.
 \end{itemize}
 
 \subsection{AR(1) Models}
@@ -240,9 +294,175 @@
     %%%%%% YULE WALKER?
 \end{itemize}
 
+%\subsection{Determining Lag Length for AR Processes}
+
 \section{Moving Average Processes}
 
+\begin{itemize}
+    \item With AR models, feeding past values into the current value has the effect of having 
+    at least some correlation at all lags. Sometimes data show correlation only at short lags, 
+    in these cases a MA process may be a suitable alternative.
+    \item A process $\{x_t\}$ is a \textit{moving average process} if $\{x_t\}$ can be 
+    expressed as a weighted average (moving average) of the past values of the white noise 
+    process $\{\epsilon_t\}$
+\end{itemize}
 
+\subsection{MA($1$)}
+\begin{itemize}
+    \item The $\text{MA}(1)$ (moving average of order 1) process is 
+    \[x_t = \epsilon_t + \theta \epsilon_{t-1}\]
+    where, as before, the $\epsilon_t$ are weak $\text{WN}(0, \sigma_{\epsilon}^{2})$.
+\end{itemize}
+
+\subsection{MA($q$)}
+\begin{itemize}
+    \item The $\text{MA}(q)$ (moving average of order $q$) process is 
+    \[x_t = \epsilon_t + \theta_1 \epsilon_{t-1} + \theta_2 \epsilon_{t-2} + \hdots + \theta_q \epsilon_{t-q} \]
+    where, as before, the $\epsilon_t$ are weak $\text{WN}(0, \sigma_{\epsilon}^{2})$.
+\end{itemize}
+
+\section{ARMA Processes}
+\begin{itemize}
+    \item Stationary time series with complex autocorrelation behavior are ofren more 
+    parsimoniously modeled by mixed AR and MA (ARMA) processes rather than by a pure AR or pure
+    MA process.
+\end{itemize}
+
+\subsection{ARMA($p,q$)}
+\begin{itemize}
+    \item An $\text{ARMA}(p,q)$ model combines both AR and MA terms, and is defined by the 
+    equation 
+    \[x_t = \phi_1 x_{t-1} + \hdots + \phi_p x_{t-p} + \epsilon_t + \theta_1 \epsilon_{t-1} + 
+    \hdots + \theta_q \epsilon_{t-q}\]
+    which shows how $\{x_t\}$ depends on lagged values of itself and lagged values of the white
+    noise process.
+\end{itemize}
+
+\section{ARIMA Processes}
+\begin{itemize}
+    \item Often the first or perhaps second differences of nonstationarity time series are 
+    stationary. \textit{Autoregressive integrated moving average} (ARIMA) processed include 
+    stationary as well as nonstationary processes.
+    \item A time series $\{x_t\}$ is said to be an $\text{ARIMA}(p,d,q)$ process if $\Delta^d 
+    x_t$ is $\text{ARMA}(p,q)$.
+    \item An $\text{ARIMA}(p,d,q)$ is stationary if $d=0$, otherwise its difference of order 
+    $d$ or above are stationary. 
+    \item An $\text{ARIMA}(p,0,q)$ is the same as an $\text{ARMA}(p,q)$.
+    \item A process is $I(d)$ if it is stationary after being differenced $d$ times.
+    \item An $\text{ARIMA}(p,d,q)$ process has $d$ unit roots, therefore we want to difference 
+    the process $d$ times to get rid of the unit roots. 
+\end{itemize}
+
+\section{Impulse Response Functions}
+\begin{itemize}
+    \item The idea of an IRF is to enact a single shock to $\epsilon_t$ (in period $t$) and,
+    via the IRF, see how the shock affects $x_{t+1}, x_{t+2}, \ldots$
+    \item It allows us to start thinking about causes and effects.
+    \item For an AR(1) process, notice that the effect of the shock never dies when $\phi=1$,
+    and it dies out quicker and quicker as we move from $\phi=0.95$ to $\phi=0.5$. This makes 
+    sense as the closer to 1 $|\phi|$ is, the more useful information there is in the previous 
+    observation in forecasting the current observation.
+    \begin{figure}[H] 
+        \centering 
+        \includegraphics[width=4in]{imgs/irf.png}
+        \caption{IRF on an AR(1) Process}
+    \end{figure}
+\end{itemize}
+
+\section{Unit Root Tests}
+\begin{itemize}
+    \item Determining whether a time series is best modeled as stationary or nonstationary can
+    be difficult, unit root tests aid in this process. 
+    \item Recall the definition of an $\text{ARMA}(p,q)$ process
+    \[x_t = \phi_1 x_{t-1} + \hdots + \phi_p x_{t-p} + \epsilon_t + \theta_1 \epsilon_{t-1} + 
+    \hdots + \theta_q \epsilon_{t-q}\]
+    \item The condition of $\{x_t\}$ to be stationary is that all roots of the polynomial 
+    \[1 - \phi_1 x - \hdots - \phi_p x^p\] 
+    have absolute values greater than one.
+    \item If there is a unit root, that is, a root with an absolute value equal to 1, then the 
+    ARMA process is nonstationary and behaves much like a random walk. This is called the unit 
+    root case. 
+    \item Unit root tests are used to decide if an AR model have an absolute root equal to 1.
+    \item A popular unit root test is the augmented Dickey-Fuller test (ADF test). In this test
+    \begin{itemize}
+        \item $H_0$: there is a unit root (the process is nonstationary)
+        \item $H_1$: the process is stationary
+    \end{itemize}
+
+    
+\end{itemize}
+
+\section{Regression}
+
+
+\section{Estimation for AR Models}
+\begin{itemize}
+    \item AR models can be estimated by OLS. Recal OLS is defined
+    \[y = X\beta + e\]
+    where 
+    \[
+    y = \begin{bmatrix}
+        y_1 \\
+        y_2 \\
+        \vdots \\
+        y_n
+    \end{bmatrix} \in \mathbb{R}^{n \times 1}, \,
+    X = \begin{bmatrix}
+        x_1' \\
+        x_2' \\
+        \vdots \\
+        x_n'
+    \end{bmatrix} \in \mathbb{R}^{n \times k}, \, 
+    e = \begin{bmatrix}
+        e_1 \\
+        e_2 \\
+        \vdots \\
+        e_n
+    \end{bmatrix} \in \mathbb{R}^{n \times 1}
+    \]
+    where $k$ is the number of regressors.   
+
+    \item Since true errors are not observed, MA models (which depend upon the true errors), MA 
+    models are not estimated by OLS. 
+\end{itemize}
+
+\subsection{OLS for AR($p$) Process}
+\begin{itemize}
+    \item Recall the definition of an $\text{AR}(p)$ process 
+    \[z_t = \alpha + \phi_1 z_{t-1} + \phi_2 z_{t-2} + \hdots + \phi_p z_{t-p} + \epsilon_t , 
+    \; t = 1, \ldots, T\]
+    \item We let 
+    \[y_i = z_t\]
+    \[x_i= [1, z_{t-1}, \ldots, z_{t-p}]'\]
+    \[\beta = [\alpha, \phi_1, \ldots, \phi_p]'\]
+
+    where 
+
+    \[
+    y = \begin{bmatrix}
+        z_{p+1} \\
+        z_{p+2} \\
+        \vdots \\
+        z_T
+    \end{bmatrix}, \,
+    X = \begin{bmatrix}
+        1 & z_p & \hdots & z_1 \\
+        1 & z_{p+1} & \hdots & z_2 \\
+        \vdots & \vdots & \ddots & \vdots \\
+        1 & z_{T-1} & \hdots & z_{T-p}
+    \end{bmatrix}, \, 
+    e = \begin{bmatrix}
+        e_1 \\
+        e_2 \\
+        \vdots \\
+        e_n
+    \end{bmatrix}
+    \]
+\end{itemize}
+
+
+
+%%%
 \section{Misc.}
 \begin{itemize}
     \item Returns are closer to i.i.d. than prices and overall exhibit more attractive 
