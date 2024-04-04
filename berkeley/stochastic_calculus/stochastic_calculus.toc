@@ -3,16 +3,37 @@
 \contentsline {subsubsection}{\numberline {1.1.1}Model Setup}{3}{subsubsection.1.1.1}%
 \contentsline {subsubsection}{\numberline {1.1.2}Assumptions}{4}{subsubsection.1.1.2}%
 \contentsline {subsubsection}{\numberline {1.1.3}Noarbitrage}{4}{subsubsection.1.1.3}%
-\contentsline {subsubsection}{\numberline {1.1.4}Arrow-Debreu Securities}{5}{subsubsection.1.1.4}%
-\contentsline {subsubsection}{\numberline {1.1.5}Fundamental Theorems of Asset Pricing}{5}{subsubsection.1.1.5}%
-\contentsline {subsubsection}{\numberline {1.1.6}Law of One Price}{5}{subsubsection.1.1.6}%
+\contentsline {subsubsection}{\numberline {1.1.4}Arrow-Debreu Securities}{6}{subsubsection.1.1.4}%
+\contentsline {subsubsection}{\numberline {1.1.5}Fundamental Theorems of Asset Pricing}{6}{subsubsection.1.1.5}%
+\contentsline {subsubsection}{\numberline {1.1.6}Law of One Price}{6}{subsubsection.1.1.6}%
 \contentsline {subsubsection}{\numberline {1.1.7}Types of Arbitrage}{6}{subsubsection.1.1.7}%
-\contentsline {subsubsection}{\numberline {1.1.8}Risk Neutral Probabilities}{6}{subsubsection.1.1.8}%
-\contentsline {subsubsection}{\numberline {1.1.9}Risk Neutral Fundamental Theorems}{8}{subsubsection.1.1.9}%
-\contentsline {subsubsection}{\numberline {1.1.10}Summary}{8}{subsubsection.1.1.10}%
-\contentsline {subsection}{\numberline {1.2}The Binomial Model}{9}{subsection.1.2}%
-\contentsline {subsubsection}{\numberline {1.2.1}Notation}{9}{subsubsection.1.2.1}%
-\contentsline {subsubsection}{\numberline {1.2.2}Options}{9}{subsubsection.1.2.2}%
-\contentsline {subsubsection}{\numberline {1.2.3}One Period, Two State Binomial Model}{10}{subsubsection.1.2.3}%
-\contentsline {section}{\numberline {2}Appendix}{11}{section.2}%
-\contentsline {subsection}{\numberline {2.1}Operator Overloading}{11}{subsection.2.1}%
+\contentsline {subsubsection}{\numberline {1.1.8}Risk Neutral Probabilities}{7}{subsubsection.1.1.8}%
+\contentsline {subsubsection}{\numberline {1.1.9}Risk Neutral Fundamental Theorems}{9}{subsubsection.1.1.9}%
+\contentsline {subsubsection}{\numberline {1.1.10}Summary}{9}{subsubsection.1.1.10}%
+\contentsline {subsection}{\numberline {1.2}The Binomial Model}{10}{subsection.1.2}%
+\contentsline {subsubsection}{\numberline {1.2.1}Notation}{10}{subsubsection.1.2.1}%
+\contentsline {subsubsection}{\numberline {1.2.2}Options}{10}{subsubsection.1.2.2}%
+\contentsline {subsubsection}{\numberline {1.2.3}One Period, Two State Binomial Model}{11}{subsubsection.1.2.3}%
+\contentsline {subsubsection}{\numberline {1.2.4}Basic Probability}{11}{subsubsection.1.2.4}%
+\contentsline {subsubsection}{\numberline {1.2.5}General $n$ Step Binomial Tree Method}{12}{subsubsection.1.2.5}%
+\contentsline {subsection}{\numberline {1.3}The General Multi-Period Model}{12}{subsection.1.3}%
+\contentsline {subsubsection}{\numberline {1.3.1}Multiperiod Fundamental Theorems}{17}{subsubsection.1.3.1}%
+\contentsline {section}{\numberline {2}Continuous Time Models}{18}{section.2}%
+\contentsline {subsection}{\numberline {2.1}Brownian Motion}{18}{subsection.2.1}%
+\contentsline {subsection}{\numberline {2.2}Multivariate Brownian Motion}{19}{subsection.2.2}%
+\contentsline {subsection}{\numberline {2.3}Stochastic Integrals}{19}{subsection.2.3}%
+\contentsline {section}{\numberline {3}Discrete Time Models Examples}{19}{section.3}%
+\contentsline {subsection}{\numberline {3.1}Example}{19}{subsection.3.1}%
+\contentsline {subsection}{\numberline {3.2}Example}{20}{subsection.3.2}%
+\contentsline {subsection}{\numberline {3.3}Example}{22}{subsection.3.3}%
+\contentsline {subsection}{\numberline {3.4}Example}{23}{subsection.3.4}%
+\contentsline {subsection}{\numberline {3.5}Example}{24}{subsection.3.5}%
+\contentsline {subsection}{\numberline {3.6}Example}{26}{subsection.3.6}%
+\contentsline {subsection}{\numberline {3.7}Example}{27}{subsection.3.7}%
+\contentsline {subsection}{\numberline {3.8}Example}{31}{subsection.3.8}%
+\contentsline {subsection}{\numberline {3.9}Example}{33}{subsection.3.9}%
+\contentsline {subsection}{\numberline {3.10}Example}{34}{subsection.3.10}%
+\contentsline {section}{\numberline {4}Continuous Time Models Examples}{35}{section.4}%
+\contentsline {subsection}{\numberline {4.1}Brownian Motion}{35}{subsection.4.1}%
+\contentsline {section}{\numberline {5}Appendix}{35}{section.5}%
+\contentsline {subsection}{\numberline {5.1}Operator Overloading}{35}{subsection.5.1}%
