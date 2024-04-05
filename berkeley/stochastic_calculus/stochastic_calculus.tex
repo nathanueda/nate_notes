@@ -599,6 +599,23 @@
         portfolio.}
     \end{figure}
 
+    \item Deriving the new rewritten formula  
+    \begin{align*}
+        \delta_t^{\boldsymbol{h}} 
+        &= \boldsymbol{h}'_{t-1}(\Delta\_\boldsymbol{s}_t) - \Delta \_ V_t + 
+        \boldsymbol{h}'_{t-1} \delta_t \\
+        &= \boldsymbol{h}'_{t-1}(\boldsymbol{s}_t - \boldsymbol{s}_{t-1}) - 
+        (\boldsymbol{h}'_{t}\boldsymbol{s}_{t} - \boldsymbol{h}'_{t-1}\boldsymbol{s}_{t-1}) + 
+        \boldsymbol{h}'_{t-1} \delta_t \\
+        &= \boldsymbol{h}'_{t-1}\boldsymbol{s}_t - \boldsymbol{h}'_{t-1}\boldsymbol{s}_{t-1} - 
+        \boldsymbol{h}'_{t}\boldsymbol{s}_{t} + \boldsymbol{h}'_{t-1}\boldsymbol{s}_{t-1} + 
+        \boldsymbol{h}'_{t-1} \delta_t \\
+        &= \boldsymbol{h}'_{t-1}\boldsymbol{s}_t - \boldsymbol{h}'_{t}\boldsymbol{s}_{t} + 
+        \boldsymbol{h}'_{t-1} \delta_t \\
+        \delta_t^{\boldsymbol{h}} &= \boldsymbol{h}'_{t-1}(\boldsymbol{s}_t + \delta_t) - 
+        \boldsymbol{h}'_{t}\boldsymbol{s}_t
+    \end{align*}
+    
     \begin{figure}[H] 
         \centering 
         \includegraphics[width=5in]{imgs/change_in_value_process.png}
@@ -743,11 +760,96 @@
     \end{itemize}
 \end{itemize}
 
+\subsection{Continuous Time Trading}
+\begin{itemize}
+    \item Here we look at how to define continuous time trading between $t=0$ and $t=T$.
+    \item We start with the discrete formula for a self financed (this is when consumption 
+    equals payoff, that is, $\delta_t^{\boldsymbol{h}} = c_t$ ) portfolio
+    \[ \delta_t^{\boldsymbol{h}} = c_t = \boldsymbol{h}'_{t-1}(\Delta\_\boldsymbol{s}_t) - 
+    \Delta \_ V_t + \boldsymbol{h}'_{t-1} \delta_t \]
+    \item if we have no dividends, we can derive the following
+    \begin{align*}
+        c_t &= \boldsymbol{h}'_{t-1}(\Delta\_\boldsymbol{s}_t) - \Delta \_ V_t + 
+        \boldsymbol{h}'_{t-1} \delta_t \\
+        c_t &= \boldsymbol{h}'_{t-1}(\Delta\_\boldsymbol{s}_t) - \Delta \_ V_t \\
+        \Delta \_ V_t &= \boldsymbol{h}'_{t-1}(\Delta\_\boldsymbol{s}_t) - c_t
+    \end{align*}
+    \item Now, we divide $[0,T]$ into $n$ sub periods of length $\Delta t = \frac{T}{n}$.
+    \item Therefore, consumption at time $k \Delta t =  c_k \Delta t$, which is talking about 
+    consumption per unit of time (i.e. driving 60 mph).
+    \item We then rewrite
+    \begin{align*}
+        \Delta \_ V_t &= \boldsymbol{h}'_{t-1}(\Delta\_\boldsymbol{s}_t) - c_t \\
+        \Delta \_ V_{k \Delta t} &= \boldsymbol{h}'_{(k-1)\Delta t}\Delta\_
+        \boldsymbol{s}_{k \Delta t} - c_{k \Delta t} \Delta t \\
+    \end{align*}
+    \item Although we can theoretically sum the differences to get the change in portfolio 
+    value 
+    \[ 
+    V_T - V_0 = \sum_{k=1}^{n}\Delta \_ V_{k\Delta t}
+    = \sum_{k=1}^{n}\boldsymbol{h}'_{(k-1)\Delta t} \Delta \_ s_{k \Delta t} - 
+    \sum_{k=1}^{n} c_{k \Delta t} \Delta t
+    \]
+    We prefer to take limits, $\Delta t \rightarrow 0$ and rewrite as 
+    \[
+    V_T - V_0 = \int_{t=0}^{T}\, dV_t 
+    = \int_{t=0}^{T}\boldsymbol{h}'_t \, d\boldsymbol{s}_t - \int_{t=0}^{T} c_t \, dt
+    \]
+    \item Therefore, we have 2 terms we needs to be able to take the limit of.
+\end{itemize}
+
+\begin{itemize}
+    \item Consider a simple model with two assets: a standard Brownian motion stock price,
+    $S$, and a bond with constant price, $B$ (interest rate is zero and therefore always has 
+    the value 1), and a time step $\Delta t$.
+    \item $S_{k \Delta t}$ are the values of the standard Brownian motion, evaluated at 
+    discrete points $S_{k \Delta t} = W_{k \Delta t}$
+        \[S_{k \Delta t} \sim N(0, k \Delta t)\]
+        \[B_{k \Delta t} = 1\]
+    \item So, 
+        \[ 
+        S_{(k+1) \Delta t} 
+        = S_{k \Delta t} + \sqrt{\Delta t} \xi_{k \Delta t}, 
+        \; \xi_{k \Delta t} \sim N(0,1) \text{ i.i.d.}
+        \]
+        \[
+        B_{(k+1)\Delta t} = B_{k \Delta t}    
+        \]
+\end{itemize}
+
+
 \subsection{Stochastic Integrals}
 \begin{itemize}
     \item Brownian motions will be used for modeling asset dynamics, and because they are so 
     wiggly, the formulas \- the \textit{calculus} that is \- is going to have to be different 
     than standard calculus. 
+    \item Instead of using the classical Riemann-Stieltjes integral, we use the Ito integral. 
+\end{itemize}
+
+\begin{itemize}
+    \item The Ito integral is much more restrictive than the Riemann in that, instead of 
+    taking the minimum and maximums when summing, we're always taking the left endpoint when 
+    summing (since otherwise the process is not adaptive). Therefore, we are force to only 
+    look at the left most endpoint since that is the only value we know. 
+    % \item \textbf{It\^{o} integral}: Assume that $W_t$ is a Brownian motion, and $a_t$ is an 
+    % adapted process with almost surely continuous sample paths, such that $E[\int_{0}^{T} 
+    % a_t^2] < \infty$. Then 
+    % \[ \oint_{t=0}^{T} a_t \, dW = \]
+    \item Important It\^{o} calculus properties: 
+    \begin{itemize}
+        \item Martingale property 
+        \[ E\left[\oint_{0}^{T} at \, dW_t \right] = 0\]
+        \item Ito isometry
+        \[ E \left[{\left(\oint_0^T a_t \, dW_t\right)}^2\right] = \int_{0}^{T} E[a_t^2] \, dt\]
+    \end{itemize}
+\end{itemize}
+
+\textbf{It\^{o}s Lemma}
+\begin{itemize}
+    \item Assume $X_t$ is an Ito process that satisfies $dX = u \, dt + v \,dW$, where $W$ is 
+    a Brownian motion, and that $Y_t = g(t, X_t)$ for some smooth function $g$. Then $dY_t$ 
+    can be written 
+    \[dY_t = g_t \,dt + g_x \,dX + \frac{1}{2} g_{xx} {(dX)}^2\]
 \end{itemize}
 
 \section{Discrete Time Models Examples}
@@ -1633,7 +1735,16 @@ Determine which of the following four processes are adapted w.r.t. to the filtra
 
 \section{Continuous Time Models Examples}
 
-\subsection{Brownian Motion}
+
+\subsection{It\^{o}s Lemma Examples}
+\begin{itemize}
+    \item Assume $X_t$ is an Ito process that satisfies $dX = u \, dt + v \,dW$, where $W$ is 
+    a Brownian motion, and that $Y_t = g(t, X_t)$ for some smooth function $g$. Then $dY_t$ 
+    can be written 
+    \[dY_t = g_t \,dt + g_x \,dX + \frac{1}{2} g_{xx} {(dX)}^2\]
+\end{itemize}
+
+
 
 \section{Appendix}
 \subsection{Operator Overloading}

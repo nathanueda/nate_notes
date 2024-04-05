@@ -1,6 +1,6 @@
 # Fdb version 4
-["pdflatex"] 1712204361 "/Users/nathanueda/VSCode/nate_notes/berkeley/stochastic_calculus/stochastic_calculus.tex" "stochastic_calculus.pdf" "stochastic_calculus" 1712204369 0
-  "/Users/nathanueda/VSCode/nate_notes/berkeley/stochastic_calculus/stochastic_calculus.tex" 1712204359 64243 a2a1c228d783d1914856c93dd5f33f25 ""
+["pdflatex"] 1712331717 "/Users/nathanueda/VSCode/nate_notes/berkeley/stochastic_calculus/stochastic_calculus.tex" "stochastic_calculus.pdf" "stochastic_calculus" 1712331724 0
+  "/Users/nathanueda/VSCode/nate_notes/berkeley/stochastic_calculus/stochastic_calculus.tex" 1712331713 69582 a1df47b580835beb98166734cfac5997 ""
   "/usr/local/texlive/2022/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc" 1136849721 2900 1537cc8184ad1792082cd229ecc269f4 ""
   "/usr/local/texlive/2022/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/local/texlive/2022/texmf-dist/fonts/tfm/jknappen/ec/tcrm1095.tfm" 1136768653 1536 02c06700a42be0f5a28664c7273f82e7 ""
@@ -129,10 +129,10 @@
   "imgs/two_period_two_state_bin_tree_model_down.jpeg" 1712101684 136904 be53afd2cbb658615aa9d82a2462e4fe ""
   "imgs/two_period_two_state_bin_tree_model_initial.jpeg" 1712102363 147485 c2105b95f765915f8a48b4825b8cd10e ""
   "imgs/two_period_two_state_bin_tree_model_up.jpeg" 1712101629 177800 89a75267d98ae8f929efdcee3026f761 ""
-  "stochastic_calculus.aux" 1712204369 9389 afe7074b349f47fa0e085c4eb656a018 "pdflatex"
-  "stochastic_calculus.out" 1712204369 5874 4a36a43fc7ffe552d11c066372901118 "pdflatex"
-  "stochastic_calculus.tex" 1712204359 64243 a2a1c228d783d1914856c93dd5f33f25 ""
-  "stochastic_calculus.toc" 1712204369 3391 5682d7a21498ac34c8902b7dec726a8f "pdflatex"
+  "stochastic_calculus.aux" 1712331723 9528 561dc3bb7b1b9daaead45d52ea362067 "pdflatex"
+  "stochastic_calculus.out" 1712331723 6079 d83d68a6c9f919e28e4201224e3abf0b "pdflatex"
+  "stochastic_calculus.tex" 1712331713 69582 a1df47b580835beb98166734cfac5997 ""
+  "stochastic_calculus.toc" 1712331723 3489 076563169e061f2f040d9dc0a41a1dff "pdflatex"
   (generated)
   "stochastic_calculus.aux"
   "stochastic_calculus.log"
