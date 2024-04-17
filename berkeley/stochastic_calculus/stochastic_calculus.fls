@@ -655,10 +655,6 @@ INPUT ./imgs/one_period_two_state_bin_tree_model.png
 INPUT ./imgs/one_period_two_state_bin_tree_model.png
 INPUT imgs/one_period_two_state_bin_tree_model.png
 INPUT ./imgs/one_period_two_state_bin_tree_model.png
-INPUT ./imgs/one_period_two_state_bin_tree_model.png
-INPUT ./imgs/one_period_two_state_bin_tree_model.png
-INPUT imgs/one_period_two_state_bin_tree_model.png
-INPUT ./imgs/one_period_two_state_bin_tree_model.png
 INPUT ./imgs/two_period_two_state_bin_tree_model.png
 INPUT ./imgs/two_period_two_state_bin_tree_model.png
 INPUT imgs/two_period_two_state_bin_tree_model.png
@@ -711,6 +707,7 @@ INPUT /usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmbsy10.
 INPUT /usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb
 INPUT /usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb
 INPUT /usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb
+INPUT /usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmex8.pfb
 INPUT /usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb
 INPUT /usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb
 INPUT /usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb

@@ -51,12 +51,12 @@
     \item Stationarity is a property for time series with some time-invariant behavior.
     \item Ergodicity is a property for times series that expresses the idea that the effect of 
     the past on the future eventually dies out.
-    \item Time series with these properties are easy to estimate and have desirable properties.
+    \item Time series with these properties are easier to estimate.
     \item Time series that are nonstationarity and nonergodic require a different set of
     techniques.
     \item Under the assumption of i.i.d r.v.s, we had LLN and CLT. For r.v.s that are not 
     i.i.d. and are instead autocorrelated, stationarity and ergodicity are similar results.
-    \item In practice, by saying the time series is ergodic, it is typically implied it is both
+    \item In practice, by saying the time series is stationary, it is typically implied it is both
     stationary and ergodic. 
     \item If a times series is stationary, it does not imply ergodicity; however, a time series 
     that is ergodic is always stationary.
@@ -84,7 +84,7 @@
    \item Strong stationarity does not imply weak stationarity and weak stationarity does not 
    imply strong stationarity.    
    \item Stationarity is important as a stationary process can be modeled with relatively few 
-   paramters.
+   parameters.
 \end{itemize}
 
 \subsection{Testing for Stationarity}
@@ -121,7 +121,7 @@
     \[\bar{x}_T= \frac{1}{T} \sum_{t=1}^{T} x_t \rightarrow \text{E}(x_t) \text{ as } T 
     \rightarrow \infty\]
     \item If $\{x_t\}$ is stationary and ergodic, then the asymptotic distribution of the 
-    sample mean is normal 
+    sample mean is normal.
 \end{itemize}
 
 \section{White Noise}
@@ -174,7 +174,7 @@
     between different time intervals.
     \item Correlation: A standardized measure to quantify the relationship between two 
     variables. Can take on a value inclusively between -1 and 1.
-    \item A time series with autocorrleation implies that, predictive power (i.e. knowing the
+    \item A time series with autocorrelation implies that, predictive power (i.e. knowing the
     price of a stock today helps forecast its price tomorrow).
     \item The \textit{autocorrelation} of a series $x_t$ is defined as 
     \[\rho_j = \frac{\gamma_j}{\gamma_0}\]
@@ -212,6 +212,7 @@
 \section{Lag and Difference Operators}
 \begin{itemize}
     \item These operators are useful in describing some time series models.
+    \item They allow us to simplify notation. 
 \end{itemize}
 \subsection{Lag Operators}
 \begin{itemize}
@@ -220,6 +221,18 @@
     \[ L x_t = x_{t-1}\]
     \[ L^j x_t = x_{t-j}\]
     \item Also commonly referred to as a backwards operator. 
+    \item Given an $ARMA(p,q)$ model, we could simplify it as follows 
+    \begin{align*}
+        Y_t = \phi_1 Y_{t-1} + \phi_2 Y_{t-2} + \hdots + \phi_p Y_{t-p} + \epsilon_t + \theta_1
+        \epsilon_{t-1} + \theta_2 \epsilon_{t-2} + \hdots + \theta_q \epsilon_{t-q} \\ 
+        Y_t - \phi_1 Y_{t-1} - \phi_2 Y_{t-2} - \hdots - \phi_p Y_{t-p} = \epsilon_t + \theta_1
+        \epsilon_{t-1} + \theta_2 \epsilon_{t-2} + \hdots + \theta_q \epsilon_{t-q} \\ 
+        Y_t - \phi_1 L Y_{t} - \phi_2 L^2 Y_{t} - \hdots - \phi_p L^p Y_{t} = \epsilon_t + 
+        \theta_1 L \epsilon_{t} + \theta_2 L^2 \epsilon_{t} + \hdots + \theta_q L^q 
+        \epsilon_{t} \\ 
+        (1 - \phi_1 L - \phi_2 L^2 - \hdots - \phi_p L^p)Y_t = (1 + \theta_1 L + \theta_2 L^2 
+        + \hdots + \theta_q L^q) \epsilon_t \\ 
+    \end{align*}
 \end{itemize}
 
 \subsection{Difference Operators}
@@ -257,8 +270,8 @@
     \item Properties of a Stationary AR(1) Process 
     \begin{itemize}
         \item $E(x_t) = \mu$ 
-        \item $\text{Var}(x_t)= \gamma_0 = \sigma_x^2 = \frac{\sigma_{\epsilon_t}^{2}}{1-\
-        phi^2}$
+        \item $\text{Var}(x_t)= \gamma_0 = \sigma_x^2 = \frac{\sigma_{\epsilon_t}^{2}}{1-
+        \phi^2}$
     \end{itemize}
     \item The ACF of an AR(1) process depends only on one parameter, $\phi$. This parsimony 
     comes at the cost that the ACF has only a very limited range of shapes. If the ACF does not
@@ -304,7 +317,7 @@
     in these cases a MA process may be a suitable alternative.
     \item A process $\{x_t\}$ is a \textit{moving average process} if $\{x_t\}$ can be 
     expressed as a weighted average (moving average) of the past values of the white noise 
-    process $\{\epsilon_t\}$
+    process $\{\epsilon_t\}$.
 \end{itemize}
 
 \subsection{MA($1$)}
@@ -358,6 +371,8 @@
     \item The idea of an IRF is to enact a single shock to $\epsilon_t$ (in period $t$) and,
     via the IRF, see how the shock affects $x_{t+1}, x_{t+2}, \ldots$
     \item It allows us to start thinking about causes and effects.
+    \item If the impulse response sizable for even long horizons indicates possible 
+    nonstationarity. 
     \item For an AR(1) process, notice that the effect of the shock never dies when $\phi=1$,
     and it dies out quicker and quicker as we move from $\phi=0.95$ to $\phi=0.5$. This makes 
     sense as the closer to 1 $|\phi|$ is, the more useful information there is in the previous 
@@ -383,21 +398,60 @@
     ARMA process is nonstationary and behaves much like a random walk. This is called the unit 
     root case. 
     \item Unit root tests are used to decide if an AR model have an absolute root equal to 1.
+    \item We can always look at a time series and say we think it is or isn't stationary, but 
+    the Dickey-Fuller and Augmented Dickey-Fuller tests give us a robust way to do so. 
     \item A popular unit root test is the augmented Dickey-Fuller test (ADF test). In this test
     \begin{itemize}
         \item $H_0$: there is a unit root (the process is nonstationary)
         \item $H_1$: the process is stationary
-    \end{itemize}
+    \end{itemize} 
+\end{itemize}
 
-    
+\subsection{Dickey-Fuller Test}
+\begin{itemize}
+    \item Assumes our time series is an $AR(1)$ model, that is 
+    \[ Y_t = \phi Y_{t-1} + \epsilon_t \]
+    \item $H_0$: there is a unit root, that is, $\phi = 1$ (the process is nonstationary)
+    \item $H_1$: the process is stationary, that is $|\phi|<1$
+    \item Let $\pi = (\phi - 1)$. The Dickey-Fuller test rewrites the $AR(1)$ model as follows
+    to make the left hand side stationary.
+    \begin{align*}
+        Y_t &= \phi Y_{t-1} + \epsilon_t \\
+        Y_t - Y_{t-1} &= \phi Y_{t-1} - Y_{t-1} + \epsilon_t \\
+        \Delta Y_t &= (\phi - 1) Y_{t-1} + \epsilon_t \\
+        \Delta Y_t &= \pi Y_{t-1} + \epsilon_t \\
+    \end{align*}
+    \item We now rewrite the hypotheses in terms of $\pi$, that is 
+    \begin{itemize}
+        \item $H_0$: $\pi = 0$
+        \item $H_1$: $\pi < 0$
+    \end{itemize}
+\end{itemize}
+
+\subsection{Augmented Dickey-Fuller Test}
+\begin{itemize}
+    \item Assumes our time series is an $AR(p)$ model, that is 
+    \[Y_t = \phi_1 Y_{t-1} + \phi_2 Y_{t-2} + \hdots + \phi_p Y_{t-p} + \epsilon_t\]
+    \item $H_0$: there is a unit root, that is, $\phi = 1$ (the process is nonstationary)
+    \item $H_1$: the process is stationary, that is $|\phi|<1$
+    \item Let $\pi = (\phi - 1)$. The Dickey-Fuller test rewrites the $AR(p)$ model as follows
+    to make the left hand side stationary.
+    \begin{align*}
+        Y_t &= \phi_1 Y_{t-1} + \phi_2 Y_{t-2} + \hdots + \phi_p Y_{t-p} + \epsilon_t \\
+        \Delta Y_t &= \beta_0 + \beta_1 t + \pi Y_{t-1} + \sum_{j=i}^{p} \gamma_j \Delta Y_{t-j} + \epsilon_t \\
+    \end{align*}
+    \item We now rewrite the hypotheses in terms of $\pi$, that is 
+    \begin{itemize}
+        \item $H_0$: $\pi = 0$
+        \item $H_1$: $\pi < 0$
+    \end{itemize}
 \end{itemize}
 
 \section{Regression}
 
-
 \section{Estimation for AR Models}
 \begin{itemize}
-    \item AR models can be estimated by OLS. Recal OLS is defined
+    \item AR models can be estimated by OLS. Recall OLS is defined
     \[y = X\beta + e\]
     where 
     \[
@@ -458,6 +512,118 @@
         e_n
     \end{bmatrix}
     \]
+\end{itemize}
+
+\subsection{Autocorrelated Residuals}
+\begin{itemize}
+    \item If the residuals are autocorrelated, the regression is misspecified. 
+\end{itemize}
+\section{Spurious Regression}
+\begin{itemize}
+    \item This is concluding there is a relationship between varables when there is none. 
+    \item The regression is spurious when we regress one random walk onto another independent 
+    random walk. It is spurious as the regression will most likely indicate a non-existent 
+    relationship. 
+    \item Rule of thumb: If we have an $R^2$ greater than our Durbin Watson statistic, our 
+    relationship is likely spurious. 
+    \item Always check the stationarity of the residual. The gression is spurious if the 
+    residual is nonstationary (cannot reject the null of the unit root test).
+    \item Just because two series move together does not mean they are related. 
+\end{itemize}
+
+\section{Estimation}
+\subsection{Estimation Basics}
+\begin{itemize}
+    \item An estimator is any procedure or formula that is used to predict or estimate the
+    true value of some unknown quantity by using information contained in data points of a 
+    sample.
+\end{itemize}
+
+\subsection{Properties of Estimation}
+\begin{itemize}
+    \item Consistency: A consistent estimator is one which produces a better and better 
+    estimate as the sample size of the data increases. 
+    \item Bias: The bias of an estimator is the difference between estimator's expected value 
+    and the true value of the parameter being estimated. 
+\end{itemize}
+
+\subsection{Ordinary Least Squares}
+\begin{itemize}
+    \item A method of parameter estimation to determine the line of best fit to the data, where 
+    best fit is defined as the minimization sum of squared residuals.
+    \item Least Squares Estimator
+    \[\hat{\beta} = {(\boldsymbol{X}^T \boldsymbol{X})}^{-1} \boldsymbol{X}^T \boldsymbol{Y}\]
+    \item Assumptions
+    \begin{enumerate}
+        \item The regression model is linear in parameters. 
+        \item The samples are randomly sampled. 
+        \item The errors and independent variables are independent (errors are orthogonal to regressors).
+        \item There is no multi-collinearity (there is no linear relationship between 
+        independent variables).
+        \item The variance of the errors of the regression model is constant (the errors are 
+        homoskedastic). $D = \sigma^2 \boldsymbol{I}$
+        \item The errors are not correlated with each other or themselves. 
+        \item The errors are normally distributed.
+    \end{enumerate}
+\end{itemize}
+
+\subsection{Generalized Least Squares}
+\begin{itemize}
+    \item A generalization of the OLS estimation technique. 
+    \item It is suitable for fitting linear models on data that exhibit heteroskedasticity 
+    (non-constant variance) and/or autocorrelation, which are common properties in real world 
+    data. OLS assumes that these properties are not present, therefore making it unfit for 
+    estimation in this case. 
+    \item When errors are i.i.d. ($\Sigma = \sigma^2 \boldsymbol{I}$), OLS is appropriate, but
+    when errors are not i.i.d. ($\Sigma \ne \sigma^2 \boldsymbol{I}$), OLS is not appropriate.
+    \item Generalized Least Squares Estimator
+    \[\hat{\beta} = {(\boldsymbol{X}^T \Sigma^{-1} \boldsymbol{X})}^{-1} \boldsymbol{X}^T 
+    \Sigma^{-1} \boldsymbol{Y}\]
+    \item A special case of GLS is Weighted Least Squares, which occurs when $\Sigma$ is a 
+    diagonal matrix. The intution is observations are weighted according to their volatilities
+    and are estimated in the same manner as regular GLS, that is 
+    \[\hat{\beta} = {(\boldsymbol{X}^T \Sigma^{-1} \boldsymbol{X})}^{-1} \boldsymbol{X}^T 
+    \Sigma^{-1} \boldsymbol{Y}\]
+    \item GLS is theoretically more efficient than OLS, but hard to implement in practice. 
+    \item Drawbacks
+    \begin{enumerate}
+        \item $\Sigma$ is usually unknown and has to be estimated.
+    \end{enumerate}
+\end{itemize}
+
+
+\subsection{Heteroskedasticity and Autocorrelation Consistent (HAC) Standard Errors}
+\begin{itemize}
+    \item These are methods to esimate consistent standard errors when errors exhibit 
+    heteroskedasticity and/or autocorrelation.
+    \item White Heteroskasticity Consistent (HC) Covariance Estimatior
+    \[
+    \hat{\text{Cov}}_{HC} (\hat{\beta} | \boldsymbol{x}_1, \ldots, \boldsymbol{x}_n) = 
+    {(\boldsymbol{X}^T \boldsymbol{X})}^{-1} \hat{\boldsymbol{C}}_{HC} {(\boldsymbol{X}^T 
+    \boldsymbol{X})}^{-1}
+    \]
+    where 
+    \[
+    \hat{\boldsymbol{C}}_{HC} = \boldsymbol{X}^T \hat{\Sigma}_{\hat{\boldsymbol{\epsilon}}}
+    \boldsymbol{X}
+    \]
+    \item Newey West Heteroskedasticity and Autocorrelation Consistent (HAC)
+    % \[
+    %     \hat{\text{Cov}}_{HC} (\hat{\beta} | \boldsymbol{x}_1, \ldots, \boldsymbol{x}_n) = 
+    %     {(\boldsymbol{X}^T \boldsymbol{X})}^{-1} \hat{\boldsymbol{C}}_{HAC} {(\boldsymbol{X}^T 
+    %     \boldsymbol{X})}^{-1}
+    %     \]
+    %     where 
+    %     \[
+    %     \hat{\boldsymbol{C}}_{HAC} = \hat{\boldsymbol{C}}_{HC}
+    %     \boldsymbol{X}^T \hat{\Sigma}_{\hat{\boldsymbol{\epsilon}}}
+    %     \boldsymbol{X}
+    %     \]
+\end{itemize}
+
+\subsection{Vector Autoregressions (VAR)}
+\begin{itemize}
+    \item A generalization of AR processes for multivariate series. 
 \end{itemize}
 
 

@@ -155,7 +155,7 @@
     \boldsymbol{D} \end{bmatrix}$. If $\boldsymbol{\bar{D}}^T \boldsymbol{h} > 0$, this means we 
     had nonnegative cashflows even at time $t=0$. Put simply, this means that we don't pay 
     anything today (and maybe even earn something today) and have the possibility of positive 
-    cashflows at time $t=1$ in at lesat one of the states. 
+    cashflows at time $t=1$ in at least one of the states. 
     \item A market is said to be \textit{arbitrage free} if there exists no arbitrage 
     portfolios. In other words, there may be many states of the world with 0 cash flows, but if
     there exists at least one state with strictly positive cash flows and there are none where 
@@ -168,7 +168,7 @@
     \item The market is complete is $\mathcal{R}$ is all of $\mathbb{R}^M$. This can be shown 
     if Rank$(\boldsymbol{D}) = M$.
     \item If $N \ge M$, then the market may be complete (depends on the row rank).
-    \item If $N < M$ the market is not complete since we can't span all of $\mathbb{R}^M$ with 
+    \item If $N < M$, the market is not complete since we can't span all of $\mathbb{R}^M$ with 
     only $N$ rows.
 \end{itemize}
 
@@ -297,6 +297,19 @@
         \mathbb{P}(A) > 0\]
         from this is follows that, for any r.v. $\tilde{X}$
         \[E_{\mathbb{P}}[L\tilde{X}] = E_{\mathbb{Q}}[\tilde{X}]\]
+
+        which can be seen by 
+        \[
+        E_{\mathbb{Q}}[\tilde{X}] 
+        = \sum_{i} x_i q_i
+        = \sum_{i} x_i q_i \frac{p_i}{p_i}
+        = \sum_{i} x_i \frac{q_i}{p_i} p_i
+        = \sum_{i} x_i L_i p_i
+        = E_{\mathbb{P}}[L\tilde{X}]
+        \]
+
+        which gives a methodology to switch between the $\mathbb{Q}$ probability measure and 
+        the $\mathbb{P}$ probability measure. 
     \end{itemize}
 \end{itemize}
 
@@ -347,7 +360,9 @@
     \item Given the discounted process $\hat{V}_0 = V_0$ and $\hat{V}^1 = \frac{\tilde{V}}{R}$,
     we have 
     \[\hat{V}_0 = E_{\mathbb{Q}}[\hat{V}_1]\]
-    therefore $\mathbb{Q}$ is called the \textit{equivalent martingale measure}.
+    therefore $\mathbb{Q}$ is called the \textit{equivalent martingale measure}. In other 
+    words, if the expectation of a r.v. tomorrows is equal to its value today, it is a 
+    martingale (the best expectation of tomorrow's value is today's value).
 \end{itemize}
 
 
@@ -360,7 +375,7 @@
 \textbf{Risk Neutral First Fundamental Theorem}
 \begin{itemize}
     \item The market is arbitrage free if and only if there exists an equivalent martingale 
-    maeasure, $\mathbb{Q}$, such that the price of any asset in $\mathcal{R}$ is given by 
+    measure, $\mathbb{Q}$, such that the price of any asset in $\mathcal{R}$ is given by 
     $V^0 = \frac{1}{R}E_{\mathbb{Q}}[\tilde{V}^1]$
 \end{itemize}
 
@@ -379,7 +394,23 @@
         \[V_0 = \boldsymbol{V}^1 \psi\]
         \item Using equivalent martingale measure/risk neutral probabilities 
         \[V_0 = \frac{1}{R} E_{\mathbb{Q}}[\tilde{V}^1]\]
-        where $q_i = \frac{\psi_i}{\hat{\psi}}, R = \frac{1}{\hat{\psi}}$.
+        where $q_i = \frac{\psi_i}{\hat{\psi}}, R = \frac{1}{\hat{\psi}}$. \\ 
+
+        We show how to get from $V_0 = \boldsymbol{V}^1 \psi$ to $_0 = \frac{1}{R} 
+        E_{\mathbb{Q}}[\tilde{V}^1]$
+
+        \begin{align*}
+            \boldsymbol{V}^1 \psi 
+            &= \sum V^1(\omega_i) \psi_i \\
+            &= \sum V^1(\omega_i) \psi_i \frac{\sum \psi_i}{\sum \psi_i} \\
+            &= \sum V^1(\omega_i) \frac{\psi_i}{\sum \psi_i} \sum \psi_i \\
+            &= \sum V^1(\omega_i) q_i \sum \psi_i \\
+            &= E_{\mathbb{Q}[\tilde{V}^1]} \sum \psi_i \\
+            &= E_{\mathbb{Q}[\tilde{V}^1]} \frac{1}{\frac{1}{\sum \psi_i}} \\
+            &= \frac{1}{R} E_{\mathbb{Q}[\tilde{V}^1]} \\
+        \end{align*}
+        
+
         \item Using the likelihood ratio 
         \[V_0 = \frac{1}{R} E_{\mathbb{P}}[L\tilde{V}^1]\]
         where $L_i = \frac{q_i}{p_i}$.
@@ -447,6 +478,129 @@
         \caption{Price dynamics}
     \end{figure}
 \end{itemize}
+
+Given the following 1 period, 2 state binomial tree market above.
+This can be setup as 
+    \[
+    \boldsymbol{s}_0 = \begin{bmatrix}
+        1 \\ 
+        1
+    \end{bmatrix}
+    \]
+    \[ 
+    \boldsymbol{D} = \begin{bmatrix}
+        u & d \\
+        R & R \\
+    \end{bmatrix}
+    \]
+
+For this $2 \times 2$ market, answer the following questions.
+\begin{enumerate}
+        \item What are the conditions for noarbitrage?
+        \begin{itemize}
+            \item No arbitrage if $d < R < u$: If $R$ is greater than $u$ and $d$, then there 
+            would be no reason to take on the risk of the stock since more could be earned risk 
+            free with $R$. If $R$ is less than $u$ and $d$, then the stock is superior. 
+            \item Another possibility for a market with no arbitrage would be if $d = R = u$. 
+            The market would not be complete, but there would be no arbitrage.
+        \end{itemize}
+        \item What are the conditions for a complete market? \\
+        Approach: If $\text{Rank}(\boldsymbol{D}) = M$, market is complete. \\
+
+        $u \ne d$. If $u=d$, $\text{Rank}(\boldsymbol{D}) = 1 < M = 2$.
+        \item What are the state prices? \\
+        Approach: Find the state price vector. Since this is a $2 \times 2$ market, we can just 
+        invert $\boldsymbol{s}^0 = \boldsymbol{D}\psi$ and solve for $\psi = 
+        \boldsymbol{D}^{-1} s^0$ to get the state prices. \\
+        
+        Recall
+        \[
+        {\begin{bmatrix}
+            a & b \\
+            c & d 
+        \end{bmatrix}}^{-1} = 
+        \frac{1}{ad - bc} 
+        \begin{bmatrix}
+            d & -b \\ 
+            -c & a
+        \end{bmatrix}
+        \] \\
+        Therefore
+        \[
+        \boldsymbol{D}^{-1} = \frac{1}{uR - Rd} 
+        \begin{bmatrix}
+            R & - d \\ 
+            -R & u
+        \end{bmatrix} = 
+        \boldsymbol{D}^{-1} = \frac{1}{(u - d)R} 
+        \begin{bmatrix}
+            R & - d \\ 
+            -R & u
+        \end{bmatrix}
+        \]
+
+        \[
+        \psi = \boldsymbol{D}^{-1} s^0 = \frac{1}{(u - d)R} 
+        \begin{bmatrix}
+            R & - d \\ 
+            -R & u
+        \end{bmatrix} 
+        \begin{bmatrix}
+            1 \\ 
+            1
+        \end{bmatrix} = \frac{1}{(u - d)R} 
+        \begin{bmatrix}
+            R - d \\ 
+            u - R
+        \end{bmatrix} = 
+        \begin{bmatrix}
+            \frac{R-d}{(u-d)R} \\
+            \frac{u-R}{(u-d)R} \\
+        \end{bmatrix}
+        \]
+    
+        \item What are the risk neutral probabilities? \\
+        Approach: The risk neutral measure is $\mathbb{Q}$, where each $q_i = \frac{\psi_i}
+        {\hat{\psi}}$, and $\hat{\psi} = \sum_{i=1}^{M} \psi_i$. \\
+    
+        Calculate 
+        \[
+        \hat{\psi} = \psi_1 + \psi_2 
+        = \frac{R-d}{(u-d)R} + \frac{u-R}{(u-d)R} 
+        = \frac{R-d+u-R}{(u-d)R} 
+        = \frac{u-d}{(u-d)R} 
+        = \frac{1}{R} 
+        \]
+        \[q_u = \frac{\psi_1}{\hat{\psi}} = \frac{R-d}{u-d}\]
+        \[q_d = \frac{\psi_2}{\hat{\psi}} = \frac{u-R}{u-d}\]
+        Therefore 
+        \[
+        \begin{bmatrix}
+            q_u \\
+            q_d 
+        \end{bmatrix} =
+        \begin{bmatrix}
+            \frac{R-d}{u-d} \\
+            \frac{u-R}{u-d}
+        \end{bmatrix}    
+        \]
+        The $q_u$ is the $q$ for an up move, is typically what we call the risk neutral 
+        probability.
+        
+        \item What is the price the call option?
+        \[
+        C_0 = C_u \psi_1 + C_d \psi_2
+        = \frac{1}{R} E_{\mathbb{Q}}[\tilde{C}_1] 
+        = \frac{1}{R} (C_u q_u + C_d q_d)
+        \]
+        
+        
+    
+    \item Payoff for call will be either 
+    \[C_u = \text{max}(uS - K, 0)\]
+    or 
+    \[C_d = \text{max}(dS - K, 0)\]
+\end{enumerate}
 
 \subsubsection{Basic Probability}
 \begin{itemize}
@@ -529,9 +683,10 @@
     information that is available at time $t$. If the process is not adapted, then it cheats 
     and uses future information. If it is adapted, it is only using the available information.
     \item An $\underline{\mathcal{F}}$-martingale is an adapted process, $m$, such that for all 
-    $0 \le s \le t, E[m_t|\mathcal{F_s}]=m_s$. In other words, the best forecast is not expected 
+    $0 \le s \le t, E[m_t|\mathcal{F}_s]=m_s$. In other words, the best forecast is not expected 
     to change (the best forecast is what it is right now). It follows immediately from the law 
     of iterated expectations that $Y_t$ defined above is a martingale. 
+    \item A set $A \in \Omega$ is said to be $\mathcal{F}$-measurable if $A \in \mathcal{F}$.
 \end{itemize}
 
 \textbf{The Multiperiod Security Market}
@@ -577,7 +732,7 @@
     \item In the case of assets that do not pay dividends, this reduces to  
     \[
     \delta_t^{\boldsymbol{h}} = (\boldsymbol{h}_{t-1}-\boldsymbol{h}_{t})'\boldsymbol{s}_t
-    = -(\boldsymbol{h}_{t} + \boldsymbol{h}_{t-1}) = -(\Delta \boldsymbol{h}\_{t})'
+    = -(\boldsymbol{h}_{t} - \boldsymbol{h}_{t-1}) = -(\Delta \_\boldsymbol{h}_{t})'
     \boldsymbol{s}_t
     \]   
     \item The \textit{value process} of a trading strategy is $V_t^{\boldsymbol{h}} = 
@@ -720,19 +875,22 @@
 \subsection{Brownian Motion}
 \begin{itemize}
     \item Brownian motion is a physical phenomenon in which some quantity if constantly 
-    undergoing small, random fluctuations. 
+    undergoing small, random fluctuations.
+    \item It is essentially the continuous time version of a random walk (which of course is in 
+    discrete time).
     \item A stochastic process, $W_t, \, t \ge 0$ is said to be a \textit{standard Brownian 
     motion} (a Wiener process), if it satisfies the following four properties: 
     \begin{enumerate}
         \item It starts at the origin: $W_0 = 0$
         \item It is normally distributed  $\sim N(0,t)$ and the increment for all $s<t$ is 
-        also normally distributed, that is, $W_t - W-s \sim N(0, t-s)$. 
+        also normally distributed, that is, $W_t - W_s \sim N(0, t-s)$. Notice that the 
+        variance is equal to the length of the time period. 
         \item It has independent increments: for all $r<s \le t<u, \, W_u - W_t$ is 
         independent of $W_s - W_r$. This means that whatever happens between $W_s$ and $W_r$ 
         has no effect on what happens between $W_t$ and $W_u$.
         \item It has continuous sample paths: $W_t$ is a continuous function of $t$.
     \end{enumerate}
-    \item Clearly, a Wiener process is a martingale process (has not drift, the expected 
+    \item Clearly, a Wiener process is a martingale process (has no drift, the expected 
     value given all prior information is always the mean, which is 0). 
     \item A \textit{Brownian motion} is a stochastic process, $X_t = X_0 + \mu t + \sigma W_t$
     where $\mu$ and $\sigma > 0$ are constants, and $W_t$ is a standardized Brownian motion. 
@@ -760,7 +918,7 @@
     \end{itemize}
 \end{itemize}
 
-\subsection{Continuous Time Trading}
+\subsection{Discrete Time Trading to Bridge Gap to Continuous Time Trading}
 \begin{itemize}
     \item Here we look at how to define continuous time trading between $t=0$ and $t=T$.
     \item We start with the discrete formula for a self financed (this is when consumption 
@@ -838,7 +996,7 @@
     \item Important It\^{o} calculus properties: 
     \begin{itemize}
         \item Martingale property 
-        \[ E\left[\oint_{0}^{T} at \, dW_t \right] = 0\]
+        \[ E\left[\oint_{0}^{T} a_t \, dW_t \right] = 0\]
         \item Ito isometry
         \[ E \left[{\left(\oint_0^T a_t \, dW_t\right)}^2\right] = \int_{0}^{T} E[a_t^2] \, dt\]
     \end{itemize}
@@ -850,6 +1008,155 @@
     a Brownian motion, and that $Y_t = g(t, X_t)$ for some smooth function $g$. Then $dY_t$ 
     can be written 
     \[dY_t = g_t \,dt + g_x \,dX + \frac{1}{2} g_{xx} {(dX)}^2\]
+    where ${(dX_t)}^2$ is computed according to the rules 
+    \[dt \times dt = 0\]
+    \[dt \times dW_t = 0\]
+    \[dW_t \times dW_t = dt\]
+    which leads to 
+    \[{(dX_t)}^2 = v^2 \,dt\]
+\end{itemize}
+
+\subsection{Transformations}
+\begin{enumerate}
+    \item If given a geometric Brownian motion
+    \[\frac{dX_t}{X_t}=\mu \,dt + \sigma \,dW_t\]
+    and take the log, you need to subtract $\frac{1}{2} \sigma^2$ from the drift term 
+    \[d\ln{X_t}= (\mu - \frac{1}{2} \sigma^2)\,dt + \sigma \,dW_t\]
+    \item If given an ordinary Brownian motion
+    \[dX_t = \mu\,dt + \sigma \,dW_t\]
+    and transform to a geometric Brownian motion, you need to add $\frac{1}{2} \sigma^2$ to the 
+    drift term 
+    \[\frac{d e^{X_t}}{e^{X_t}}= (\mu + \frac{1}{2} \sigma^2)\,dt + \sigma \,dW_t\]
+\end{enumerate}
+
+\subsection{Multidimensional Uncorrelated It\^{o}s Lemma}
+\begin{itemize}
+    \item Let $\boldsymbol{X}_t$ be a $k$-dimensional Ito process given by 
+    \[d\boldsymbol{X}_t=\mu\,dt + \sigma \,d\boldsymbol{W}_t\]
+
+    where $\mu_t \in \mathbb{R}^k, \sigma_t \in \mathbb{R}^{k \times k}, \Sigma = \sigma \sigma^T, \sigma_i = 
+    [\sigma_{i,1}, \ldots, sigma_{i,k}]$ and $\boldsymbol{W}_t$ is a standardized 
+    $k$-dimensional Brownian motion. Let $g(t,x) \in C^2 ([0, \infty] \times \mathbb{R}^k)$.
+    Then $Y_t = g(t, \boldsymbol{X}_t)$ is an Ito process, and 
+
+    \[
+    dY_t = \left(g_t + \sum_{i} g_{x_i} \mu_i + \frac{1}{2} \sum_{i,j} g_{x_i x_j} \Sigma_{ij}
+    \right)\,dt + \sum_{i} g_{x_i} \sigma_i \,d\boldsymbol{W}_t
+    \]
+\end{itemize}
+
+In the $k=2$ dimensional case, this would take the form as follows 
+
+\begin{align*}
+    d\boldsymbol{X}_t =& \mu\,dt + \sigma \,d\boldsymbol{W}_t \\
+    \begin{bmatrix} dx_1 \\ dx_2 \end{bmatrix} =& \begin{bmatrix} \mu_1 \\ \mu_2 \end{bmatrix}
+    \,dt + \begin{bmatrix} \sigma_{11} & \sigma_{12} \\ \sigma_{21} & \sigma_{22} 
+    \end{bmatrix} \begin{bmatrix} dW_1 \\ dW_2 \end{bmatrix} \\
+\end{align*}
+
+\begin{align*}
+    \Sigma = \sigma \sigma^T = \begin{bmatrix}
+        \sigma_{11}^2 + \sigma_{12}^2 & \sigma_{11} \sigma_{21} + \sigma_{12} \sigma_{22} \\
+        \sigma_{21} \sigma_{11} + \sigma_{22} \sigma_{21} &  \sigma_{21}^2 + \sigma_{22}^2
+    \end{bmatrix} = 
+    \begin{bmatrix}
+        \Sigma_{11} & \Sigma_{12} \\ 
+        \Sigma_{21} & \Sigma_{22}
+    \end{bmatrix}
+\end{align*}
+
+Now we can apply Ito
+\begin{align*}
+    dY_t &= \left(g_t + \sum_{i} g_{x_i} \mu_i + \frac{1}{2} \sum_{i,j} g_{x_i x_j} \Sigma_{ij}
+    \right)\,dt + \sum_{i} g_{x_i} \sigma_i \,d\boldsymbol{W}_t \\
+    dY_t &= g_t\,dt + (g_{x_1}\,dx_1 + g_{x_2}\,dx_2) + (\frac{1}{2}[g_{x_1x_1} \Sigma_{11} +
+    g_{x_2x_2} \Sigma_{22} + 2 g_{x_1x_2} \Sigma_{12}]\,dt) \\
+    dY_t &= g_t\,dt + g_{x_1}\,dx_1 + g_{x_2}\,dx_2 + \frac{1}{2}[g_{x_1x_1} \Sigma_{11} +
+    g_{x_2x_2} \Sigma_{22} + 2 g_{x_1x_2} \Sigma_{12}]\,dt \\
+\end{align*}
+
+We can then take the stochastic integral of $dY$
+\[ \oint_0^T = g(T, \boldsymbol{X}_T) - g(0, \boldsymbol{X}_0) \]
+with the hessian $H = \begin{bmatrix}
+    g_{x_1 x_1} & g_{x_1 x_2} \\
+    g_{x_2 x_1} & g_{x_2 x_2} 
+\end{bmatrix}$
+
+\subsection{It\^{o}s Version of the Product Rule}
+\begin{itemize}
+    \item Define quadratic covariance of 2 Ito processes as ${\langle X,Y\rangle}_t = \int 
+    dXdY$, where $dXdY = \sigma_X \sigma_Y \rho_{xy} \,dt$
+    \item The Ito version of the product rule (Leibniz' formula) now takes the following forms 
+    \begin{itemize}
+        \item Integral Form: $X_t Y_t - X_0 Y_0 = \int X\,dY + \int Y\,dX + {\langle X,Y
+        \rangle}_t$
+        \item Differential Form: $d(XY) = X\,dY + Y\,dX + dXdY$.
+    \end{itemize}
+\end{itemize}
+
+\subsection{Continuous Time Porfolio Model}
+\textbf{Total Change in Value of Portfolio}
+\begin{itemize}
+    \item Assume $N$-asset trading strategy according to diffusion process, $\boldsymbol{h}_t$,
+    and asset value diffusion process, $\boldsymbol{s}_t$.
+    \item The value of the portfolio at time $t$ is $V_t = \boldsymbol{h}'_t \boldsymbol{s}_t$.
+    \item So, by Ito, we have 
+    \begin{align*}
+        dV_t &= \boldsymbol{h}'_t \,d\boldsymbol{s} + d\boldsymbol{h}'_t \boldsymbol{s}_t + 
+        d\boldsymbol{h}'_t d\boldsymbol{s}_t \\
+        dV_t &= \boldsymbol{h}'_t\,d\boldsymbol{s}_t + d\boldsymbol{h}'_t(\boldsymbol{s}_t + 
+        d\boldsymbol{s_t})
+    \end{align*}
+    \item Compared to the discrete relationship for the total change in value of portfolio 
+    \[
+    \Delta\_V_t = \boldsymbol{h}'_{t-1} \Delta \_ \boldsymbol{s}_t + \Delta \_ 
+    \boldsymbol{h}'_t (\boldsymbol{s}_{t-1} + \Delta \_ \boldsymbol{s}_t)
+    \]
+\end{itemize}
+
+\textbf{Portfolio Payoff}
+\begin{itemize}
+    \item In discrete time, we used the following formula to denote the portfolio payoff 
+    \[
+    \delta_t^{\boldsymbol{h}} = \boldsymbol{h}'_{t-1}(\Delta\_\boldsymbol{s}_t) - \Delta \_ 
+    V_t + \boldsymbol{h}'_{t-1} \delta_t
+    \]
+    or equivalently
+    \[ \delta_t^{\boldsymbol{h}} = \boldsymbol{h}'_{t-1}(\boldsymbol{s}_t + \delta_t) - 
+    \boldsymbol{h}'_{t}\boldsymbol{s}_t 
+    \]
+    \item For the continuous time version, we start by defining the cumulative dividend
+    process of stocks from 0 to $t$, $\Theta_t \in \mathbb{R}^N$ and the gain process, $G_t =
+    \boldsymbol{s}_t + \Theta_t$.
+    \item We then define the cumulative payoff process of a porfolio from 0 to $t$, 
+    $F_t^{\boldsymbol{h}} \in \mathbb{R}$
+    \item This allows us to create the following relationship 
+    \[ 
+    dV + dF^{\boldsymbol{h}} = \boldsymbol{h}' \,d\boldsymbol{s} + \boldsymbol{h}'\,d\Theta = 
+    \boldsymbol{h}'\,dG 
+    \]
+    \item We can then define the (instantaneous) porfolio payoff in continuous time as follows 
+    \[
+    dF_t^{\boldsymbol{h}} = -d\boldsymbol{h}'_t(\boldsymbol{s}_t + d\boldsymbol{s}_t) + 
+    \boldsymbol{h}'\,d\Theta_t
+    \]
+    which is the porfolio payout equal to the payments from rebalancing the portfolio with the 
+    payments from stock dividends added. 
+    \item If the stocks pay no dividends ($\Theta = d\Theta = 0$), we have
+    \[
+        dF_t^{\boldsymbol{h}} = -d\boldsymbol{h}'_t(\boldsymbol{s}_t + d\boldsymbol{s}_t)
+    \]
+    \item If the stocks pay no dividends ($\Theta = d\Theta = 0$) and we have self financing 
+    trading strategy ($dF^{\boldsymbol{h}}=0$), we have 
+
+    \[ {(d\boldsymbol{h})}'\boldsymbol{s} = -{(d\boldsymbol{h})}'(d\boldsymbol{s}) \]
+    \[ dV = \boldsymbol{h}'\,d\boldsymbol{s} \]
+\end{itemize}
+
+\subsection{Stochastic Differential Equations}
+\begin{itemize}
+    \item A SDE is of the form 
+    \[dX = \mu(t,X)\,dt + \sigma(t, X_t) \,dW_t\]
 \end{itemize}
 
 \section{Discrete Time Models Examples}
@@ -1156,138 +1463,6 @@ Answer the questions for the following economy
     Approach: By FTAP, we know the market if arbitrage free iff there exists a strictly
     positive SPV. Since we have shown the market is not arbitrage free, we know there is not a 
     strictly positive SPV. 
-\end{enumerate}
-
-\subsection{Example}
-
-Given the following 1 period, 2 state binomial tree market (denoted by the image below).
-
-\begin{figure}[H] 
-    \centering 
-    \includegraphics[width=4in]{imgs/one_period_two_state_bin_tree_model.png}
-    \caption{Price dynamics}
-\end{figure}
-
-This can be setup as 
-    \[
-    \boldsymbol{s}_0 = \begin{bmatrix}
-        1 \\ 
-        1
-    \end{bmatrix}
-    \]
-    \[ 
-    \boldsymbol{D} = \begin{bmatrix}
-        u & d \\
-        R & R \\
-    \end{bmatrix}
-    \]
-
-For this $2 \times 2$ market, answer the following questions.
-\begin{enumerate}
-        \item What are the conditions for noarbitrage?
-        \begin{itemize}
-            \item No arbitrage if $d < R < u$: If $R$ is greater than $u$ and $d$, then there 
-            would be no reason to take on the risk of the stock since more could be earned risk 
-            free with $R$. If $R$ is less than $u$ and $d$, then the stock is superior. 
-            \item Another possibility for a market with no arbitrage would be if $d = R = u$. 
-            The market would not be complete, but there would be no arbitrage.
-        \end{itemize}
-        \item What are the conditions for a complete market? \\
-        Approach: If $\text{Rank}(\boldsymbol{D}) = M$, market is complete. \\
-
-        $u \ne d$. If $u=d$, $\text{Rank}(\boldsymbol{D}) = 1 < M = 2$.
-        \item What are the state prices? \\
-        Approach: Find the state price vector. Since this is a $2 \times 2$ market, we can just 
-        invert $\boldsymbol{s}^0 = \boldsymbol{D}\psi$ and solve for $\psi = 
-        \boldsymbol{D}^{-1} s^0$ to get the state prices. \\
-        
-        Recall
-        \[
-        {\begin{bmatrix}
-            a & b \\
-            c & d 
-        \end{bmatrix}}^{-1} = 
-        \frac{1}{ad - bc} 
-        \begin{bmatrix}
-            d & -b \\ 
-            -c & a
-        \end{bmatrix}
-        \] \\
-        Therefore
-        \[
-        \boldsymbol{D}^{-1} = \frac{1}{uR - Rd} 
-        \begin{bmatrix}
-            R & - d \\ 
-            -R & u
-        \end{bmatrix} = 
-        \boldsymbol{D}^{-1} = \frac{1}{(u - d)R} 
-        \begin{bmatrix}
-            R & - d \\ 
-            -R & u
-        \end{bmatrix}
-        \]
-
-        \[
-        \psi = \boldsymbol{D}^{-1} s^0 = \frac{1}{(u - d)R} 
-        \begin{bmatrix}
-            R & - d \\ 
-            -R & u
-        \end{bmatrix} 
-        \begin{bmatrix}
-            1 \\ 
-            1
-        \end{bmatrix} = \frac{1}{(u - d)R} 
-        \begin{bmatrix}
-            R - d \\ 
-            u - R
-        \end{bmatrix} = 
-        \begin{bmatrix}
-            \frac{R-d}{(u-d)R} \\
-            \frac{u-R}{(u-d)R} \\
-        \end{bmatrix}
-        \]
-    
-        \item What are the risk neutral probabilities? \\
-        Approach: The risk neutral measure is $\mathbb{Q}$, where each $q_i = \frac{\psi_i}
-        {\hat{\psi}}$, and $\hat{\psi} = \sum_{i=1}^{M} \psi_i$. \\
-    
-        Calculate 
-        \[
-        \hat{\psi} = \psi_1 + \psi_2 
-        = \frac{R-d}{(u-d)R} + \frac{u-R}{(u-d)R} 
-        = \frac{R-d+u-R}{(u-d)R} 
-        = \frac{u-d}{(u-d)R} 
-        = \frac{1}{R} 
-        \]
-        \[q_u = \frac{\psi_1}{\hat{\psi}} = \frac{R-d}{u-d}\]
-        \[q_d = \frac{\psi_2}{\hat{\psi}} = \frac{u-R}{u-d}\]
-        Therefore 
-        \[
-        \begin{bmatrix}
-            q_u \\
-            q_d 
-        \end{bmatrix} =
-        \begin{bmatrix}
-            \frac{R-d}{u-d} \\
-            \frac{u-R}{u-d}
-        \end{bmatrix}    
-        \]
-        The $q_u$ is the $q$ for an up move, is typically what we call the risk neutral 
-        probability.
-        
-        \item What is the price the call option?
-        \[
-        C_0 = C_u \psi_1 + C_d \psi_2
-        = \frac{1}{R} E_{\mathbb{Q}}[\tilde{C}_1] 
-        = \frac{1}{R} (C_u q_u + C_d q_d)
-        \]
-        
-        
-    
-    \item Payoff for call will be either 
-    \[C_u = \text{max}(uS - K, 0)\]
-    or 
-    \[C_d = \text{max}(dS - K, 0)\]
 \end{enumerate}
 
 \subsection{Example}
@@ -1736,16 +1911,317 @@ Determine which of the following four processes are adapted w.r.t. to the filtra
 \section{Continuous Time Models Examples}
 
 
-\subsection{It\^{o}s Lemma Examples}
+\section{It\^{o}s Lemma Examples}
+\subsection{Example}
+Calculate the It\^{o} integral $\oint W_t \, dW_t$ \\ 
+The problem defines $dX_t = dW_t$  and $Y_t =  g(t, X_t) = X_t^2$, which means $Y_t = W_t^2$
+
+\begin{enumerate}
+    \item Calculate the partial derivatives 
+    \[g_t(t, X_t) = 0\]
+    \[g_x(t, X_t) = 2X_t\]
+    \[g_{xx}(t, X_t) = 2\]
+    \item Plug these partials into It\^{o}s Lemma
+    
+    \begin{align*}
+        dY_t &= g_t \,dt + g_x \,dX_t + \frac{1}{2} g_{xx} {(dX_t)}^2 \\
+        dY_t &= 0 \,dt + 2X_t \,dX_t + \frac{1}{2} 2 {(dX_t)}^2 \\
+        dY_t &= 2X_t \,dX_t + {(dX_t)}^2 
+    \end{align*}
+    \item Make the substitions for $X_t = W_t$ and ${(dX_t)}^2 = v^2dt$, where in this case 
+    $v=1$
+    \begin{align*}
+        dY_t &= 2W_t \,dW_t + dt
+    \end{align*}
+\end{enumerate}
+
+\subsection{Example}
+Let $X_t = 2 + t + e^{W_t}$. Calculate $dX_t$. \\ 
+\begin{enumerate}
+    \item Define the function, here we have $x$ as a function of $t$ and $W_t$, $x(t, W_t)$.
+    \item Calculate the partial derivatives 
+    \[x_t(t, W_t) = 1 \]
+    \[x_w(t, W_t) = e^{W_t} \]
+    \[x_{ww}(t, W_t) = e^{W_t} \]
+    \item Plug these partials into It\^{o}s Lemma
+    \begin{align*}
+        dX_t &= x_t \,dt + x_w \,dW_t + \frac{1}{2} x_{ww} {(dW_t)}^2 \\
+        dX_t &= 1 \,dt + e^{W_t} \,dW_t + \frac{1}{2} e^{W_t} {(dW_t)}^2 \\
+        dX_t &= 1 \,dt + e^{W_t} \,dW_t + \frac{1}{2} e^{W_t} \,dt \\
+        dX_t &= (1 +  \frac{1}{2} e^{W_t}) \,dt + e^{W_t} \,dW_t \\
+    \end{align*}
+    \item Note 
+    \[X_0 = 2 + 0 + e^0 = 2 + 1 = 3\]
+    \item Then $X_T$ is calculated as followed 
+    \[X_T  = X_0 + \oint dX_t = 3 + \oint (1 +  \frac{1}{2} e^{W_t}) \,dt + e^{W_t} \,dW_t \]
+\end{enumerate}
+
+\subsection{Example}
+Calculate the following stochastic integral
+\[\oint_0^T t \, dW_t\] 
+
+Our goal here is to write it as an integral of something $dt$, $\oint \text{something} \, dt$. 
+\\
+For this specific problem, we end up getting the same answer as we would using classical
+calculus (Since the dependence on $W$ is linear, therefore its second derivative is 0 and the 
+Ito term does not play a role). \\
+
+\begin{enumerate}
+    \item  \[ g(t, W_t) = W_t t\]
+    \item Find the partials 
+    \[g_t = W_t\]
+    \[g_w = t\] % We want g_w to be t since we are calculating the stochastic integral of t. 
+    \[g_{ww} = 0\]
+    \item Plug these partials into It\^{o}s Lemma
+    \begin{align*}
+        dY_t &= g_t \,dt + g_w \,dW_t + \frac{1}{2} g_{ww} {(dW_t)}^2 \\
+        dY_t &= W_t \,dt + t \,dW_t + \frac{1}{2} 0 {(dW_t)}^2 \\
+        dY_t &= W_t \,dt + t \,dW_t \\
+    \end{align*}
+    \item \[\int_{0}^{T}dY = \oint W \,dt + \oint t \, dW = {\left[tW\right]}_0^T = TW_T\] % ???
+\end{enumerate}
+
+\subsection{Example}
+Define $Y_t = e^{X_t}$, where $X_t = \mu t + \sigma W_t$ is a Brownian motion, i.e., $Y_t$ is 
+a geometric Brownian motion. Derive $E[Y_t]$ using Ito's lemma. You may wish to use the ODE 
+formula: $y' = cy \rightarrow y_t = y_0 e^{ct}$. This problem transforms from ordinary
+Brownian Motion to geometric Brownian motion. 
+
+\begin{enumerate}
+    \item 
+    $Y_t = g(X_t) = e^{X_t}$
+    \item Find the partials 
+    \[g_t = 0\]
+    \[g_x = e^x\]
+    \[g_{xx} = e^{x}\]
+    \item Plug these partials into It\^{o}s Lemma
+    \begin{align*}
+        dY_t &= g_t \,dt + g_x \,dX_t + \frac{1}{2} g_{xx} {(dX_t)}^2 \\
+        dY_t &= 0 \,dt + e^x \,dX_t + \frac{1}{2} e^{x} {(dX_t)}^2 \\
+        dY_t &= e^x \,dX_t + \frac{1}{2} e^{x} {(dX_t)}^2 \\
+        dY_t &= e^x (\mu \,dt + \sigma \,dW) + \frac{1}{2} e^{x} \sigma^2 \,dt \\
+        dY_t &= e^x\mu \,dt + e^x\sigma \,dW + \frac{1}{2} e^{x} \sigma^2 \,dt \\
+        dY_t &= e^x((\mu + \frac{1}{2} \sigma^2) \,dt + \sigma \,dW)  \\
+    \end{align*}
+    \item Let $e^x = y_t$, let $\hat{\mu} = \mu + \frac{1}{2} \sigma^2$
+        \[dY_t = y_t(\hat{\mu} \,dt + \sigma \,dW) \]
+        \[\frac{dY_t}{y_t} = \hat{\mu} \,dt + \sigma \,dW \]
+    \item Now we find the expectation 
+    \[Y_0 = e^0 = 1\]
+    \begin{align*}
+        E[Y_T] - Y_0 = E \left[\oint_0^T dY_t\right] \\
+        E[Y_T] - 1 = E \left[\oint_0^T y_t(\hat{\mu} \,dt + \sigma \,dW) \right]         
+    \end{align*}
+
+    We can now use the martingale property 
+    \[ E\left[\oint_{0}^{T} at \, dW_t \right] = 0\]
+
+    \begin{align*}
+        E[Y_T] - 1 = E \left[\oint_0^T y_t(\hat{\mu} \,dt + 0) \right] \\
+        E[Y_T] - 1 = E \left[\oint_0^T y_t \hat{\mu} \,dt \right]         
+    \end{align*}
+
+    We can now use linearity to move the expectation operator inside
+    \begin{align*}
+        E[Y_T] - 1 = \oint_0^T  E [y_t] \hat{\mu} \,dt     
+    \end{align*}
+
+    Define $m_t = E[Y_t]$ to simplify the notation
+    \begin{align*}
+        m_T = m_0 + \hat{\mu} \oint_0^T m_t \,dt \\
+        m_T = 1 + \hat{\mu} \oint_0^T m_t \,dt
+    \end{align*}
+    Now differentiate
+    \begin{align*}
+        m' = 0 + \hat{\mu} m \\
+        m' = \hat{\mu} m \\
+    \end{align*}
+
+    Now use the ODE formula $y' = cy \rightarrow y_t = y_0 e^{ct}$ where, in our case, we have
+    \[m' = \hat{\mu} m \rightarrow m_t = 1 e^{\hat{\mu}t}\]
+
+    where we previously defined $\hat{\mu} = \mu + \frac{1}{2} \sigma^2$
+    \begin{align*}
+        1 e^{\hat{\mu}t} \\
+        E[Y_t]=e^{(\mu + \frac{1}{2} \sigma^2)t}
+    \end{align*}
+
+\end{enumerate}
+
+\subsection{Example}
+Calculate $d(e^X e^Y)$. Verify that the result is the same as what you get when you define 
+$Z=X+Y$ and calculate $d(e^Z)$. \\ 
+
+Recall that an Ito process $X_t$ in correlated form (using $V$ instead of $W$) is given by 
+\[ dX_t = u\,dt + v\,dV_t \]
+
+We also define: 
+\[(dV_x)(dV_y) = \rho_{xy} \,dt\]
+\[\sigma_{xy} = \sigma_x \sigma_y \rho_{xy}\]
+
+Therefore for our problem, we have
+\[ dX = \mu_x\,dt + \sigma_x\,dV_x \]
+\[ dY = \mu_y\,dt + \sigma_y\,dV_y \]
+
+\begin{align*}
+    Z &= X+Y \\
+    dZ &= dX + dY \\
+    dZ &= \mu_x\,dt + \sigma_x\,dV_x + \mu_y\,dt + \sigma_y\,dV_y \\
+    dZ &= (\mu_x + \mu_y)\,dt + \sigma_x\,dV_x + \sigma_y\,dV_y \\
+\end{align*}
+
+Squaring $dZ$, we get
+\begin{align*}
+    {(dZ)}^2 &= {((\mu_x + \mu_y)\,dt + \sigma_x\,dV_x + \sigma_y\,dV_y)}^2 \\
+    {(dZ)}^2 &= {(\sigma_x\,dV_x + \sigma_y\,dV_y)}^2 \\
+    {(dZ)}^2 &= (\sigma_x\,dV_x + \sigma_y\,dV_y)(\sigma_x\,dV_x + \sigma_y\,dV_y) \\
+    {(dZ)}^2 &= \sigma_x^2{(\,dV_x)}^2 + 2 \sigma_{xy} {(\,dV_y)}^2 + \sigma_y^2{(\,dV_y)}^2 \\
+    {(dZ)}^2 &= \sigma_x^2 \,dt + 2 \sigma_{xy} \,dt + \sigma_y^2 \,dt \\
+    {(dZ)}^2 &= {(\sigma_x^2 + 2 \sigma_{xy} + \sigma_y^2)} \,dt \\
+\end{align*}
+
+Now calculate $d(e^Z)$
+
+\begin{enumerate}
+    \item $g(Z) = e^Z$
+    \item Find the partials 
+    \begin{align*}
+        g_t &= 0 \\ 
+        g_z &= e^z \\ 
+        g_{zz} &= e^z 
+    \end{align*}
+    \item Plug these partials into It\^{o}s Lemma
+    \begin{align*}
+        dZ &= g_t \,dt + g_z \,dZ_t + \frac{1}{2} g_{zz} {(dZ)}^2 \\
+        dZ &= 0 \,dt + e^z \,dZ_t + \frac{1}{2} e^{z} {(dZ)}^2 \\
+        dZ &= e^z \,dZ + \frac{1}{2} e^{z} {(dZ)}^2 \\
+    \end{align*}
+    \item Plug in $dZ$ and ${(dZ)}^2$
+    \begin{align*}
+        dZ &= e^z ((\mu_x + \mu_y)\,dt + \sigma_x\,dV_x + \sigma_y\,dV_y) + \frac{1}{2} e^{z} 
+        {(\sigma_x^2 + 2 \sigma_{xy} + \sigma_y^2)} \,dt \\
+        dZ &= e^z ((\mu_x + \mu_y)\,dt + \sigma_x\,dV_x + \sigma_y\,dV_y) + \frac{1}{2} e^{z} 
+        {(\sigma_x^2 + 2 \sigma_x \sigma_y \rho_{xy} + \sigma_y^2)} \,dt \\
+        dZ &= e^z ((\mu_x + \mu_y)\,dt + \sigma_x\,dV_x + \sigma_y\,dV_y + \frac{1}{2} e^{z} 
+        {(\sigma_x^2 + \sigma_y^2 + 2 \sigma_x \sigma_y \rho_{xy})} \,dt) \\
+    \end{align*}
+\end{enumerate}
+
+Now caluclate $d(e^X e^Y)$ using the Ito version of the product rule 
+\begin{enumerate}
+    \item $d(e^X e^Y) = (de^x)e^y + e^x(de^y) + (de^x)(de^y)$
+    \item Solve the derivatives  % confused
+        \begin{align*}
+            d(e^X e^Y) &= (de^x)e^y + e^x(de^y) + (de^x)(de^y) \\
+            d(e^X e^Y) &= e^x(\mu_x\,dt + \sigma_x\,dV_x + \frac{1}{2} \sigma_x^2 \,dt)e^y \\
+            &+ e^x(\mu_y\,dt + \sigma_y\,dV_y + \frac{1}{2} \sigma_y^2 \,dt)e^y \\
+            &+ e^x(\mu_x\,dt + \sigma_x\,dV_x + \frac{1}{2} \sigma_x^2 \,dt) e^y(\mu_y\,dt + 
+            \sigma_y\,dV_y + \frac{1}{2} \sigma_x^2 \,dt) \\
+            d(e^X e^Y) &= e^{x+y} ((\mu_x + \mu_y)\,dt + \sigma_x\,dV_x + \sigma_y\,dV_y + 
+            \frac{1}{2} {(\sigma_x^2 + \sigma_y^2 + 2 \sigma_x \sigma_y \rho_{xy})} \,dt) \\
+            d(e^X e^Y) &= e^{z} ((\mu_x + \mu_y)\,dt + \sigma_x\,dV_x + \sigma_y\,dV_y + 
+            \frac{1}{2} {(\sigma_x^2 + \sigma_y^2 + 2 \sigma_x \sigma_y \rho_{xy})} \,dt) \\
+        \end{align*} 
+\end{enumerate}
+
+\section{Continuous Time Trading Examples}
+\subsection{Example}
+
+One stock with GBM (returns are i.i.d.) dynamics for prices and constant dividend yield 
+$\alpha$. A risk free asset with constant returns 
+
+\begin{align*}
+    \frac{dS}{S} &= \hat{\mu}\,dt + \sigma\,dW, \; S_0 = 1 \\
+    \frac{dB}{B} &= r\,dt, \; B_0 = 1 \\ 
+    d\Theta &= {(\alpha S \,dt, 0)}^T, 
+\end{align*}
+where $\alpha>0$ and $\hat{\mu}$ and $\sigma$ are constant, and $r$ is the instantaneous risk 
+free rate. $\alpha S$ may be interpreted as the fraction of the stock price that we get in 
+dividends over a year. \\
+
+Also, recall
+
+\[S_t = e^{\mu t + \sigma W_t}\]
+\[B_t = B_0 e^{rt} = e^{rt}\]
+
+Calculate the value process, $V_t$, and the payoff process, $F_t^{\boldsymbol{h}}$, for the 
+following three trading strategies
+\begin{enumerate}
+    \item $\boldsymbol{h}_t = {(0, e^{-rt})}^T$ (investing nothing in the stock and a 
+    decreasing amount in the bond)
+    \item $\boldsymbol{h}_t = {(e^{\alpha t}, 0)}^T$
+    \item $\boldsymbol{h}_t = {(\frac{1}{\sigma S t}, - \frac{1}{\sigma B t})}^T$, assuming 
+    $\alpha = 0$
+\end{enumerate}
+
 \begin{itemize}
-    \item Assume $X_t$ is an Ito process that satisfies $dX = u \, dt + v \,dW$, where $W$ is 
-    a Brownian motion, and that $Y_t = g(t, X_t)$ for some smooth function $g$. Then $dY_t$ 
-    can be written 
-    \[dY_t = g_t \,dt + g_x \,dX + \frac{1}{2} g_{xx} {(dX)}^2\]
+    \item Part 1: Solving for $\boldsymbol{h}_t = {(0, e^{-rt})}^T$ 
+    \item Solve for $V_t$
+    \begin{align*}
+        V_t &= \boldsymbol{h}'\boldsymbol{s}_t \\
+        &= 
+        \begin{bmatrix} 0 & e^{-rt} \end{bmatrix}
+        \begin{bmatrix}
+            S_t \\ 
+            e^{rt}
+        \end{bmatrix} \\ 
+        &= 0 + e^0
+        V_t &= 1
+    \end{align*}
+    \item Solve for $F_t^{\boldsymbol{h}}$ \\
+    From above, we know $dV_t = 0$ and since $B= e^{rt}$, we know $dB=re^{rt} \,dt$.
+    \begin{align*}
+        dV+dF^{\boldsymbol{h}}&=\boldsymbol{h}'\,d\boldsymbol{s}+\boldsymbol{h}'\,d\Theta \\ 
+        0+dF^{\boldsymbol{h}}&=\begin{bmatrix} 0 & e^{-rt} \end{bmatrix}'\begin{bmatrix}
+        dS \\ dB \end{bmatrix}+\begin{bmatrix} 0 & e^{-rt} \end{bmatrix}\begin{bmatrix}
+        \alpha S \,dt, \\ 0 \end{bmatrix} \\ 
+        dF^{\boldsymbol{h}}&=\begin{bmatrix} 0 & e^{-rt} \end{bmatrix}'\begin{bmatrix}
+        dS \\ re^{rt} \,dt \end{bmatrix}+\begin{bmatrix} 0 & e^{-rt} \end{bmatrix}\begin{bmatrix}
+        \alpha S \,dt, \\ 0 \end{bmatrix} \\ 
+        dF^{\boldsymbol{h}}&=\begin{bmatrix} 0 & e^{-rt} \end{bmatrix}'\begin{bmatrix}
+        dS \\ re^{rt} \,dt \end{bmatrix}+\begin{bmatrix} 0 & e^{-rt} \end{bmatrix}\begin{bmatrix}
+        \alpha S \,dt, \\ 0 \end{bmatrix} \\ 
+        dF^{\boldsymbol{h}} &= re^0\,dt + 0 \\
+        dF^{\boldsymbol{h}} &= r\,dt \\
+    \end{align*}
+\end{itemize}
+
+\begin{itemize}
+    \item Part 2: $\boldsymbol{h}_t = {(e^{\alpha t}, 0)}^T$
+    \item Solve for $V_t$
+    \begin{align*}
+        V_t &= \boldsymbol{h}'\boldsymbol{s}_t \\
+        &= 
+        \begin{bmatrix} e^{\alpha t} & 0 \end{bmatrix}
+        \begin{bmatrix}
+            e^{\mu t + \sigma W_t} \\ 
+            B_t
+        \end{bmatrix} \\ 
+        &= e^{(\alpha + \mu)t + \sigma W_t} + 0 \\
+        V_t &= e^{(\alpha + \mu)t + \sigma W_t}
+    \end{align*}
+    \item Solve for $F_t^{\boldsymbol{h}}$ \\
+    From above, we know $dV_t = 0$ and since $B= e^{rt}$, we know $dB=re^{rt} \,dt$.
+    \begin{align*}
+        dF^{\boldsymbol{h}} &= -d\boldsymbol{h}'_t(\boldsymbol{s}_t + d\boldsymbol{s}_t) + 
+        \boldsymbol{h}'\,d\Theta_t \\
+        dF^{\boldsymbol{h}} &= \begin{bmatrix} - \alpha e^{\alpha t} \,dt& 0 \end{bmatrix}
+        \begin{bmatrix} \boldsymbol{s} + d\boldsymbol{s} \\ B + dB \end{bmatrix} + 
+        \begin{bmatrix} e^{\alpha t} \,dt & 0 \end{bmatrix} \begin{bmatrix} \alpha S\,dt \\ 0 
+        \end{bmatrix} \\
+        dF^{\boldsymbol{h}} &= - \alpha e^{\alpha t} \,dt (\boldsymbol{s} + d\boldsymbol{s}) + 
+        0 + e^{\alpha t} (\alpha S\,dt) + 0 \\
+        dF^{\boldsymbol{h}} &= - \alpha e^{\alpha t} \boldsymbol{s} \,dt  - \alpha e^{\alpha t} 
+        d\boldsymbol{s} + e^{\alpha t} \alpha S\,dt \\
+        dF^{\boldsymbol{h}} &= - \alpha e^{\alpha t} \boldsymbol{s} \,dt  + \alpha S
+        e^{\alpha t} \,dt \\ % confused
+    \end{align*} 
 \end{itemize}
 
 
-
+% \item Integral Form: $X_t Y_t - X_0 Y_0 = \int X\,dY + \int Y\,dX + {\langle X,Y
+% \rangle}_t$
+% \item Differential Form: $d(XY) = X\,dY + Y\,dX + dXdY$.
 \section{Appendix}
 \subsection{Operator Overloading}
 For some vector $\boldsymbol{a}$, we write

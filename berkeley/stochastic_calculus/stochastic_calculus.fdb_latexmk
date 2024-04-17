@@ -1,6 +1,6 @@
 # Fdb version 4
-["pdflatex"] 1712331717 "/Users/nathanueda/VSCode/nate_notes/berkeley/stochastic_calculus/stochastic_calculus.tex" "stochastic_calculus.pdf" "stochastic_calculus" 1712331724 0
-  "/Users/nathanueda/VSCode/nate_notes/berkeley/stochastic_calculus/stochastic_calculus.tex" 1712331713 69582 a1df47b580835beb98166734cfac5997 ""
+["pdflatex"] 1713046388 "/Users/nathanueda/VSCode/nate_notes/berkeley/stochastic_calculus/stochastic_calculus.tex" "stochastic_calculus.pdf" "stochastic_calculus" 1713046399 0
+  "/Users/nathanueda/VSCode/nate_notes/berkeley/stochastic_calculus/stochastic_calculus.tex" 1713046381 89934 131405e9e84d35ddec12439869d5704d ""
   "/usr/local/texlive/2022/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc" 1136849721 2900 1537cc8184ad1792082cd229ecc269f4 ""
   "/usr/local/texlive/2022/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/local/texlive/2022/texmf-dist/fonts/tfm/jknappen/ec/tcrm1095.tfm" 1136768653 1536 02c06700a42be0f5a28664c7273f82e7 ""
@@ -50,6 +50,7 @@
   "/usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb" 1248133631 32569 5e5ddc8df908dea60932f3c484a54c0d ""
   "/usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb" 1248133631 32626 4f5c1b83753b1dd3a97d1b399a005b4b ""
   "/usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb" 1248133631 37944 359e864bd06cde3b1cf57bb20757fb06 ""
+  "/usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmex8.pfb" 1248133631 30273 87a352d78b6810ae5cfdc68d2fb827b2 ""
   "/usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmmib8.pfb" 1248133631 35479 892d27442ef9ef29ce1ee57aa0e8a665 ""
   "/usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb" 1248133631 34694 ad62b13721ee8eda1dcc8993c8bd7041 ""
   "/usr/local/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfrm1095.pfb" 1215737283 145929 f25e56369a345c4ff583b067cd87ce8e ""
@@ -129,10 +130,10 @@
   "imgs/two_period_two_state_bin_tree_model_down.jpeg" 1712101684 136904 be53afd2cbb658615aa9d82a2462e4fe ""
   "imgs/two_period_two_state_bin_tree_model_initial.jpeg" 1712102363 147485 c2105b95f765915f8a48b4825b8cd10e ""
   "imgs/two_period_two_state_bin_tree_model_up.jpeg" 1712101629 177800 89a75267d98ae8f929efdcee3026f761 ""
-  "stochastic_calculus.aux" 1712331723 9528 561dc3bb7b1b9daaead45d52ea362067 "pdflatex"
-  "stochastic_calculus.out" 1712331723 6079 d83d68a6c9f919e28e4201224e3abf0b "pdflatex"
-  "stochastic_calculus.tex" 1712331713 69582 a1df47b580835beb98166734cfac5997 ""
-  "stochastic_calculus.toc" 1712331723 3489 076563169e061f2f040d9dc0a41a1dff "pdflatex"
+  "stochastic_calculus.aux" 1713046398 10832 dedce88a12980ef93156bee2fc8a7a5e "pdflatex"
+  "stochastic_calculus.out" 1713046398 8043 d68efc739be716e39b6efb212980834f "pdflatex"
+  "stochastic_calculus.tex" 1713046381 89934 131405e9e84d35ddec12439869d5704d ""
+  "stochastic_calculus.toc" 1713046398 4470 64c44deedc71f80864da026c231683b3 "pdflatex"
   (generated)
   "stochastic_calculus.aux"
   "stochastic_calculus.log"

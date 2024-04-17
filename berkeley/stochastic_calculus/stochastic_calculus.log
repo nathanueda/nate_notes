@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.12.19)  5 APR 2024 08:41
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.12.19)  13 APR 2024 15:13
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -338,280 +338,272 @@ LaTeX Font Info:    Trying to load font information for U+msb on input line 22.
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ) [1
 
-{/usr/local/texlive/2022/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] (./stochastic_calculus.toc)
+{/usr/local/texlive/2022/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] (./stochastic_calculus.toc [2])
 \tf@toc=\write4
 \openout4 = `stochastic_calculus.toc'.
 
- [2] [3] [4] [5] [6] [7] [8] [9]
-<imgs/call_payoff.png, id=260, 1120.185pt x 628.3475pt>
+ [3] [4] [5] [6] [7] [8] [9] [10]
+<imgs/call_payoff.png, id=319, 1120.185pt x 628.3475pt>
 File: imgs/call_payoff.png Graphic file (type png)
 <use imgs/call_payoff.png>
-Package pdftex.def Info: imgs/call_payoff.png  used on input line 409.
+Package pdftex.def Info: imgs/call_payoff.png  used on input line 440.
 (pdftex.def)             Requested size: 289.07999pt x 162.14883pt.
-<imgs/put_payoff.png, id=262, 1102.1175pt x 616.3025pt>
+ [11]
+<imgs/put_payoff.png, id=328, 1102.1175pt x 616.3025pt>
 File: imgs/put_payoff.png Graphic file (type png)
 <use imgs/put_payoff.png>
-Package pdftex.def Info: imgs/put_payoff.png  used on input line 415.
+Package pdftex.def Info: imgs/put_payoff.png  used on input line 446.
 (pdftex.def)             Requested size: 289.07999pt x 161.65488pt.
- [10
+ [12
 pdfTeX warning (ext4): destination with the same identifier (name{figure.1}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.423 \end{itemize}
-                   
+l.464     \[B_1 = R\]
+                     
 pdfTeX warning (ext4): destination with the same identifier (name{figure.2}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.423 \end{itemize}
-                    <./imgs/call_payoff.png> <./imgs/put_payoff.png>]
-<imgs/one_period_two_state_bin_tree_model.png, id=271, 974.64125pt x 406.51875pt>
+l.464     \[B_1 = R\]
+                      <./imgs/call_payoff.png> <./imgs/put_payoff.png>]
+<imgs/one_period_two_state_bin_tree_model.png, id=337, 974.64125pt x 406.51875pt>
 File: imgs/one_period_two_state_bin_tree_model.png Graphic file (type png)
 <use imgs/one_period_two_state_bin_tree_model.png>
-Package pdftex.def Info: imgs/one_period_two_state_bin_tree_model.png  used on input line 446.
+Package pdftex.def Info: imgs/one_period_two_state_bin_tree_model.png  used on input line 477.
 (pdftex.def)             Requested size: 289.07999pt x 120.57329pt.
- [11
+ [13
 pdfTeX warning (ext4): destination with the same identifier (name{figure.3}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.463 \end{itemize}
-                    <./imgs/one_period_two_state_bin_tree_model.png>]
+l.527         \]
+                 \\ <./imgs/one_period_two_state_bin_tree_model.png>] [14]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 465.
+(hyperref)                removing `math shift' on input line 619.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 465.
+(hyperref)                removing `math shift' on input line 619.
 
 
 Package amsmath Warning: Foreign command \atopwithdelims;
 (amsmath)                \frac or \genfrac should be used instead
-(amsmath)                 on input line 470.
+(amsmath)                 on input line 624.
 
-<imgs/three_period_economy.png, id=278, 623.32875pt x 623.32875pt>
+<imgs/three_period_economy.png, id=355, 623.32875pt x 623.32875pt>
 File: imgs/three_period_economy.png Graphic file (type png)
 <use imgs/three_period_economy.png>
-Package pdftex.def Info: imgs/three_period_economy.png  used on input line 489.
+Package pdftex.def Info: imgs/three_period_economy.png  used on input line 643.
 (pdftex.def)             Requested size: 289.07999pt x 289.08397pt.
-[12
+[15]
+<imgs/three_period_economy_2.png, id=360, 603.25375pt x 597.23125pt>
+File: imgs/three_period_economy_2.png Graphic file (type png)
+<use imgs/three_period_economy_2.png>
+Package pdftex.def Info: imgs/three_period_economy_2.png  used on input line 658.
+(pdftex.def)             Requested size: 289.07999pt x 286.19386pt.
+ [16
 pdfTeX warning (ext4): destination with the same identifier (name{figure.4}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.495     \item N
-                 aively, a trading strategy is a function of time and the st... <./imgs/three_period_economy.png>]
-<imgs/three_period_economy_2.png, id=285, 603.25375pt x 597.23125pt>
-File: imgs/three_period_economy_2.png Graphic file (type png)
-<use imgs/three_period_economy_2.png>
-Package pdftex.def Info: imgs/three_period_economy_2.png  used on input line 504.
-(pdftex.def)             Requested size: 289.07999pt x 286.19386pt.
- [13
+l.661 
+       <./imgs/three_period_economy.png>] [17
 pdfTeX warning (ext4): destination with the same identifier (name{figure.5}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.525     \item A
-                 n $\underline{\mathcal{F}}$-\textit{adapted} (random) proce... <./imgs/three_period_economy_2.png>] [14]
-<imgs/payoff_process_cum_div_justified.jpeg, id=298, 1646.15pt x 1028.84375pt>
+l.689     \item A
+                  set $A \in \Omega$ is said to be $\mathcal{F}$-measurable ... <./imgs/three_period_economy_2.png>]
+<imgs/payoff_process_cum_div_justified.jpeg, id=373, 1646.15pt x 1028.84375pt>
 File: imgs/payoff_process_cum_div_justified.jpeg Graphic file (type jpg)
 <use imgs/payoff_process_cum_div_justified.jpeg>
-Package pdftex.def Info: imgs/payoff_process_cum_div_justified.jpeg  used on input line 594.
+Package pdftex.def Info: imgs/payoff_process_cum_div_justified.jpeg  used on input line 749.
 (pdftex.def)             Requested size: 361.34999pt x 225.84396pt.
-<imgs/change_in_value_process.png, id=299, 1017.8025pt x 647.41875pt>
+ [18]
+<imgs/change_in_value_process.png, id=379, 1017.8025pt x 647.41875pt>
 File: imgs/change_in_value_process.png Graphic file (type png)
 <use imgs/change_in_value_process.png>
-Package pdftex.def Info: imgs/change_in_value_process.png  used on input line 621.
+Package pdftex.def Info: imgs/change_in_value_process.png  used on input line 776.
 (pdftex.def)             Requested size: 361.34999pt x 229.85008pt.
- [15
+ [19
 pdfTeX warning (ext4): destination with the same identifier (name{figure.6}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.625 
-       <./imgs/payoff_process_cum_div_justified.jpeg>] [16
+l.780 
+       <./imgs/payoff_process_cum_div_justified.jpeg>] [20
 pdfTeX warning (ext4): destination with the same identifier (name{figure.7}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.662 ...(\boldsymbol{s}_T)}_i\right], \; t < T \]
+l.817 ...(\boldsymbol{s}_T)}_i\right], \; t < T \]
                                                    <./imgs/change_in_value_process.png>]
-<imgs/embedding.png, id=311, 1277.77374pt x 670.505pt>
+<imgs/embedding.png, id=392, 1277.77374pt x 670.505pt>
 File: imgs/embedding.png Graphic file (type png)
 <use imgs/embedding.png>
-Package pdftex.def Info: imgs/embedding.png  used on input line 683.
+Package pdftex.def Info: imgs/embedding.png  used on input line 838.
 (pdftex.def)             Requested size: 433.62pt x 227.53897pt.
- [17
+ [21
 pdfTeX warning (ext4): destination with the same identifier (name{figure.8}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.695 \end{itemize}
-                    <./imgs/embedding.png>] [18] [19]
-<imgs/example1.png, id=332, 686.565pt x 380.42125pt>
+l.850 \end{itemize}
+                    <./imgs/embedding.png>] [22] [23] [24] [25] [26]
+<imgs/example1.png, id=426, 686.565pt x 380.42125pt>
 File: imgs/example1.png Graphic file (type png)
 <use imgs/example1.png>
-Package pdftex.def Info: imgs/example1.png  used on input line 860.
+Package pdftex.def Info: imgs/example1.png  used on input line 1167.
 (pdftex.def)             Requested size: 289.07999pt x 160.17635pt.
- [20]
-Overfull \hbox (61.59814pt too wide) detected at line 910
+ [27]
+Overfull \hbox (61.59814pt too wide) detected at line 1217
 [][] \OT1/cmr/m/n/10.95 = [][] = [] [] = [] [] = []
  []
 
-[21
+[28
 pdfTeX warning (ext4): destination with the same identifier (name{figure.9}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.940     \]
-             <./imgs/example1.png>]
-<imgs/example2.png, id=345, 702.625pt x 428.60126pt>
+l.1247     \]
+              <./imgs/example1.png>]
+<imgs/example2.png, id=439, 702.625pt x 428.60126pt>
 File: imgs/example2.png Graphic file (type png)
 <use imgs/example2.png>
-Package pdftex.def Info: imgs/example2.png  used on input line 949.
+Package pdftex.def Info: imgs/example2.png  used on input line 1256.
 (pdftex.def)             Requested size: 289.07999pt x 176.34239pt.
- [22
+ [29
 pdfTeX warning (ext4): destination with the same identifier (name{figure.10}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.994 ...q_2}{p_2} = \frac{0.315}{0.40} = 0.7875\]
+l.1301 ..._2}{p_2} = \frac{0.315}{0.40} = 0.7875\]
                                                    <./imgs/example2.png>]
-<imgs/example3.jpeg, id=356, 713.66624pt x 613.29124pt>
+<imgs/example3.jpeg, id=450, 713.66624pt x 613.29124pt>
 File: imgs/example3.jpeg Graphic file (type jpg)
 <use imgs/example3.jpeg>
-Package pdftex.def Info: imgs/example3.jpeg  used on input line 1075.
+Package pdftex.def Info: imgs/example3.jpeg  used on input line 1382.
 (pdftex.def)             Requested size: 289.07999pt x 248.41902pt.
- [23] [24
+ [30] [31
 pdfTeX warning (ext4): destination with the same identifier (name{figure.11}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.1120     \item I
+l.1427     \item I
                   s there an arbitrage opportunity? \\ <./imgs/example3.jpeg>]
 File: imgs/one_period_two_state_bin_tree_model.png Graphic file (type png)
 <use imgs/one_period_two_state_bin_tree_model.png>
-Package pdftex.def Info: imgs/one_period_two_state_bin_tree_model.png  used on input line 1167.
+Package pdftex.def Info: imgs/one_period_two_state_bin_tree_model.png  used on input line 1474.
 (pdftex.def)             Requested size: 289.07999pt x 120.57329pt.
- [25
+ [32
 pdfTeX warning (ext4): destination with the same identifier (name{figure.12}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.1187         \item W
-                      hat are the conditions for noarbitrage?] [26]
-File: imgs/one_period_two_state_bin_tree_model.png Graphic file (type png)
-<use imgs/one_period_two_state_bin_tree_model.png>
-Package pdftex.def Info: imgs/one_period_two_state_bin_tree_model.png  used on input line 1299.
-(pdftex.def)             Requested size: 289.07999pt x 120.57329pt.
- [27
+l.1488 \[\Delta d S + B R = C_d\]
+                                 ]
+<imgs/two_period_two_state_bin_tree_model.png, id=474, 1168.365pt x 598.235pt>
+File: imgs/two_period_two_state_bin_tree_model.png Graphic file (type png)
+<use imgs/two_period_two_state_bin_tree_model.png>
+Package pdftex.def Info: imgs/two_period_two_state_bin_tree_model.png  used on input line 1531.
+(pdftex.def)             Requested size: 361.34999pt x 185.0219pt.
+ [33]
+<imgs/two_period_two_state_bin_tree_model_up.jpeg, id=479, 1568.86125pt x 610.28pt>
+File: imgs/two_period_two_state_bin_tree_model_up.jpeg Graphic file (type jpg)
+<use imgs/two_period_two_state_bin_tree_model_up.jpeg>
+Package pdftex.def Info: imgs/two_period_two_state_bin_tree_model_up.jpeg  used on input line 1543.
+(pdftex.def)             Requested size: 289.07999pt x 112.44373pt.
+ [34
 pdfTeX warning (ext4): destination with the same identifier (name{figure.13}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.1338 \end{align*}
-                   ]
-<imgs/two_period_two_state_bin_tree_model.png, id=395, 1168.365pt x 598.235pt>
-File: imgs/two_period_two_state_bin_tree_model.png Graphic file (type png)
-<use imgs/two_period_two_state_bin_tree_model.png>
-Package pdftex.def Info: imgs/two_period_two_state_bin_tree_model.png  used on input line 1356.
-(pdftex.def)             Requested size: 361.34999pt x 185.0219pt.
- [28]
-<imgs/two_period_two_state_bin_tree_model_up.jpeg, id=400, 1568.86125pt x 610.28pt>
-File: imgs/two_period_two_state_bin_tree_model_up.jpeg Graphic file (type jpg)
-<use imgs/two_period_two_state_bin_tree_model_up.jpeg>
-Package pdftex.def Info: imgs/two_period_two_state_bin_tree_model_up.jpeg  used on input line 1368.
-(pdftex.def)             Requested size: 289.07999pt x 112.44373pt.
- [29
+l.1576 
+       
 pdfTeX warning (ext4): destination with the same identifier (name{figure.14}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.1403     \[\Delta = \frac{C_u - C_d}{S (u-d)}\]
-                                                 
+l.1576 
+        <./imgs/two_period_two_state_bin_tree_model.png> <./imgs/two_period_two_state_bin_tree_model_up.jpeg>]
+<imgs/two_period_two_state_bin_tree_model_down.jpeg, id=489, 1360.08125pt x 479.7925pt>
+File: imgs/two_period_two_state_bin_tree_model_down.jpeg Graphic file (type jpg)
+<use imgs/two_period_two_state_bin_tree_model_down.jpeg>
+Package pdftex.def Info: imgs/two_period_two_state_bin_tree_model_down.jpeg  used on input line 1599.
+(pdftex.def)             Requested size: 289.07999pt x 101.97469pt.
+ [35
 pdfTeX warning (ext4): destination with the same identifier (name{figure.15}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.1403     \[\Delta = \frac{C_u - C_d}{S (u-d)}\]
-                                                  <./imgs/two_period_two_state_bin_tree_model.png> <./imgs/two_period_two_state_bin_tree_model_up.jpeg>]
-<imgs/two_period_two_state_bin_tree_model_down.jpeg, id=411, 1360.08125pt x 479.7925pt>
-File: imgs/two_period_two_state_bin_tree_model_down.jpeg Graphic file (type jpg)
-<use imgs/two_period_two_state_bin_tree_model_down.jpeg>
-Package pdftex.def Info: imgs/two_period_two_state_bin_tree_model_down.jpeg  used on input line 1424.
-(pdftex.def)             Requested size: 289.07999pt x 101.97469pt.
- [30
+l.1640     \]
+              <./imgs/two_period_two_state_bin_tree_model_down.jpeg>]
+<imgs/two_period_two_state_bin_tree_model_initial.jpeg, id=499, 1019.81pt x 810.02625pt>
+File: imgs/two_period_two_state_bin_tree_model_initial.jpeg Graphic file (type jpg)
+<use imgs/two_period_two_state_bin_tree_model_initial.jpeg>
+Package pdftex.def Info: imgs/two_period_two_state_bin_tree_model_initial.jpeg  used on input line 1653.
+(pdftex.def)             Requested size: 289.07999pt x 229.61151pt.
+ [36
 pdfTeX warning (ext4): destination with the same identifier (name{figure.16}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.1465     \]
-              <./imgs/two_period_two_state_bin_tree_model_down.jpeg>]
-<imgs/two_period_two_state_bin_tree_model_initial.jpeg, id=420, 1019.81pt x 810.02625pt>
-File: imgs/two_period_two_state_bin_tree_model_initial.jpeg Graphic file (type jpg)
-<use imgs/two_period_two_state_bin_tree_model_initial.jpeg>
-Package pdftex.def Info: imgs/two_period_two_state_bin_tree_model_initial.jpeg  used on input line 1478.
-(pdftex.def)             Requested size: 289.07999pt x 229.61151pt.
- [31
+l.1687     \[\Delta = \frac{C_u - C_d}{S (u-d)}\]
+                                                  <./imgs/two_period_two_state_bin_tree_model_initial.jpeg>]
+<imgs/two_period_euorpean_put.png, id=507, 1056.94875pt x 400.49625pt>
+File: imgs/two_period_euorpean_put.png Graphic file (type png)
+<use imgs/two_period_euorpean_put.png>
+Package pdftex.def Info: imgs/two_period_euorpean_put.png  used on input line 1718.
+(pdftex.def)             Requested size: 289.07999pt x 109.53487pt.
+ [37
 pdfTeX warning (ext4): destination with the same identifier (name{figure.17}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.1513     \[B = \frac{C_d u- C_u d}{R(u-d)}\]
-                                               <./imgs/two_period_two_state_bin_tree_model_initial.jpeg>]
-<imgs/two_period_euorpean_put.png, id=430, 1056.94875pt x 400.49625pt>
-File: imgs/two_period_euorpean_put.png Graphic file (type png)
-<use imgs/two_period_euorpean_put.png>
-Package pdftex.def Info: imgs/two_period_euorpean_put.png  used on input line 1543.
-(pdftex.def)             Requested size: 289.07999pt x 109.53487pt.
- [32
+l.1736 ...} = \text{Max}\{0, 90 - 83.20\} = 6.80\]
+                                                   <./imgs/two_period_euorpean_put.png>]
+<imgs/two_period_euorpean_put_2.png, id=516, 1300.86pt x 524.96124pt>
+File: imgs/two_period_euorpean_put_2.png Graphic file (type png)
+<use imgs/two_period_euorpean_put_2.png>
+Package pdftex.def Info: imgs/two_period_euorpean_put_2.png  used on input line 1772.
+(pdftex.def)             Requested size: 289.07999pt x 116.6533pt.
+<imgs/two_period_american_put.png, id=517, 798.985pt x 380.42125pt>
+File: imgs/two_period_american_put.png Graphic file (type png)
+<use imgs/two_period_american_put.png>
+Package pdftex.def Info: imgs/two_period_american_put.png  used on input line 1782.
+(pdftex.def)             Requested size: 289.07999pt x 137.63649pt.
+ [38
 pdfTeX warning (ext4): destination with the same identifier (name{figure.18}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.1567 \[
-          <./imgs/two_period_euorpean_put.png>]
-<imgs/two_period_euorpean_put_2.png, id=438, 1300.86pt x 524.96124pt>
-File: imgs/two_period_euorpean_put_2.png Graphic file (type png)
-<use imgs/two_period_euorpean_put_2.png>
-Package pdftex.def Info: imgs/two_period_euorpean_put_2.png  used on input line 1597.
-(pdftex.def)             Requested size: 289.07999pt x 116.6533pt.
-<imgs/two_period_american_put.png, id=439, 798.985pt x 380.42125pt>
-File: imgs/two_period_american_put.png Graphic file (type png)
-<use imgs/two_period_american_put.png>
-Package pdftex.def Info: imgs/two_period_american_put.png  used on input line 1607.
-(pdftex.def)             Requested size: 289.07999pt x 137.63649pt.
- [33
+l.1788 \[
+         
 pdfTeX warning (ext4): destination with the same identifier (name{figure.19}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.1623 \]
-         
-pdfTeX warning (ext4): destination with the same identifier (name{figure.20}) has been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
-l.1623 \]
+l.1788 \[
           <./imgs/two_period_euorpean_put_2.png> <./imgs/two_period_american_put.png>]
-<imgs/multiperiod_security_example.png, id=448, 1046.91125pt x 471.7625pt>
+<imgs/multiperiod_security_example.png, id=526, 1046.91125pt x 471.7625pt>
 File: imgs/multiperiod_security_example.png Graphic file (type png)
 <use imgs/multiperiod_security_example.png>
-Package pdftex.def Info: imgs/multiperiod_security_example.png  used on input line 1653.
+Package pdftex.def Info: imgs/multiperiod_security_example.png  used on input line 1828.
 (pdftex.def)             Requested size: 361.34999pt x 162.83022pt.
 File: imgs/embedding.png Graphic file (type png)
 <use imgs/embedding.png>
-Package pdftex.def Info: imgs/embedding.png  used on input line 1702.
+Package pdftex.def Info: imgs/embedding.png  used on input line 1877.
 (pdftex.def)             Requested size: 433.62pt x 227.53897pt.
- [34
+ [39
+pdfTeX warning (ext4): destination with the same identifier (name{figure.20}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.1880 
+        <./imgs/multiperiod_security_example.png>] [40
 pdfTeX warning (ext4): destination with the same identifier (name{figure.21}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.1705 
-        <./imgs/multiperiod_security_example.png>] [35
-pdfTeX warning (ext4): destination with the same identifier (name{figure.22}) has been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
-l.1744 ...g_x \,dX + \frac{1}{2} g_{xx} {(dX)}^2\]
-                                                  ] [36] (./stochastic_calculus.aux)
+l.1920     \item C
+                  alculate the partial derivatives] [41] [42] [43] [44] [45] [46] [47] [48] (./stochastic_calculus.aux)
 Package rerunfilecheck Info: File `stochastic_calculus.out' has not changed.
-(rerunfilecheck)             Checksum: D83D68A6C9F919E28E4201224E3ABF0B;6079.
+(rerunfilecheck)             Checksum: D68EFC739BE716E39B6EFB212980834F;8043.
  ) 
 Here is how much of TeX's memory you used:
- 10244 strings out of 476093
- 161468 string characters out of 5791584
- 1867793 words of memory out of 5000000
- 30339 multiletter control sequences out of 15000+600000
+ 10305 strings out of 476093
+ 162047 string characters out of 5791584
+ 1872793 words of memory out of 5000000
+ 30350 multiletter control sequences out of 15000+600000
  523148 words of font info for 71 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 72i,13n,77p,580b,548s stack positions out of 10000i,1000n,20000p,200000b,200000s
-{/usr/local/texlive/2022/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}</usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmbsy10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmib10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmmib8.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfrm1095.pfb>
-Output written on stochastic_calculus.pdf (36 pages, 10457275 bytes).
+ 72i,18n,77p,580b,577s stack positions out of 10000i,1000n,20000p,200000b,200000s
+{/usr/local/texlive/2022/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}</usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmbsy10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmex8.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmib10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmmib8.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfrm1095.pfb>
+Output written on stochastic_calculus.pdf (48 pages, 10497877 bytes).
 PDF statistics:
- 579 PDF objects out of 1000 (max. 8388607)
- 465 compressed objects within 5 object streams
- 135 named destinations out of 1000 (max. 500000)
- 416 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 729 PDF objects out of 1000 (max. 8388607)
+ 600 compressed objects within 6 object streams
+ 185 named destinations out of 1000 (max. 500000)
+ 504 words of extra memory for PDF output out of 10000 (max. 10000000)
 

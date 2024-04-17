@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.12.19)  30 MAR 2024 16:07
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.12.19)  15 APR 2024 14:48
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -338,125 +338,125 @@ LaTeX Font Info:    Trying to load font information for U+msb on input line 22.
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ) [1
 
-{/usr/local/texlive/2022/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] (./times_series.toc)
+{/usr/local/texlive/2022/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] (./times_series.toc [2])
 \tf@toc=\write4
 \openout4 = `times_series.toc'.
 
- [2] [3]
-<imgs/stationary_vs_nonstationary.png, id=185, 642.4pt x 642.4pt>
+ [3] [4]
+<imgs/stationary_vs_nonstationary.png, id=244, 642.4pt x 642.4pt>
 File: imgs/stationary_vs_nonstationary.png Graphic file (type png)
 <use imgs/stationary_vs_nonstationary.png>
 Package pdftex.def Info: imgs/stationary_vs_nonstationary.png  used on input line 102.
 (pdftex.def)             Requested size: 289.07999pt x 289.08713pt.
- [4]
-<imgs/white_noise.png, id=191, 2569.6pt x 1927.2pt>
+ [5]
+<imgs/white_noise.png, id=250, 2569.6pt x 1927.2pt>
 File: imgs/white_noise.png Graphic file (type png)
 <use imgs/white_noise.png>
 Package pdftex.def Info: imgs/white_noise.png  used on input line 131.
 (pdftex.def)             Requested size: 289.07999pt x 216.78593pt.
- [5
+ [6
 pdfTeX warning (ext4): destination with the same identifier (name{figure.1}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
 l.134 
-       <./imgs/stationary_vs_nonstationary.png>] [6
+       <./imgs/stationary_vs_nonstationary.png>] [7
 pdfTeX warning (ext4): destination with the same identifier (name{figure.2}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
 l.165     \[\gamma_j = \text{Cov}(x_t, x_{t-j})\]
                                                   <./imgs/white_noise.png>]
-<imgs/acf_plots.png, id=208, 588.1975pt x 253.94875pt>
+<imgs/acf_plots.png, id=268, 588.1975pt x 253.94875pt>
 File: imgs/acf_plots.png Graphic file (type png)
 <use imgs/acf_plots.png>
 Package pdftex.def Info: imgs/acf_plots.png  used on input line 194.
 (pdftex.def)             Requested size: 361.34999pt x 156.00899pt.
- [7] [8
+ [8] [9
 pdfTeX warning (ext4): destination with the same identifier (name{figure.3}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.237     \item T
-                 he simplest correlated stationary processess are \textit{au... <./imgs/acf_plots.png>]
-<imgs/ar1_acf.png, id=220, 540.0175pt x 422.57875pt>
+l.241 ...Delta x_t = x_t - L x_t = x_t - x_{t-1}\]
+                                                   <./imgs/acf_plots.png>]
+<imgs/ar1_acf.png, id=279, 540.0175pt x 422.57875pt>
 File: imgs/ar1_acf.png Graphic file (type png)
 <use imgs/ar1_acf.png>
-Package pdftex.def Info: imgs/ar1_acf.png  used on input line 268.
+Package pdftex.def Info: imgs/ar1_acf.png  used on input line 281.
 (pdftex.def)             Requested size: 361.34999pt x 282.77165pt.
- [9]
+ [10]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 280.
+(hyperref)                removing `math shift' on input line 293.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 280.
+(hyperref)                removing `math shift' on input line 293.
 
-[10
+[11
 pdfTeX warning (ext4): destination with the same identifier (name{figure.4}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.305     \item A
+l.318     \item A
                   process $\{x_t\}$ is a \textit{moving average process} if ... <./imgs/ar1_acf.png>]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 310.
+(hyperref)                removing `math shift' on input line 323.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 310.
+(hyperref)                removing `math shift' on input line 323.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 317.
+(hyperref)                removing `math shift' on input line 330.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 317.
+(hyperref)                removing `math shift' on input line 330.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 331.
+(hyperref)                removing `math shift' on input line 344.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 331.
+(hyperref)                removing `math shift' on input line 344.
 
-[11]
-<imgs/irf.png, id=238, 456.70625pt x 260.975pt>
+[12]
+<imgs/irf.png, id=297, 456.70625pt x 260.975pt>
 File: imgs/irf.png Graphic file (type png)
 <use imgs/irf.png>
-Package pdftex.def Info: imgs/irf.png  used on input line 367.
+Package pdftex.def Info: imgs/irf.png  used on input line 382.
 (pdftex.def)             Requested size: 289.07999pt x 165.19164pt.
- [12
+ [13
 pdfTeX warning (ext4): destination with the same identifier (name{figure.5}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.386     \item A
-                  popular unit root test is the augmented Dickey-Fuller test... <./imgs/irf.png>]
+l.400     \item U
+                 nit root tests are used to decide if an AR model have an ab... <./imgs/irf.png>] [14]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 429.
+(hyperref)                removing `math shift' on input line 483.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 429.
+(hyperref)                removing `math shift' on input line 483.
 
-[13] [14] (./times_series.aux)
+[15] [16] [17] [18] (./times_series.aux)
 Package rerunfilecheck Info: File `times_series.out' has not changed.
-(rerunfilecheck)             Checksum: D2517F5672ACC280D6A5CDDAEF419F81;4848.
+(rerunfilecheck)             Checksum: A590E53375CAF692460A670774BD8210;6980.
  ) 
 Here is how much of TeX's memory you used:
- 10038 strings out of 476093
- 156093 string characters out of 5791584
- 1865793 words of memory out of 5000000
- 30236 multiletter control sequences out of 15000+600000
- 520686 words of font info for 63 fonts, out of 8000000 for 9000
+ 10088 strings out of 476093
+ 156671 string characters out of 5791584
+ 1866793 words of memory out of 5000000
+ 30255 multiletter control sequences out of 15000+600000
+ 523148 words of font info for 71 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 72i,9n,77p,579b,564s stack positions out of 10000i,1000n,20000p,200000b,200000s
-{/usr/local/texlive/2022/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}</usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfrm1095.pfb>
-Output written on times_series.pdf (14 pages, 1080308 bytes).
+ 72i,9n,77p,579b,582s stack positions out of 10000i,1000n,20000p,200000b,200000s
+{/usr/local/texlive/2022/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}</usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmib10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmmib8.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfrm1095.pfb>
+Output written on times_series.pdf (18 pages, 1110370 bytes).
 PDF statistics:
- 343 PDF objects out of 1000 (max. 8388607)
- 281 compressed objects within 3 object streams
- 55 named destinations out of 1000 (max. 500000)
- 274 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 437 PDF objects out of 1000 (max. 8388607)
+ 366 compressed objects within 4 object streams
+ 78 named destinations out of 1000 (max. 500000)
+ 362 words of extra memory for PDF output out of 10000 (max. 10000000)
 
