@@ -336,7 +336,7 @@
 
 \section{ARMA Processes}
 \begin{itemize}
-    \item Stationary time series with complex autocorrelation behavior are ofren more 
+    \item Stationary time series with complex autocorrelation behavior are often more 
     parsimoniously modeled by mixed AR and MA (ARMA) processes rather than by a pure AR or pure
     MA process.
 \end{itemize}
@@ -621,10 +621,76 @@
     %     \]
 \end{itemize}
 
+\subsection{Maximum Likelihood}
+\begin{itemize}
+    \item Likelihood Function: Let $X_1, \ldots, X_n$ be an i.i.d. random sample from a 
+    distribution with a parameter $\theta$ ($\theta$ may be a real value or a vector, $\theta =
+    (\theta_1, \ldots, \theta_k)$). Suppose $x_1, \ldots, x_n$ are observed values of $X_1, 
+    \ldots, X_n$. If the $X_i$'s are discrete r.v.s, the likelihood function is defined as the 
+    probability of observing the sample in the real world as a function of $\theta$
+
+    \[L(x_1, \ldots, x_n | \theta) = P(X_1 = x_1, \ldots, X_n = x_n | \theta) = \prod_{x=1}^{n} 
+    P(x_i | \theta) \]
+
+    If the $X_i$'s are continuous r.v.s, we have a similar likelihood function
+    \[L(x_1, \ldots, x_n | \theta) = f(X_1 = x_1, \ldots, X_n = x_n | \theta) = \prod_{x=1}^{n} 
+    f(x_i | \theta) \]
+
+    \item As sums are often easier to deal with than products, we modify this to the log 
+    likelihood function.  If the $X_i$'s are discrete r.v.s, this is defined as
+
+    \[ \log{L(x_1, \ldots, x_n | \theta)} = \sum_{x=1}^{n} \log{P(x_i | \theta)}\]
+    
+    If the $X_i$'s are continuous r.v.s, we have a similar log likelihood function
+    \[ \log{L(x_1, \ldots, x_n | \theta)} = \sum_{x=1}^{n} \log{f(x_i | \theta)} \]
+    
+    \item Naturally, this is a value we would like to maximize, leading us to maximum 
+    log likelihood estimation.
+    \[ \hat{\theta}_{mle} = \max_{\theta}{\log{L(x | \theta)}}\]
+\end{itemize}
+
+\subsection{MLE with Autocorrelation}
+\begin{itemize}
+    \item Since the sample is no longer i.i.d, the density is no longer the product of the 
+    individual densities. Instead, we use conditional densities 
+    \[f(x_1, \ldots, x_n) = f(x_n | x_{n-1}, \ldots, x_1) f(x_{n-1} | x_{n-2}, \ldots, x_1)
+    \ldots f(x_2 | x_1) f(x_1)\]
+\end{itemize}
+
+
+\section{Multivariate Time Series}
+\begin{itemize}
+    \item Multivariate regression is not multiple regression.
+    \item Multivariate regression refers to modeling multiple target variables at the same time. 
+\end{itemize}
+
 \subsection{Vector Autoregressions (VAR)}
 \begin{itemize}
     \item A generalization of AR processes for multivariate series. 
 \end{itemize}
+
+
+\section{Cointegration}
+\subsection{Cointegration with Two Time Series}
+\begin{itemize}
+    \item Up until now, if we've had non-stationary time series, it has been a bad idea to 
+    regress them on one another. 
+    \item Sometimes we can find 2 or more non-stationary time series that are so closely 
+    connected that a linear combination of them is stationary. That is, they have a common 
+    trend, the linear combination gets rid of the trend, and the result is a stationary time 
+    series which is just the deviation from the trend. 
+    \item In these cases, we can create a cointegrating vector, which is the vector of the 
+    coefficients of this linear combination. 
+    \item Slightly more formally, 2 times series, $ \boldsymbol{Y}_t = (Y_{1,t}, Y_{2,t})'$ 
+    are cointegrated if each is $I(1)$ but there exists a cointegration vector, $\alpha = 
+    (1, -\alpha)$, such that $ \alpha'\boldsymbol{Y}_t = Y_{1,t} - \alpha Y_{2,t}$ is 
+    stationary. That is, $\alpha'\boldsymbol{Y}_t \sim I(0)$.
+    \item To test for cointegration, regress $Y_{1,t}$ on $Y_{2,t}$ to get an $\alpha$ and then 
+    we can check the residuals to see if they are stationary. % Partly true.
+    \item The stationary cointegration error is the deviation from the trend as is defined 
+    \[Z_t =  Y_{1,t} - \alpha Y_{2,t} \]
+\end{itemize}
+
 
 
 

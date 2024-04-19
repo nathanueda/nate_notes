@@ -37,6 +37,11 @@
 \contentsline {subsection}{\numberline {15.3}Ordinary Least Squares}{16}{subsection.15.3}%
 \contentsline {subsection}{\numberline {15.4}Generalized Least Squares}{17}{subsection.15.4}%
 \contentsline {subsection}{\numberline {15.5}Heteroskedasticity and Autocorrelation Consistent (HAC) Standard Errors}{17}{subsection.15.5}%
-\contentsline {subsection}{\numberline {15.6}Vector Autoregressions (VAR)}{17}{subsection.15.6}%
-\contentsline {section}{\numberline {16}Misc.}{18}{section.16}%
-\contentsline {section}{\numberline {17}Definitions}{18}{section.17}%
+\contentsline {subsection}{\numberline {15.6}Maximum Likelihood}{18}{subsection.15.6}%
+\contentsline {subsection}{\numberline {15.7}MLE with Autocorrelation}{18}{subsection.15.7}%
+\contentsline {section}{\numberline {16}Multivariate Time Series}{18}{section.16}%
+\contentsline {subsection}{\numberline {16.1}Vector Autoregressions (VAR)}{18}{subsection.16.1}%
+\contentsline {section}{\numberline {17}Cointegration}{19}{section.17}%
+\contentsline {subsection}{\numberline {17.1}Cointegration with Two Time Series}{19}{subsection.17.1}%
+\contentsline {section}{\numberline {18}Misc.}{19}{section.18}%
+\contentsline {section}{\numberline {19}Definitions}{19}{section.19}%

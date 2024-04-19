@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.12.19)  15 APR 2024 14:48
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.12.19)  17 APR 2024 20:30
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -343,13 +343,13 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 \openout4 = `times_series.toc'.
 
  [3] [4]
-<imgs/stationary_vs_nonstationary.png, id=244, 642.4pt x 642.4pt>
+<imgs/stationary_vs_nonstationary.png, id=269, 642.4pt x 642.4pt>
 File: imgs/stationary_vs_nonstationary.png Graphic file (type png)
 <use imgs/stationary_vs_nonstationary.png>
 Package pdftex.def Info: imgs/stationary_vs_nonstationary.png  used on input line 102.
 (pdftex.def)             Requested size: 289.07999pt x 289.08713pt.
  [5]
-<imgs/white_noise.png, id=250, 2569.6pt x 1927.2pt>
+<imgs/white_noise.png, id=275, 2569.6pt x 1927.2pt>
 File: imgs/white_noise.png Graphic file (type png)
 <use imgs/white_noise.png>
 Package pdftex.def Info: imgs/white_noise.png  used on input line 131.
@@ -365,7 +365,7 @@ pdfTeX warning (ext4): destination with the same identifier (name{figure.2}) has
                                                   \__shipout_drop_firstpage_...
 l.165     \[\gamma_j = \text{Cov}(x_t, x_{t-j})\]
                                                   <./imgs/white_noise.png>]
-<imgs/acf_plots.png, id=268, 588.1975pt x 253.94875pt>
+<imgs/acf_plots.png, id=293, 588.1975pt x 253.94875pt>
 File: imgs/acf_plots.png Graphic file (type png)
 <use imgs/acf_plots.png>
 Package pdftex.def Info: imgs/acf_plots.png  used on input line 194.
@@ -376,7 +376,7 @@ pdfTeX warning (ext4): destination with the same identifier (name{figure.3}) has
                                                   \__shipout_drop_firstpage_...
 l.241 ...Delta x_t = x_t - L x_t = x_t - x_{t-1}\]
                                                    <./imgs/acf_plots.png>]
-<imgs/ar1_acf.png, id=279, 540.0175pt x 422.57875pt>
+<imgs/ar1_acf.png, id=304, 540.0175pt x 422.57875pt>
 File: imgs/ar1_acf.png Graphic file (type png)
 <use imgs/ar1_acf.png>
 Package pdftex.def Info: imgs/ar1_acf.png  used on input line 281.
@@ -421,7 +421,7 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 344.
 
 [12]
-<imgs/irf.png, id=297, 456.70625pt x 260.975pt>
+<imgs/irf.png, id=323, 456.70625pt x 260.975pt>
 File: imgs/irf.png Graphic file (type png)
 <use imgs/irf.png>
 Package pdftex.def Info: imgs/irf.png  used on input line 382.
@@ -440,23 +440,23 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 483.
 
-[15] [16] [17] [18] (./times_series.aux)
+[15] [16] [17] [18] [19] (./times_series.aux)
 Package rerunfilecheck Info: File `times_series.out' has not changed.
-(rerunfilecheck)             Checksum: A590E53375CAF692460A670774BD8210;6980.
+(rerunfilecheck)             Checksum: 48891F07A4751B8E9A582C3E642D36F8;7842.
  ) 
 Here is how much of TeX's memory you used:
- 10088 strings out of 476093
- 156671 string characters out of 5791584
+ 10099 strings out of 476093
+ 156818 string characters out of 5791584
  1866793 words of memory out of 5000000
- 30255 multiletter control sequences out of 15000+600000
+ 30260 multiletter control sequences out of 15000+600000
  523148 words of font info for 71 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  72i,9n,77p,579b,582s stack positions out of 10000i,1000n,20000p,200000b,200000s
 {/usr/local/texlive/2022/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}</usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmib10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmmib8.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfrm1095.pfb>
-Output written on times_series.pdf (18 pages, 1110370 bytes).
+Output written on times_series.pdf (19 pages, 1116175 bytes).
 PDF statistics:
- 437 PDF objects out of 1000 (max. 8388607)
- 366 compressed objects within 4 object streams
- 78 named destinations out of 1000 (max. 500000)
- 362 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 468 PDF objects out of 1000 (max. 8388607)
+ 396 compressed objects within 4 object streams
+ 84 named destinations out of 1000 (max. 500000)
+ 402 words of extra memory for PDF output out of 10000 (max. 10000000)
 
