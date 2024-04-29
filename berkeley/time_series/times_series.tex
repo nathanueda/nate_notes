@@ -667,8 +667,127 @@
 \subsection{Vector Autoregressions (VAR)}
 \begin{itemize}
     \item A generalization of AR processes for multivariate series. 
+    \item Suppose that for each $t$ 
+        \[ 
+        \boldsymbol{Y_t} = 
+        \begin{bmatrix}
+            Y_{1,t} \\
+            Y_{2,t} \\
+            \vdots \\
+            Y_{d,t}
+        \end{bmatrix}
+        \]
+    is a $d$-dimensional multivariate time series. 
+    \item The definition of stationarity for multivariate time series is the same with 
+    univariate time series.
+    \item A multivariate time series is said to be stationary if, for every $n$ and $m$, 
+    $\boldsymbol{Y}_1, \ldots, \boldsymbol{Y}_n$ and $\boldsymbol{Y_{1+m}}, \ldots, 
+    \boldsymbol{Y_{n+m}}$ have the same distributions. 
 \end{itemize}
 
+\subsubsection{VAR(1)}
+\begin{itemize}
+    \item A bivariate VAR(1) process may be written 
+    
+    \[
+    \begin{bmatrix}
+        Y_{1,t} \\
+        Y_{2,t}
+    \end{bmatrix} = 
+    \begin{bmatrix}
+        \phi_{0,1} \\ 
+        \phi_{0,2}
+    \end{bmatrix} +
+    \begin{bmatrix}
+        \phi_{11,1} & \phi_{12,1} \\ 
+        \phi_{21,1} & \phi_{22,1} 
+    \end{bmatrix}
+    \begin{bmatrix}
+        Y_{1,t-1} \\
+        Y_{2,t-1}
+    \end{bmatrix}
+    + 
+    \begin{bmatrix}
+        \epsilon_{1,t} \\
+        \epsilon_{2,t}
+    \end{bmatrix}
+    \]
+
+    where 
+    
+    \[
+    \Phi_0 = 
+    \begin{bmatrix}
+        \phi_{0,1} \\ 
+        \phi_{0,2}
+    \end{bmatrix}    
+    \]
+    and
+    \[
+    \Phi_1 =     
+    \begin{bmatrix}
+        \phi_{11,1} & \phi_{12,1} \\ 
+        \phi_{21,1} & \phi_{22,1} 
+    \end{bmatrix}
+    \]
+    
+    expanding this out, we have the following equations 
+
+    \[ Y_{1,t} = \phi_{0,1} + \phi_{11,1} Y_{1,t-1} + \phi_{12,1} Y_{2,t-1} + \epsilon_{1,t} \]
+
+    and
+
+    \[ Y_{2,t} = \phi_{0,2} + \phi_{21,1} Y_{1,t-1} + \phi_{22,1} Y_{2,t-1} + \epsilon_{2,t} \]
+
+    where $\phi_{ij,1}$ is the amount of influence of $Y_{j, t-1}$ on $Y_{i,t}$. 
+    % \item For a bivariate AR($p$) process, $\phi_{i,j}^k$ (the $(i,j)$th component of $\Phi_k$) 
+    % is the influence of $Y_{j, t-k}$ on $Y_{i,t}, \, k=1, \ldots, p$.
+    \item For a VAR(1) for $k$ variables we have 
+    \[ \boldsymbol{Y}_t = \Phi_0 + \Phi_1 \boldsymbol{Y}_{t-1} + \epsilon_t \]
+\end{itemize}
+
+\subsubsection{VAR(p)}
+\begin{itemize}
+    \item A VAR($p$) may be written 
+    \[ 
+    \boldsymbol{Y}_t = \Phi_0 + \Phi_1 \boldsymbol{Y}_{t-1} + \cdots + \Phi_p 
+    \boldsymbol{Y}_{t-p} + \epsilon_t 
+    \]
+\end{itemize}
+
+\subsubsection{Cross-Correlation Function}
+\begin{itemize}
+    \item Suppose $Y_j$ and $Y_i$ are 2 component series of a stationary multivariate time 
+    series. The cross-correlation function (CCF) between $Y_j$ and $Y_i$ is defined as 
+
+    \[ \rho_{Y_i, Y_i}(h) = \text{Corr}\{Y_j(t), Y_i(t-h)\} \]
+
+    and is the correlation between $Y_j$ at time $t$ and $Y_i$ at $h$ time units earlier. 
+    \item Unlike the ACF, the CCF is not symmetric in the lag variable 
+    \[ \rho_{Y_j, Y_i}(h) \ne \rho_{Y_j, Y_i}(-h) \]
+    
+    however what does hold true is the following 
+
+    \[ \rho_{Y_j, Y_i}(h) = \rho_{Y_i, Y_j}(-h) \]
+
+\end{itemize}
+
+\subsubsection{Forecasting}
+\begin{itemize}
+    \item If mean is 0 
+    \[E_t(\boldsymbol{Y}_{t+k}|\boldsymbol{Y}_t) = \Phi^k \boldsymbol{Y}_t\]
+    \item If mean is non-zero
+    \[E_t(\boldsymbol{Y}_{t+k}|\boldsymbol{Y}_t) = \mu + \Phi^k (\boldsymbol{Y}_t - \mu) \]
+\end{itemize}
+
+\subsection{Granger Causality}
+\begin{itemize}
+    \item A time series $w_t$ Granger causes another time series $y_t$ if $w_t$ helps to 
+    forecast $y_t$, given past $y_t$.
+    \item The idea is that $w_t$ Granger causes $y_t$ if $w_t$ can assist in forecasting $y_t$
+    by looking at past values of $y_t$.
+    
+\end{itemize}
 
 \section{Cointegration}
 \subsection{Cointegration with Two Time Series}
@@ -685,14 +804,68 @@
     are cointegrated if each is $I(1)$ but there exists a cointegration vector, $\alpha = 
     (1, -\alpha)$, such that $ \alpha'\boldsymbol{Y}_t = Y_{1,t} - \alpha Y_{2,t}$ is 
     stationary. That is, $\alpha'\boldsymbol{Y}_t \sim I(0)$.
+    \item In discussing cointegration, the key idea is that a series could be nonstationary, 
+    but at the same time, there could be some relationship in these variables that drive two or 
+    more of these variables at the same time. 
     \item To test for cointegration, regress $Y_{1,t}$ on $Y_{2,t}$ to get an $\alpha$ and then 
     we can check the residuals to see if they are stationary. % Partly true.
     \item The stationary cointegration error is the deviation from the trend as is defined 
     \[Z_t =  Y_{1,t} - \alpha Y_{2,t} \]
 \end{itemize}
 
+\section{Vector Error Correction Models}
+\begin{itemize}
+    \item The regression approach to cointegration is somewhat unsatisfactory, as one series 
+    must be chosen as the dependent variable, and this choice must be somewaht arbitrary. 
+    \item VECMs offer an alternate approach in which the deviation from the mean is called the 
+    error and whenever the stationary linear combination deviates from its mean, it is 
+    subsequently pushed back toward its mean (the error is corrected) to follow its long term 
+    path and maintain stationarity. 
+    % \item A VECM is a restriction on a VAR that imposes the condition that two variables can 
+    % be cointegrated (they move together in some way that is stationary)
+    \item Granger's Representation Theorem: The cointegrated series $\boldsymbol{X}_t$ with 
+    cointegrating vector $\alpha$ has 2 equivalent representations: 
+    \begin{enumerate}
+        \item Restricted VAR($p$) in $\boldsymbol{X}_t$ 
+        \[ \boldsymbol{X}_t = \Phi(L)\boldsymbol{X}_{t-1} + \boldsymbol{w}_t \]
+        where the coefficients of $\Phi(L)$ are subject to nonlinear restrictions. 
+        \item VECM($p-1$) 
+        \[ 
+        \Delta\boldsymbol{X}_t = \gamma z_{t-1} + \Psi(L) \Delta \boldsymbol{X}_{t-1} + 
+        \boldsymbol{w}_t 
+        \]
+        where $z_t = \alpha' \boldsymbol{X}_t$ and $\gamma$ has at least one non-zero element. 
+        $z_{t-1}$ specifies how much the variables will come back together and $\gamma$ 
+        dictates how fast they come back together. 
+    \end{enumerate}
+\end{itemize}
+
+\section{Present Value Relationships}
+
+\begin{itemize}
+    \item The expectation of the price at time $t$ is the sum of all future dividends,
+    discounted by the product of all interest rates in all future periods
+    \[
+    P_t = E_t \left[ \sum_{i=1}^{\infty} \frac{D_{t+i}}{\prod_{j=1}^{i} (1 + R_{t+j})}\right]
+    \]
+    \item Under Random Walk Hypothesis returns are not predictable. 
+\end{itemize}
+\subsection{Gordon Growth Model}
+\begin{itemize}
+    \item \[D_t = \frac{1+G}{R-G} D_t\]
+    \item Assumptions 
+    \begin{enumerate}
+        \item Dividends grow at rate $G$ 
+        \[D_{t+1} = (1+G) D_t +e_{1,t+1}\]
+        \item Discount rate is $R$ (constant return). This implies that, when defining $P_t$, 
+        $\prod_{j=1}^{i} (1 + R_{t+j}) \rightarrow {(1+R)}^i$
+    \end{enumerate}
+    \item Price dividend ratio 
+    \[\frac{P_t}{D_t} = \frac{1+G}{R-G}\]
+\end{itemize}
 
 
+\section{CAPM}
 
 %%%
 \section{Misc.}
