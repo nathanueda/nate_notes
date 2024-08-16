@@ -76,7 +76,7 @@
    \begin{itemize}
     \item First moment is a finite constant: $E(x_t) = \mu$
     \item Second moment is a finite constant: $Var(x_t) = \sigma^2$
-    \item $\text{Cov}(x_t, x_s) - \gamma(|t-s|)$
+    \item $\text{Cov}(x_t, x_s) = \gamma(|t-s|)$
    \end{itemize}
    In other words, the mean and variance do not change with time and the covariance between 
    two observations depends on the time distance between them (aka having same number of 
@@ -178,6 +178,7 @@
     price of a stock today helps forecast its price tomorrow).
     \item The \textit{autocorrelation} of a series $x_t$ is defined as 
     \[\rho_j = \frac{\gamma_j}{\gamma_0}\]
+    \item 
 \end{itemize}
 
 \subsection{Testing for autocorrelation}
@@ -354,7 +355,7 @@
 \section{ARIMA Processes}
 \begin{itemize}
     \item Often the first or perhaps second differences of nonstationarity time series are 
-    stationary. \textit{Autoregressive integrated moving average} (ARIMA) processed include 
+    stationary. \textit{Autoregressive integrated moving average} (ARIMA) processes include 
     stationary as well as nonstationary processes.
     \item A time series $\{x_t\}$ is said to be an $\text{ARIMA}(p,d,q)$ process if $\Delta^d 
     x_t$ is $\text{ARMA}(p,q)$.
@@ -520,13 +521,13 @@
 \end{itemize}
 \section{Spurious Regression}
 \begin{itemize}
-    \item This is concluding there is a relationship between varables when there is none. 
+    \item This is concluding there is a relationship between variables when there is none. 
     \item The regression is spurious when we regress one random walk onto another independent 
     random walk. It is spurious as the regression will most likely indicate a non-existent 
     relationship. 
     \item Rule of thumb: If we have an $R^2$ greater than our Durbin Watson statistic, our 
     relationship is likely spurious. 
-    \item Always check the stationarity of the residual. The gression is spurious if the 
+    \item Always check the stationarity of the residual. The regression is spurious if the 
     residual is nonstationary (cannot reject the null of the unit root test).
     \item Just because two series move together does not mean they are related. 
 \end{itemize}
@@ -592,11 +593,13 @@
 \end{itemize}
 
 
+
+
 \subsection{Heteroskedasticity and Autocorrelation Consistent (HAC) Standard Errors}
 \begin{itemize}
     \item These are methods to esimate consistent standard errors when errors exhibit 
     heteroskedasticity and/or autocorrelation.
-    \item White Heteroskasticity Consistent (HC) Covariance Estimatior
+    \item White Heteroskasticity Consistent (HC) Covariance Estimator
     \[
     \hat{\text{Cov}}_{HC} (\hat{\beta} | \boldsymbol{x}_1, \ldots, \boldsymbol{x}_n) = 
     {(\boldsymbol{X}^T \boldsymbol{X})}^{-1} \hat{\boldsymbol{C}}_{HC} {(\boldsymbol{X}^T 

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.12.19)  24 APR 2024 12:10
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.12.19)  8 MAY 2024 22:01
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -368,77 +368,77 @@ l.165     \[\gamma_j = \text{Cov}(x_t, x_{t-j})\]
 <imgs/acf_plots.png, id=339, 588.1975pt x 253.94875pt>
 File: imgs/acf_plots.png Graphic file (type png)
 <use imgs/acf_plots.png>
-Package pdftex.def Info: imgs/acf_plots.png  used on input line 194.
+Package pdftex.def Info: imgs/acf_plots.png  used on input line 195.
 (pdftex.def)             Requested size: 361.34999pt x 156.00899pt.
  [8] [9
 pdfTeX warning (ext4): destination with the same identifier (name{figure.3}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.241 ...Delta x_t = x_t - L x_t = x_t - x_{t-1}\]
+l.242 ...Delta x_t = x_t - L x_t = x_t - x_{t-1}\]
                                                    <./imgs/acf_plots.png>]
 <imgs/ar1_acf.png, id=350, 540.0175pt x 422.57875pt>
 File: imgs/ar1_acf.png Graphic file (type png)
 <use imgs/ar1_acf.png>
-Package pdftex.def Info: imgs/ar1_acf.png  used on input line 281.
+Package pdftex.def Info: imgs/ar1_acf.png  used on input line 282.
 (pdftex.def)             Requested size: 361.34999pt x 282.77165pt.
  [10]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 293.
+(hyperref)                removing `math shift' on input line 294.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 293.
+(hyperref)                removing `math shift' on input line 294.
 
 [11
 pdfTeX warning (ext4): destination with the same identifier (name{figure.4}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.318     \item A
+l.319     \item A
                   process $\{x_t\}$ is a \textit{moving average process} if ... <./imgs/ar1_acf.png>]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 323.
+(hyperref)                removing `math shift' on input line 324.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 323.
+(hyperref)                removing `math shift' on input line 324.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 330.
+(hyperref)                removing `math shift' on input line 331.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 330.
+(hyperref)                removing `math shift' on input line 331.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 344.
+(hyperref)                removing `math shift' on input line 345.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 344.
+(hyperref)                removing `math shift' on input line 345.
 
 [12]
 <imgs/irf.png, id=368, 456.70625pt x 260.975pt>
 File: imgs/irf.png Graphic file (type png)
 <use imgs/irf.png>
-Package pdftex.def Info: imgs/irf.png  used on input line 382.
+Package pdftex.def Info: imgs/irf.png  used on input line 383.
 (pdftex.def)             Requested size: 289.07999pt x 165.19164pt.
  [13
 pdfTeX warning (ext4): destination with the same identifier (name{figure.5}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.400     \item U
+l.401     \item U
                  nit root tests are used to decide if an AR model have an ab... <./imgs/irf.png>] [14]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 483.
+(hyperref)                removing `math shift' on input line 484.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 483.
+(hyperref)                removing `math shift' on input line 484.
 
 [15] [16] [17] [18] [19] [20] [21] [22] (./times_series.aux)
 Package rerunfilecheck Info: File `times_series.out' has not changed.
@@ -453,7 +453,7 @@ Here is how much of TeX's memory you used:
  1141 hyphenation exceptions out of 8191
  72i,9n,77p,579b,582s stack positions out of 10000i,1000n,20000p,200000b,200000s
 {/usr/local/texlive/2022/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}</usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx8.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmib10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmmib8.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfrm1095.pfb>
-Output written on times_series.pdf (22 pages, 1136293 bytes).
+Output written on times_series.pdf (22 pages, 1136097 bytes).
 PDF statistics:
  538 PDF objects out of 1000 (max. 8388607)
  460 compressed objects within 5 object streams

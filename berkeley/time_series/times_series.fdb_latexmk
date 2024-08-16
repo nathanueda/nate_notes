@@ -1,6 +1,6 @@
 # Fdb version 4
-["pdflatex"] 1713985828 "/Users/nathanueda/VSCode/nate_notes/berkeley/time_series/times_series.tex" "times_series.pdf" "times_series" 1713985830 0
-  "/Users/nathanueda/VSCode/nate_notes/berkeley/time_series/times_series.tex" 1713985828 38821 fac37a0065279e680c4f87b0c7e1a2a8 ""
+["pdflatex"] 1715230907 "/Users/nathanueda/VSCode/nate_notes/berkeley/time_series/times_series.tex" "times_series.pdf" "times_series" 1715230910 0
+  "/Users/nathanueda/VSCode/nate_notes/berkeley/time_series/times_series.tex" 1715230907 38836 4a5f1d7183d96ee142039dccc7803027 ""
   "/usr/local/texlive/2022/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc" 1136849721 2900 1537cc8184ad1792082cd229ecc269f4 ""
   "/usr/local/texlive/2022/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/local/texlive/2022/texmf-dist/fonts/tfm/jknappen/ec/tcrm1095.tfm" 1136768653 1536 02c06700a42be0f5a28664c7273f82e7 ""
@@ -116,10 +116,10 @@
   "imgs/irf.png" 1711818311 95770 858902ebfe9d9b0ad8c411b9a4477a96 ""
   "imgs/stationary_vs_nonstationary.png" 1711677327 60279 437cca09642824734b754d1f674c9726 ""
   "imgs/white_noise.png" 1711677572 335542 929cd653bf792f4cf33053226070f842 ""
-  "times_series.aux" 1713985830 8566 0dcfad1ab3ef525f05b4677816f29de9 "pdflatex"
-  "times_series.out" 1713985830 9146 69f8b4591f5dd984bec47316f186eac6 "pdflatex"
-  "times_series.tex" 1713985828 38821 fac37a0065279e680c4f87b0c7e1a2a8 ""
-  "times_series.toc" 1713985830 4792 e428833ad76fb66eb7ddd3d266f3859a "pdflatex"
+  "times_series.aux" 1715230909 8566 0dcfad1ab3ef525f05b4677816f29de9 "pdflatex"
+  "times_series.out" 1715230909 9146 69f8b4591f5dd984bec47316f186eac6 "pdflatex"
+  "times_series.tex" 1715230907 38836 4a5f1d7183d96ee142039dccc7803027 ""
+  "times_series.toc" 1715230909 4792 e428833ad76fb66eb7ddd3d266f3859a "pdflatex"
   (generated)
   "times_series.aux"
   "times_series.log"
